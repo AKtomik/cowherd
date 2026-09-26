@@ -3,7 +3,9 @@ extends Node
 @onready var menu_scene = preload("res://scenes/menu.tscn")
 @onready var narrative_scene = preload("res://scenes/narrative_scene.tscn")
 @onready var level_scene = preload("res://scenes/level.tscn")
+@onready var game_over_scene = preload("res://scenes/game_over.tscn")
 
+var game_over_text = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,8 +31,11 @@ func switch_to_level(id: int):
 		printerr("Unknown level id")
 
 
-func game_over() -> void:
+func game_over(id: int) -> void:
 	
-	get_tree().change_scene_to_packed(menu_scene)
+	await get_tree().change_scene_to_packed(game_over_scene)
+	
+	if id == 0:
+		game_over_text = "Mort par la main de ton père."
 	
 	

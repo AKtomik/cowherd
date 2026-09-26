@@ -6,7 +6,7 @@ pere: Melchor, tu as 16 ans, tu es un homme fait. Il est temps de partir d’ici
 	pere: Je sais, mais c’est en train de changer \: les Otomis, qui connaissent bien les Chichimèques, ont accepté de nous aider à les soumettre et le vice-roi a donné d’immenses terres dans la vallée de San Juan et au-delà à tous les Espagnols qui veulent élever des vaches et des chevaux. Tu connais les scandales qu’ont causé les Indiens auprès de la Couronne. A cause de ces intriguants, les animaux que nous avons apporté aux Indiens pour qu’ils cessent de se charger comme des ânes et qu’ils cultivent les champs avec moins de peine, les vaches, les ânes, les chevaux, sont comparés aux plaies d’Egypte. Des milliers de têtes de bétail vont être expulsés de Tlaxcala, de Toluca et de Jilotepec vers le pays des Chichimèques. Si tu travailles bien, tu feras rapidement fortune là-bas.
 - J’espère ne plus jamais revoir ton visage, perro, puto, mazate.
 	"Mulâtre ingrat, tu ne vaux pas mieux que les Indiens qui prient à la Vierge le jour et font des sacrifices à Quetzalcoatl la nuit, menteur, serviteur de Satan : je vais t’envoyer aux mines de Ixmiquilpan.": <Empty Text Event>
-	do GameOverlord.game_over()
+	do GameOverlord.game_over(0)
 	return
 - Oui, mon seigneur. Si l’on me demande qui sont mes parents, que dois-je dire ?
 	pere: N’utilise jamais le nom de ma famille. Tu n’es pas né à Castille et tu ne tromperas jamais personne. Ta mère était de Guinée, mais n’utilise pas les mots que tu lui entendais prononcer de temps à autre, ils n’ont aucune utilité ici. Ne cache pas qu’elle était une esclave, ta peau te trahira toujours. Mais tu peux dire qu’elle avait une foi sincère et qu’elle t’a toujours inculqué le respect des Espagnols, les nouveaux seigneurs des Indes.
