@@ -7,7 +7,7 @@ var position_followed: Vector3
 @export var magnet_position: Node3D
 
 @export var ALIGN_SPEED: float = .09
-@export var CINEMATIC_SPEED: float = .01
+@export var CINEMATIC_SPEED: float = .09
 @export_range(0, 1) var MIDDLE_RATIO: float = .5
 @export_range(-3, 10) var FOLLOW_EXAGERATION: float = 0
 
@@ -25,7 +25,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var ideal_position = magnet_position.position.lerp(follow_node.position + position_difference, MIDDLE_RATIO)
 	if (level.cinematic): position_followed = position_followed.move_toward(ideal_position, CINEMATIC_SPEED)
 	else: position_followed = position_followed.lerp(ideal_position, ALIGN_SPEED)

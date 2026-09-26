@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Coward"
-run/main_scene="uid://c4qt43tbd3w5x"
+run/main_scene="uid://dpro8hklwkc22"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -47,8 +47,8 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [global_group]
 
-cows=""
 cow_area=""
+cows=""
 obstacles=""
 
 [input]
@@ -71,6 +71,7 @@ dialogic_default_action={
 3d_physics/layer_4="cow"
 3d_physics/layer_9="panic provocation"
 3d_physics/layer_10="panic detection"
+3d_physics/layer_11="pen area"
 
 [physics]
 

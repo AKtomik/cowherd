@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c50m2hv8uegw5" path="res://scripts/ui.gd" id="1_nt7q6"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2r41h"]
+font_size = 60
+
 [node name="UI" type="Control" unique_id=156332835]
 layout_mode = 3
 anchors_preset = 15
@@ -16,3 +19,4 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
+label_settings = SubResource("LabelSettings_2r41h")

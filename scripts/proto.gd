@@ -8,7 +8,7 @@ var cows: Array = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
-	PEN.cow_entered_pen.connect(_on_cow_entered_pen)
+	PEN.cow_enter_pen.connect(_on_cow_entered_pen)
 	PEN.cow_left_pen.connect(_on_cow_left_pen)
 	
 	# List cows

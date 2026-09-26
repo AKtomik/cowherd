@@ -11,10 +11,14 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
 
-[node name="Level2" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("PEN", "UI", "sun_node")]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xkjw5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
+
+[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("pen_node", "ui_node", "sun_node")]
 script = ExtResource("1_ppgk2")
-PEN = NodePath("Map/Pen")
-UI = NodePath("CanvasLayer/UI")
+pen_node = NodePath("Map/Pen")
+ui_node = NodePath("CanvasLayer/UI")
 sun_node = NodePath("DirectionalLight3D")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=824461060]
@@ -27,6 +31,7 @@ script = ExtResource("5_2r41h")
 follow_node = NodePath("../Player")
 magnet_position = NodePath("../CameraMagnet")
 ALIGN_SPEED = 0.07
+CINEMATIC_SPEED = 0.4
 MIDDLE_RATIO = 0.75
 FOLLOW_EXAGERATION = 3.0
 Y_LOCK_ENABLED = true
@@ -46,7 +51,7 @@ level = NodePath("..")
 [node name="Map" type="Node3D" parent="." unique_id=369540063]
 
 [node name="Pen" parent="Map" unique_id=1444030719 instance=ExtResource("4_b121j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.810415, -4.7683716e-07, -18.392918)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7006397, 1.4305115e-06, -43.457336)
 
 [node name="Ground" type="StaticBody3D" parent="Map" unique_id=659294413]
 transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
@@ -107,6 +112,36 @@ shape = SubResource("BoxShape3D_u60bi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall5" unique_id=369489505]
 mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Rock" type="StaticBody3D" parent="Map" unique_id=248168530 groups=["obstacles"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9451885, 0, 2.5797458)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock" unique_id=864046858]
+shape = SubResource("CapsuleShape3D_xkjw5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock" unique_id=174710927]
+mesh = SubResource("CapsuleMesh_u60bi")
+
+[node name="Rock2" type="StaticBody3D" parent="Map" unique_id=377545063 groups=["obstacles"]]
+transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 5, 17.417616, 0, -20.803288)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock2" unique_id=1689776685]
+shape = SubResource("CapsuleShape3D_xkjw5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock2" unique_id=816270485]
+mesh = SubResource("CapsuleMesh_u60bi")
+
+[node name="Rock3" type="StaticBody3D" parent="Map" unique_id=1155477620 groups=["obstacles"]]
+transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 8, -3.8749752, -1.9073486e-06, -17.867514)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock3" unique_id=1084716146]
+shape = SubResource("CapsuleShape3D_xkjw5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock3" unique_id=167043607]
+mesh = SubResource("CapsuleMesh_u60bi")
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
@@ -173,3 +208,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.250366, 1.0000019, 0.0136
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("5_8c41q")]
+
+[editable path="Map/Pen"]
