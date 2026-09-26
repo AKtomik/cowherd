@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://c1m34p06gpycu"]
 
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/player.tscn" id="1_q4ytd"]
+[ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/cow.gd" id="2_6gjf6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u60bi"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
 
 [node name="Level" type="Node3D" unique_id=1058585129]
 
@@ -19,7 +24,19 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=824461060]
 transform = Transform3D(1, 0, 0, 0, 0.71911764, 0.6948883, 0, -0.6948883, 0.71911764, 0, 6.6657405, 0)
-light_angular_distance = 41.66
+light_angular_distance = 3.63
 
 [node name="Player" parent="." unique_id=303297383 instance=ExtResource("1_q4ytd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+
+[node name="Cow" type="RigidBody3D" parent="." unique_id=2015433555]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.3876557, 2.6934862, 2.7976751)
+script = ExtResource("2_6gjf6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cow" unique_id=1537622131]
+transform = Transform3D(1, 0, -4.371139e-08, -4.371139e-08, 1.9106855e-15, -1, 0, 1, 1.9106855e-15, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cow" unique_id=1907176328]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_u60bi")
