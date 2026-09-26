@@ -65,6 +65,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Wall1" type="StaticBody3D" parent="Map" unique_id=1349482913 groups=["obstacles"]]
 transform = Transform3D(3.9505768, 0, -0.9992195, 0, 5, 0, 99.92194, 0, 0.039505765, -44.406273, 0, -7.234818)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall1" unique_id=901247071]
@@ -75,6 +76,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Wall2" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
 transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 20.732449)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall2" unique_id=1680730822]
@@ -85,6 +87,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Wall3" type="StaticBody3D" parent="Map" unique_id=1242347814 groups=["obstacles"]]
 transform = Transform3D(3.9505773, 0, -0.99921954, 0, 5, 0, 99.921936, 0, 0.039505765, 45.870087, -3.8146973e-06, -0.09259796)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall3" unique_id=1768130953]
@@ -95,6 +98,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Wall4" type="StaticBody3D" parent="Map" unique_id=1531075389 groups=["obstacles"]]
 transform = Transform3D(51.616596, 0, 0, 0, 5, 0, 0, 0, 1, -35.043312, 0, -38.50861)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall4" unique_id=1372664398]
@@ -105,6 +109,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Wall5" type="StaticBody3D" parent="Map" unique_id=1818945136 groups=["obstacles"]]
 transform = Transform3D(51.616596, 0, 0, 0, 4.9999995, 0, 0, 0, 1, 38.96683, 0, -38.056667)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall5" unique_id=659824954]
@@ -115,6 +120,7 @@ mesh = SubResource("BoxMesh_u60bi")
 
 [node name="Rock" type="StaticBody3D" parent="Map" unique_id=248168530 groups=["obstacles"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9451885, 0, 2.5797458)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock" unique_id=864046858]
@@ -125,6 +131,7 @@ mesh = SubResource("CapsuleMesh_u60bi")
 
 [node name="Rock2" type="StaticBody3D" parent="Map" unique_id=377545063 groups=["obstacles"]]
 transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 5, 17.417616, 0, -20.803288)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock2" unique_id=1689776685]
@@ -135,6 +142,7 @@ mesh = SubResource("CapsuleMesh_u60bi")
 
 [node name="Rock3" type="StaticBody3D" parent="Map" unique_id=1155477620 groups=["obstacles"]]
 transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 8, -3.8749752, -1.9073486e-06, -17.867514)
+collision_layer = 2
 collision_mask = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock3" unique_id=1084716146]

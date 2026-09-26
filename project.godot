@@ -35,10 +35,7 @@ directories/dtl_directory={
 "interlude1": "res://assets/Narrative/interlude1.dtl",
 "intro": "res://assets/Narrative/intro.dtl"
 }
-layout/style_directory={
-"": "res://Resources/default_narrative_style.tres",
-"default_narrative_style": "res://Resources/default_narrative_style.tres"
-}
+layout/style_directory={}
 layout/style_list=["res://Resources/default_narrative_style.tres"]
 layout/default_style="res://Resources/default_narrative_style.tres"
 
@@ -53,8 +50,8 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [global_group]
 
-cows=""
 cow_area=""
+cows=""
 obstacles=""
 
 [input]

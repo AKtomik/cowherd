@@ -9,24 +9,24 @@ class_name Cow
 @export var cow_shape: CollisionShape3D
 @export var cow_obstacle_detection_shape: CollisionShape3D
 
-# General var
+@export_group("General var")
 @export var MAX_SPEED_IDLE: float = 5.0
 @export var MAX_SPEED_FLEE: float = 10.0 # Used when fleeing
 @export var MAX_FORCE: float = 200.0 # Max steering force
 @export var MASS: float = 1.0
 
-# Wander var
+@export_group("Wander var")
 @export var WANDER_RADIUS: float = 1.5 # Circle radius
 @export var WANDER_DISTANCE: float = 2.0 # Circle distance ahead
 @export var WANDER_JITTER: float = 0.3 # Random angle change per frame
 @export var WANDER_WEIGHT: float = 0.2
 var wander_angle: float = 0 # Current wander angle
 
-# Flee var
+@export_group("Flee var")
 var panic_by: Array = []
 @export var FLEE_WEIGHT: float = 20.0
 
-# Flock var
+@export_group("Flock var")
 @export var SEPARATION_RADIUS: float = 2.0 # Personal space
 @export var ALIGNMENT_RADIUS: float = 5.0 # Velocity matching range
 @export var COHESION_RADIUS: float = 8.0 # Group attraction range
@@ -36,16 +36,15 @@ var panic_by: Array = []
 @export var FLOCK_WEIGHT: float = 0.5
 var neighbours: Array = []
 
-# Obstacle avoidance var
+@export_group("Obstacles var")
 var obstacles: Array[Node3D] = []
 @export var OBSTACLE_WEIGHT: float = 10.0
 @export var OBSTACLE_LOOK_AHEAD: float = 5.0
-var OBSTACLE_MAX_DIST: float
+@export var OBSTACLE_MAX_DIST: float = 100.0
 
 func _ready() -> void:
 	
 	wander_angle = randf_range(0, 2 * PI)
-	OBSTACLE_MAX_DIST = cow_obstacle_detection_shape.shape.radius
 
 
 func _physics_process(delta: float) -> void:
@@ -80,7 +79,7 @@ func _physics_process(delta: float) -> void:
 	# Rotate to face the right direction
 	var current_direction = global_position + velocity
 	look_at(current_direction)
-		
+
 	move_and_slide()
 	since += delta
 
@@ -191,7 +190,7 @@ func obstacle_avoidance() -> Vector3:
 	var half_ahead: Vector3 = position + velocity.normalized() * look_ahead * 0.5
 	
 	# Find the most threatening obstacle
-	var nearest: Area3D = null
+	var nearest: StaticBody3D = null
 	var nearest_distance: float = OBSTACLE_MAX_DIST
 	
 	for o in obstacles:
@@ -203,7 +202,7 @@ func obstacle_avoidance() -> Vector3:
 		if closest < nearest_distance:
 			nearest_distance = closest
 			nearest = o
-			
+
 	if nearest == null:
 		return Vector3.ZERO
 		
@@ -230,11 +229,20 @@ var since = 0
 func _on_obstacle_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body not in obstacles:
 		obstacles.append(body)
-		print("_on_obstacle_detection_body_entered", obstacles, since)
 		since = 0
 
 func _on_obstacle_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body in obstacles:
 		obstacles.erase(body)
-		print("_on_obstacle_detection_body_exited", obstacles, since)
 		since = 0
+
+
+func _on_neighbours_detection_body_entered(body: Node3D) -> void:
+	if body not in obstacles:
+		neighbours.append(body)
+		#print("_on_neighbours_detection_body_entered", neighbours, since)
+
+func _on_neighbours_detection_body_exited(body: Node3D) -> void:
+	if body in neighbours:
+		neighbours.erase(body)
+		#print("_on_neighbours_detection_body_exited", neighbours, since)

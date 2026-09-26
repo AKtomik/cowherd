@@ -11,6 +11,12 @@ radius = 0.7
 radius = 3.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0dxmq"]
+radius = 0.9
+height = 4.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fgglk"]
+radius = 1.5
+height = 5.0
 
 [node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape", "cow_obstacle_detection_shape") groups=["cows"]]
 collision_layer = 8
@@ -21,7 +27,15 @@ axis_lock_angular_z = true
 script = ExtResource("1_fgglk")
 cow_mesh = NodePath("MeshInstance3D")
 cow_shape = NodePath("PanicDetection/CollisionShape3D")
-cow_obstacle_detection_shape = NodePath("SnifDetection/CollisionShape3D")
+cow_obstacle_detection_shape = NodePath("ObstacleDetection/CollisionShape3D")
+MAX_FORCE = 100.0
+MASS = 2.0
+SEPARATION_RADIUS = 3.0
+ALIGNMENT_RADIUS = 4.5
+COHESION_RADIUS = 5.0
+SEPARATION_WEIGHT = 50.0
+ALIGNMENT_WEIGHT = 3.0
+OBSTACLE_WEIGHT = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1027818964]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -39,17 +53,29 @@ collision_mask = 256
 shape = SubResource("SphereShape3D_u60bi")
 debug_color = Color(0.6630709, 0.5087792, 0.19451845, 0.41960785)
 
-[node name="SnifDetection" type="Area3D" parent="." unique_id=1592692233]
+[node name="ObstacleDetection" type="Area3D" parent="." unique_id=1592692233]
 collision_layer = 8
-collision_mask = 3
+collision_mask = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SnifDetection" unique_id=1509246181]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleDetection" unique_id=1509246181]
 transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_0dxmq")
+debug_color = Color(0, 0.60455257, 0.43973753, 0.21568628)
+
+[node name="NeighbourDetection" type="Area3D" parent="." unique_id=48777373]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NeighbourDetection" unique_id=575113049]
+transform = Transform3D(-1.3113416e-07, 3, -1.3113416e-07, 0, -1.3113416e-07, -3, -3, -1.3113416e-07, 5.7320566e-15, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_fgglk")
+debug_color = Color(0, 0.6039216, 0, 0.21568628)
 
 [connection signal="area_entered" from="PanicDetection" to="." method="_on_panic_area_entered"]
 [connection signal="area_exited" from="PanicDetection" to="." method="_on_panic_area_exited"]
-[connection signal="area_entered" from="SnifDetection" to="." method="_on_obstacle_detection_area_entered"]
-[connection signal="area_exited" from="SnifDetection" to="." method="_on_obstacle_detection_area_exited"]
-[connection signal="body_entered" from="SnifDetection" to="." method="_on_obstacle_detection_body_entered"]
-[connection signal="body_exited" from="SnifDetection" to="." method="_on_obstacle_detection_body_exited"]
+[connection signal="area_entered" from="ObstacleDetection" to="." method="_on_obstacle_detection_area_entered"]
+[connection signal="area_exited" from="ObstacleDetection" to="." method="_on_obstacle_detection_area_exited"]
+[connection signal="body_entered" from="ObstacleDetection" to="." method="_on_obstacle_detection_body_entered"]
+[connection signal="body_exited" from="ObstacleDetection" to="." method="_on_obstacle_detection_body_exited"]
+[connection signal="body_entered" from="NeighbourDetection" to="." method="_on_neighbours_detection_body_entered"]
+[connection signal="body_exited" from="NeighbourDetection" to="." method="_on_neighbours_detection_body_exited"]
