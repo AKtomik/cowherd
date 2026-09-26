@@ -1,6 +1,7 @@
 extends RigidBody3D
 
 @export var cow_mesh: MeshInstance3D
+@export var cow_shape: CollisionShape3D
 
 # physic
 var real_direction: Vector3 = Vector3(0, 0, 0)
@@ -41,11 +42,13 @@ func _physics_process(delta: float) -> void:
 	
 	if (panic_by.size() > 0):
 		panic_phase()
-		#cow_mesh.mesh. = Color(1, 0, 0)
+		# why it is affecting all of them at same time?:
+		cow_shape.debug_color = Color(1, 0, 0, .3)
 	elif (next_phase_in < 0):
 		next_phase_in = randf_range(.5, 1.5)
 		idle_phase()
-		#cow_mesh.color = Color(0, 1, 0)
+		# why it is affecting all of them at same time?:
+		cow_shape.debug_color = Color(0, 1, 0, .3)
 
 	# todo: direction velocity system
 	real_direction = desired_direction
