@@ -27,6 +27,9 @@ collision_mask = 27
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("2_qhqgy")
+SPEED_MAX = 15.0
+SPEED_ACCELERATION = 0.8
+SPEED_DECELERATION = 0.06
 visual_rotated = NodePath("VisalRotated")
 
 [node name="DetectionRange" type="Area3D" parent="." unique_id=1335660236]

@@ -14,6 +14,7 @@ class_name Cow
 @export var MAX_SPEED_FLEE: float = 10.0 # Used when fleeing
 @export var MAX_FORCE: float = 200.0 # Max steering force
 @export var MASS: float = 1.0
+@export var GREAT_SPEED_FACTOR: float = 1.0
 
 @export_group("Wander var")
 @export var WANDER_RADIUS: float = 1.5 # Circle radius
@@ -93,11 +94,11 @@ func apply_steering_force(steering_force: Vector3, max_speed: float, dt: float) 
 	var acceleration = steering_force / MASS
 	
 	# Update velocity
-	velocity += acceleration * dt
+	velocity += acceleration * dt * GREAT_SPEED_FACTOR
 	
 	# Clamp to max speed
-	if velocity.length() > max_speed:
-		velocity = velocity.normalized() * max_speed
+	if velocity.length() > max_speed * GREAT_SPEED_FACTOR:
+		velocity = velocity.normalized() * max_speed * GREAT_SPEED_FACTOR
 
 
 func wander() -> Vector3:
@@ -190,8 +191,6 @@ func obstacle_avoidance() -> Vector3:
 	var look_ahead: float = velocity.length() / MAX_SPEED_FLEE * OBSTACLE_LOOK_AHEAD
 	var ahead: Vector3 = position + velocity.normalized() * look_ahead
 	var half_ahead: Vector3 = position + velocity.normalized() * look_ahead * 0.5
-	var back: Vector3 = position - velocity.normalized() * look_ahead
-	var half_back: Vector3 = position - velocity.normalized() * look_ahead * 0.5
 	
 	# Find the most threatening obstacle
 	var nearest: StaticBody3D = null
@@ -201,9 +200,7 @@ func obstacle_avoidance() -> Vector3:
 		var d1: float = ahead.distance_to(o.global_position)
 		var d2: float = half_ahead.distance_to(o.global_position)
 		var d3: float = position.distance_to(o.global_position)
-		var d4: float = back.distance_to(o.global_position)
-		var d5: float = half_back.distance_to(o.global_position)
-		var closest: float = min(d1, d2, d3, d4, d5)
+		var closest: float = min(d1, d2, d3)
 		
 		if closest < nearest_distance:
 			nearest_distance = closest
