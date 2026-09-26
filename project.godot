@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Coward"
-run/main_scene="uid://c1m34p06gpycu"
+run/main_scene="uid://dpro8hklwkc22"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
