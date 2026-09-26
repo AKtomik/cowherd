@@ -16,6 +16,8 @@ script = ExtResource("1_g2els")
 follow_node = NodePath("../Horse")
 
 [node name="Horse" type="CharacterBody3D" parent="." unique_id=421952062 node_paths=PackedStringArray("visual_rotated")]
+collision_layer = 4
+collision_mask = 11
 script = ExtResource("2_qhqgy")
 visual_rotated = NodePath("Rota")
 
