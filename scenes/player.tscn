@@ -23,7 +23,7 @@ normal_texture = ExtResource("5_fjrip")
 
 [node name="PlayerHorse" type="CharacterBody3D" unique_id=421952062 node_paths=PackedStringArray("visual_rotated")]
 collision_layer = 4
-collision_mask = 11
+collision_mask = 27
 script = ExtResource("2_qhqgy")
 visual_rotated = NodePath("VisalRotated")
 

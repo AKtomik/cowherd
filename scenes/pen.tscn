@@ -3,42 +3,42 @@
 [ext_resource type="Script" uid="uid://bsnbsckeq66wq" path="res://scripts/pen.gd" id="1_ngeja"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0dxmq"]
+size = Vector3(50, 5, 10)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0dxmq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngeja"]
+size = Vector3(50, 5, 10)
 
-[node name="Pen" type="Node3D" unique_id=1444030719 node_paths=PackedStringArray("COLLISION", "CORNER_TOPLEFT", "CORNER_TOPRIGHT", "CORNER_BOTTOMLEFT", "CORNER_BOTTOMRIGHT")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
+size = Vector3(50, 5, 2)
+
+[node name="Pen" type="Node3D" unique_id=1444030719 node_paths=PackedStringArray("COLLISION")]
 script = ExtResource("1_ngeja")
-COLLISION = NodePath("Area3D/CollisionShape3D")
-CORNER_TOPLEFT = NodePath("Corners/TopLeft")
-CORNER_TOPRIGHT = NodePath("Corners/TopRight")
-CORNER_BOTTOMLEFT = NodePath("Corners/BottomLeft")
-CORNER_BOTTOMRIGHT = NodePath("Corners/BottomRight")
+COLLISION = NodePath("EnterArea/CollisionShape3D")
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1202511450]
-collision_layer = 2
-collision_mask = 512
+[node name="EnterArea" type="Area3D" parent="." unique_id=1202511450]
+collision_layer = 1024
+collision_mask = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1066743936]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnterArea" unique_id=1066743936]
 shape = SubResource("BoxShape3D_0dxmq")
 debug_color = Color(0.75686276, 0.2, 0.9882353, 0.73333335)
 
-[node name="Corners" type="Node3D" parent="." unique_id=1226146494]
+[node name="ExitArea" type="Area3D" parent="." unique_id=684808205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04508543, 0, 10.751992)
+collision_layer = 1024
+collision_mask = 8
 
-[node name="TopLeft" type="MeshInstance3D" parent="Corners" unique_id=1585890849]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-mesh = SubResource("BoxMesh_0dxmq")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitArea" unique_id=934869322]
+shape = SubResource("BoxShape3D_ngeja")
+debug_color = Color(0.75686276, 0.2, 0, 0.73333335)
 
-[node name="TopRight" type="MeshInstance3D" parent="Corners" unique_id=1550603780]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-mesh = SubResource("BoxMesh_0dxmq")
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=179292635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.3692684)
+collision_layer = 16
+collision_mask = 4
 
-[node name="BottomLeft" type="MeshInstance3D" parent="Corners" unique_id=1548936187]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-mesh = SubResource("BoxMesh_0dxmq")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=957816050]
+shape = SubResource("BoxShape3D_u60bi")
 
-[node name="BottomRight" type="MeshInstance3D" parent="Corners" unique_id=337358526]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
-mesh = SubResource("BoxMesh_0dxmq")
-
-[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
+[connection signal="body_entered" from="EnterArea" to="." method="on_body_enter_pen"]
+[connection signal="body_entered" from="ExitArea" to="." method="on_body_exit_pen"]

@@ -37,7 +37,7 @@ var panic_by: Array = []
 var neighbours: Array = []
 
 # Obstacle avoidance var
-var obstacles: Array = []
+var obstacles: Array[Node3D] = []
 @export var OBSTACLE_WEIGHT: float = 10.0
 @export var OBSTACLE_LOOK_AHEAD: float = 5.0
 var OBSTACLE_MAX_DIST: float
@@ -220,11 +220,18 @@ func _on_panic_area_exited(area: Area3D) -> void:
 
 
 func _on_obstacle_detection_area_entered(area: Area3D) -> void:
-	
-	if area.is_in_group("obstacles"):
+	if area.is_in_group("obstacles") and area not in obstacles:
 		obstacles.append(area)
 
 func _on_obstacle_detection_area_exited(area: Area3D) -> void:
-	
-	if area.is_in_group("obstacles"):
+	if area.is_in_group("obstacles") and area in obstacles:
 		obstacles.erase(area)
+
+
+func _on_obstacle_detection_body_entered(body: Node3D) -> void:
+	if body.is_in_group("obstacles") and body not in obstacles:
+		obstacles.append(body)
+
+func _on_obstacle_detection_body_exited(body: Node3D) -> void:
+	if body.is_in_group("obstacles") and body in obstacles:
+		obstacles.erase(body)
