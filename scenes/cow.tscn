@@ -2,22 +2,23 @@
 
 [ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/cow.gd" id="1_fgglk"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u60bi"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_fgglk"]
+radius = 0.7
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
 radius = 3.0
 
-[node name="Cow" type="RigidBody3D" unique_id=233384321]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+[node name="Cow" type="RigidBody3D" unique_id=233384321 node_paths=PackedStringArray("cow_mesh")]
 collision_layer = 8
 collision_mask = 15
 script = ExtResource("1_fgglk")
+cow_mesh = NodePath("MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1027818964]
-transform = Transform3D(1, 0, -4.371139e-08, -4.371139e-08, 1.9106855e-15, -1, 0, 1, 1.9106855e-15, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_u60bi")
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+shape = SubResource("SphereShape3D_fgglk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=709582235]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)

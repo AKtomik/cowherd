@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b7ygxlcy10sun" path="res://scripts/horse.gd" id="2_qhqgy"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g2els"]
-radius = 3.0
+radius = 7.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bfnls"]
 radius = 0.7
@@ -30,7 +30,7 @@ collision_mask = 512
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Horse/Area3D" unique_id=1788272496]
 shape = SubResource("SphereShape3D_g2els")
-debug_color = Color(0.6630709, 0.5087792, 0.19451845, 0.41960785)
+debug_color = Color(0.79384357, 0.35396436, 0.634816, 0.41960785)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Horse" unique_id=1750590295]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
