@@ -11,19 +11,32 @@ offset_bottom = 789.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2031083009]
 
-[node name="Start" type="Button" parent="CanvasLayer" unique_id=1734234549]
+[node name="VSplitContainer" type="VSplitContainer" parent="CanvasLayer" unique_id=1038022658]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -15.5
-offset_right = 23.0
-offset_bottom = 15.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Start
-"
+split_offsets = PackedInt32Array(0, 0)
 
-[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[node name="Start" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=1734234549]
+layout_mode = 2
+text = "Jouer"
+
+[node name="Credits" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=612226832]
+layout_mode = 2
+text = "Crédits"
+
+[node name="Quit" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=790519751]
+layout_mode = 2
+text = "Quitter"
+
+[connection signal="pressed" from="CanvasLayer/VSplitContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/VSplitContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/VSplitContainer/Quit" to="." method="_on_quit_pressed"]

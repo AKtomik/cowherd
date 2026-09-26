@@ -16,3 +16,12 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	
 	GameOverlord.start_game()
+
+
+func _on_credits_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_quit_pressed() -> void:
+	
+	get_tree().quit()
