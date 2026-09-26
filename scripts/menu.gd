@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var credits_layer: CanvasLayer
+
 @onready var menu_scene = preload("res://scenes/menu.tscn")
 @onready var narrative_scene = preload("res://scenes/narrative_scene.tscn")
 
@@ -20,9 +22,15 @@ func _on_start_pressed() -> void:
 
 
 func _on_credits_pressed() -> void:
-	pass # Replace with function body.
+	
+	credits_layer.visible = true
 
 
 func _on_quit_pressed() -> void:
 	
 	get_tree().quit()
+
+
+func _on_return_pressed() -> void:
+	
+	credits_layer.visible = false

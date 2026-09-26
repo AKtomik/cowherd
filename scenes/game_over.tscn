@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dgw4rupp4kj6a"]
+
+[ext_resource type="Script" uid="uid://dy2xt6lhhhm4n" path="res://scripts/game_over.gd" id="1_xeevv"]
+
+[node name="GameOver" type="Control" unique_id=1573280929 node_paths=PackedStringArray("flavour_text")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+flavour_text = NodePath("VSplitContainer/Label")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1404321205]
+layout_mode = 0
+offset_right = 1194.0
+offset_bottom = 695.0
+color = Color(0, 0, 0, 1)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=776978628]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -238.5
+offset_top = -65.0
+offset_right = 238.5
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="VSplitContainer" unique_id=23170256]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "This is how you died. Too bad..."
+
+[node name="Menu" type="Button" parent="VSplitContainer" unique_id=910903441]
+layout_mode = 2
+text = "Retour au menu principal"
+
+[connection signal="pressed" from="VSplitContainer/Menu" to="." method="_on_menu_pressed"]
