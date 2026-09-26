@@ -37,33 +37,93 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 
 [node name="Cow" parent="." unique_id=233384321 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.649092, 1, -1.7552805)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow2" parent="." unique_id=1920320106 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.003189, 1, 13.24519)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow3" parent="." unique_id=1095926027 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.940536, 1, -2.1029997)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow4" parent="." unique_id=1047863658 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.272404, 1, -14.869044)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow5" parent="." unique_id=366816852 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.861467, 1, 8.243958)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow6" parent="." unique_id=495916648 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.654844, 1, 12.547262)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow7" parent="." unique_id=32860563 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.323208, 0.99999815, -2.6911592)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow8" parent="." unique_id=1473179791 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.821857, 1, 10.49454)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow9" parent="." unique_id=629701607 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.992559, 1, -31.650501)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Cow10" parent="." unique_id=83496599 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.96875, 1, -14.820006)
+MAX_SPEED = 5.0
+MAX_FORCE = 10.0
+MASS = 1.0
+WANDER_RADIUS = 1.5
+WANDER_DISTANCE = 2.0
+WANDER_JITTER = 0.3
 
 [node name="Pen" parent="." unique_id=1444030719 instance=ExtResource("3_bfnls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.810413, -4.7683716e-07, -18.392916)
