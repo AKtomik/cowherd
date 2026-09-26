@@ -13,7 +13,7 @@ func _ready() -> void:
 	print("level ready!")
 
 
-var cinematic = false
+var cinematic = true
 var started = false
 
 func start():
