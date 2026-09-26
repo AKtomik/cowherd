@@ -74,6 +74,50 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall1" unique_id=511969998]
 mesh = SubResource("BoxMesh_u60bi")
 
+[node name="Wall6" type="StaticBody3D" parent="Map" unique_id=127492038 groups=["obstacles"]]
+transform = Transform3D(23.542858, 0, -1.1046455, 0, 4.9999995, 0, 21.752048, 0, 1.1955891, -35.06701, 0, 13.222574)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall6" unique_id=1422554007]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall6" unique_id=567965005]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall7" type="StaticBody3D" parent="Map" unique_id=947119385 groups=["obstacles"]]
+transform = Transform3D(23.94076, 0, 1.0823654, 0, 4.9999995, 0, -21.313322, 0, 1.2157959, -39.68046, 0, -30.502907)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall7" unique_id=294752705]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall7" unique_id=1882625375]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall8" type="StaticBody3D" parent="Map" unique_id=912444931 groups=["obstacles"]]
+transform = Transform3D(19.63582, 0, 1.2865901, 0, 4.9999995, 0, -25.334799, 0, 0.99717593, 37.491676, 0, 12.669158)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall8" unique_id=137251623]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall8" unique_id=1775571571]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall9" type="StaticBody3D" parent="Map" unique_id=741828972 groups=["obstacles"]]
+transform = Transform3D(25.906342, 0, -0.9585569, 0, 4.9999995, 0, 18.875355, 0, 1.3156149, 38.02969, 0, -35.182106)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall9" unique_id=682378963]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall9" unique_id=575341668]
+mesh = SubResource("BoxMesh_u60bi")
+
 [node name="Wall2" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
 transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 20.732449)
 collision_layer = 2

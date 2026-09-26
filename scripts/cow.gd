@@ -185,9 +185,13 @@ func flock_cohesion() -> Vector3:
 	
 func obstacle_avoidance() -> Vector3:
 	
+	if !obstacles: return Vector3.ZERO
+	
 	var look_ahead: float = velocity.length() / MAX_SPEED_FLEE * OBSTACLE_LOOK_AHEAD
 	var ahead: Vector3 = position + velocity.normalized() * look_ahead
 	var half_ahead: Vector3 = position + velocity.normalized() * look_ahead * 0.5
+	var back: Vector3 = position - velocity.normalized() * look_ahead
+	var half_back: Vector3 = position - velocity.normalized() * look_ahead * 0.5
 	
 	# Find the most threatening obstacle
 	var nearest: StaticBody3D = null
@@ -197,14 +201,15 @@ func obstacle_avoidance() -> Vector3:
 		var d1: float = ahead.distance_to(o.global_position)
 		var d2: float = half_ahead.distance_to(o.global_position)
 		var d3: float = position.distance_to(o.global_position)
-		var closest: float = min(d1, d2, d3)
+		var d4: float = back.distance_to(o.global_position)
+		var d5: float = half_back.distance_to(o.global_position)
+		var closest: float = min(d1, d2, d3, d4, d5)
 		
 		if closest < nearest_distance:
 			nearest_distance = closest
 			nearest = o
 
-	if nearest == null:
-		return Vector3.ZERO
+	if nearest == null: return Vector3.ZERO
 		
 	var avoidance: Vector3 = ahead - nearest.global_position
 	return avoidance.normalized() * MAX_FORCE
