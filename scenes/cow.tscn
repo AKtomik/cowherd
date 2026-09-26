@@ -10,12 +10,15 @@ radius = 0.7
 [sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
 radius = 3.0
 
-[node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape") groups=["cows"]]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0dxmq"]
+
+[node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape", "cow_obstacle_detection_shape") groups=["cows"]]
 collision_layer = 8
 collision_mask = 15
 script = ExtResource("1_fgglk")
 cow_mesh = NodePath("MeshInstance3D")
 cow_shape = NodePath("PanicDetection/CollisionShape3D")
+cow_obstacle_detection_shape = NodePath("ObstacleDetection/CollisionShape3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1027818964]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -33,9 +36,14 @@ collision_mask = 256
 shape = SubResource("SphereShape3D_u60bi")
 debug_color = Color(0.6630709, 0.5087792, 0.19451845, 0.41960785)
 
-[node name="Line2D" type="Line2D" parent="." unique_id=259492536]
-width = 20.0
-default_color = Color(1, 0, 0, 1)
+[node name="ObstacleDetection" type="Area3D" parent="." unique_id=1592692233]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleDetection" unique_id=1509246181]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_0dxmq")
 
 [connection signal="area_entered" from="PanicDetection" to="." method="_on_panic_area_entered"]
 [connection signal="area_exited" from="PanicDetection" to="." method="_on_panic_area_exited"]
+[connection signal="area_entered" from="ObstacleDetection" to="." method="_on_obstacle_detection_area_entered"]
+[connection signal="area_exited" from="ObstacleDetection" to="." method="_on_obstacle_detection_area_exited"]

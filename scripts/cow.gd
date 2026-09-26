@@ -7,6 +7,7 @@ class_name Cow
 
 @export var cow_mesh: MeshInstance3D
 @export var cow_shape: CollisionShape3D
+@export var cow_obstacle_detection_shape: CollisionShape3D
 
 # General var
 @export var MAX_SPEED_IDLE: float = 5.0
@@ -23,7 +24,7 @@ var wander_angle: float = 0 # Current wander angle
 
 # Flee var
 var panic_by: Array = []
-@export var FLEE_WEIGHT: float = 200.0
+@export var FLEE_WEIGHT: float = 20.0
 
 # Flock var
 @export var SEPARATION_RADIUS: float = 2.0 # Personal space
@@ -35,10 +36,16 @@ var panic_by: Array = []
 @export var FLOCK_WEIGHT: float = 0.5
 var neighbours: Array = []
 
+# Obstacle avoidance var
+var obstacles: Array = []
+@export var OBSTACLE_WEIGHT: float = 10.0
+@export var OBSTACLE_LOOK_AHEAD: float = 5.0
+var OBSTACLE_MAX_DIST: float
 
 func _ready() -> void:
 	
 	wander_angle = randf_range(0, 2 * PI)
+	OBSTACLE_MAX_DIST = cow_obstacle_detection_shape.shape.radius
 
 
 func _physics_process(delta: float) -> void:
@@ -58,8 +65,12 @@ func _physics_process(delta: float) -> void:
 		
 	var flock_force = flock()
 	
+	var obstacle_avoidance_force = obstacle_avoidance()
+	
 	# Priority based truncation
-	var composite_force = flee_force * FLEE_WEIGHT
+	var composite_force = obstacle_avoidance_force * OBSTACLE_WEIGHT
+	if composite_force.length() < MAX_FORCE:
+		composite_force = flee_force * FLEE_WEIGHT
 	if composite_force.length() < MAX_FORCE:
 		composite_force += flock_force * FLOCK_WEIGHT
 	if composite_force.length() < MAX_FORCE:
@@ -171,6 +182,32 @@ func flock_cohesion() -> Vector3:
 	
 	return seek(centre_of_mass)
 	
+	
+func obstacle_avoidance() -> Vector3:
+	
+	var look_ahead: float = velocity.length() / MAX_SPEED_FLEE * OBSTACLE_LOOK_AHEAD
+	var ahead: Vector3 = position + velocity.normalized() * look_ahead
+	var half_ahead: Vector3 = position + velocity.normalized() * look_ahead * 0.5
+	
+	# Find the most threatening obstacle
+	var nearest: Area3D = null
+	var nearest_distance: float = OBSTACLE_MAX_DIST
+	
+	for o in obstacles:
+		var d1: float = ahead.distance_to(o.global_position)
+		var d2: float = half_ahead.distance_to(o.global_position)
+		var d3: float = position.distance_to(o.global_position)
+		var closest: float = min(d1, d2, d3)
+		
+		if closest < nearest_distance:
+			nearest_distance = closest
+			nearest = o
+			
+	if nearest == null:
+		return Vector3.ZERO
+		
+	var avoidance: Vector3 = ahead - nearest.global_position
+	return avoidance.normalized() * MAX_FORCE
 
 
 func _on_panic_area_entered(area: Area3D) -> void:
@@ -180,3 +217,14 @@ func _on_panic_area_entered(area: Area3D) -> void:
 func _on_panic_area_exited(area: Area3D) -> void:
 
 	panic_by.erase(area)
+
+
+func _on_obstacle_detection_area_entered(area: Area3D) -> void:
+	
+	if area.is_in_group("obstacles"):
+		obstacles.append(area)
+
+func _on_obstacle_detection_area_exited(area: Area3D) -> void:
+	
+	if area.is_in_group("obstacles"):
+		obstacles.erase(area)
