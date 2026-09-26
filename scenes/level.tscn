@@ -41,7 +41,7 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Ground" unique_id=1219543948]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Wall1" type="StaticBody3D" parent="Map" unique_id=1349482913]
+[node name="Wall1" type="StaticBody3D" parent="Map" unique_id=1349482913 groups=["obstacles"]]
 transform = Transform3D(3.9505768, 0, -0.9992195, 0, 5, 0, 99.92194, 0, 0.039505765, -44.406273, 0, -7.234818)
 collision_mask = 15
 
@@ -51,7 +51,7 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall1" unique_id=511969998]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Wall2" type="StaticBody3D" parent="Map" unique_id=161824770]
+[node name="Wall2" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
 transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 20.732449)
 collision_mask = 15
 
@@ -61,7 +61,7 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall2" unique_id=1519158370]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Wall3" type="StaticBody3D" parent="Map" unique_id=1242347814]
+[node name="Wall3" type="StaticBody3D" parent="Map" unique_id=1242347814 groups=["obstacles"]]
 transform = Transform3D(3.9505773, 0, -0.99921954, 0, 5, 0, 99.921936, 0, 0.039505765, 45.870087, -3.8146973e-06, -0.09259796)
 collision_mask = 15
 
@@ -71,7 +71,7 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall3" unique_id=1496998397]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Wall4" type="StaticBody3D" parent="Map" unique_id=1531075389]
+[node name="Wall4" type="StaticBody3D" parent="Map" unique_id=1531075389 groups=["obstacles"]]
 transform = Transform3D(51.616596, 0, 0, 0, 5, 0, 0, 0, 1, -35.043312, 0, -38.50861)
 collision_mask = 15
 
@@ -81,7 +81,7 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall4" unique_id=867161663]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Wall5" type="StaticBody3D" parent="Map" unique_id=1818945136]
+[node name="Wall5" type="StaticBody3D" parent="Map" unique_id=1818945136 groups=["obstacles"]]
 transform = Transform3D(51.616596, 0, 0, 0, 4.9999995, 0, 0, 0, 1, 38.96683, 0, -38.056667)
 collision_mask = 15
 
@@ -154,7 +154,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.110498, 1.0000019, -28.60
 [node name="Cow19" parent="Cows" unique_id=1853336108 instance=ExtResource("3_klq6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.24904, 1.0000019, -22.40312)
 
-[node name="Cow20" parent="Cows" unique_id=188131422 instance=ExtResource("3_klq6b")]
+[node name="Cow20" parent="Cows" unique_id=188131422 groups=["obstacles"] instance=ExtResource("3_klq6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.250366, 1.0000019, 0.01367569)
 
 [editable path="Player"]
