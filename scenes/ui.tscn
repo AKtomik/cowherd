@@ -5,6 +5,9 @@
 [sub_resource type="LabelSettings" id="LabelSettings_2r41h"]
 font_size = 60
 
+[sub_resource type="LabelSettings" id="LabelSettings_nt7q6"]
+font_size = 60
+
 [node name="UI" type="Control" unique_id=156332835]
 layout_mode = 3
 anchors_preset = 15
@@ -20,3 +23,14 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
 label_settings = SubResource("LabelSettings_2r41h")
+
+[node name="TimeScore" type="Label" parent="." unique_id=714086867]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 83.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_nt7q6")

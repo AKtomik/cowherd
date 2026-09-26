@@ -82,6 +82,7 @@ func _physics_process(delta: float) -> void:
 	look_at(current_direction)
 		
 	move_and_slide()
+	since += delta
 
 
 func apply_steering_force(steering_force: Vector3, max_speed: float, dt: float) -> void:
@@ -211,11 +212,9 @@ func obstacle_avoidance() -> Vector3:
 
 
 func _on_panic_area_entered(area: Area3D) -> void:
-	
 	panic_by.append(area)
-#
-func _on_panic_area_exited(area: Area3D) -> void:
 
+func _on_panic_area_exited(area: Area3D) -> void:
 	panic_by.erase(area)
 
 
@@ -227,11 +226,15 @@ func _on_obstacle_detection_area_exited(area: Area3D) -> void:
 	if area.is_in_group("obstacles") and area in obstacles:
 		obstacles.erase(area)
 
-
+var since = 0
 func _on_obstacle_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body not in obstacles:
 		obstacles.append(body)
+		print("_on_obstacle_detection_body_entered", obstacles, since)
+		since = 0
 
 func _on_obstacle_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body in obstacles:
 		obstacles.erase(body)
+		print("_on_obstacle_detection_body_exited", obstacles, since)
+		since = 0
