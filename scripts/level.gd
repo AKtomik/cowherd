@@ -30,7 +30,7 @@ func level_end():
 		get_tree().change_scene_to_file("res://scenes/narrative_scene.tscn")
 		Dialogic.start("interlude1")
 	else:
-		get_tree().change_scene_to_file("res://scenes/level.tscn")
+		get_tree().reload_current_scene()
 
 # score
 func add_score():

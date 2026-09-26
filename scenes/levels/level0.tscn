@@ -19,16 +19,18 @@
 script = ExtResource("1_ppgk2")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
-sun_node = NodePath("DirectionalLight3D")
+sun_node = NodePath("Sun")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=824461060]
-transform = Transform3D(0.7439209, -0.37955102, -0.5500205, 0.64033383, 0.6403338, 0.42419937, 0.19119148, -0.6677675, 0.719397, 0, 6.6657405, 0)
-light_angular_distance = 3.63
+[node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_2r41h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+level = NodePath("..")
 
-[node name="FollowCamera" type="Camera3D" parent="." unique_id=165947926 node_paths=PackedStringArray("follow_node", "magnet_position", "starting_position", "level")]
+[node name="CameraPackage" type="Node3D" parent="." unique_id=1496614505]
+
+[node name="FollowCamera" type="Camera3D" parent="CameraPackage" unique_id=59954025 node_paths=PackedStringArray("follow_node", "magnet_position", "starting_position", "level")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 20, 20)
 script = ExtResource("5_2r41h")
-follow_node = NodePath("../Player")
+follow_node = NodePath("../../Player")
 magnet_position = NodePath("../CameraMagnet")
 ALIGN_SPEED = 0.07
 CINEMATIC_SPEED = 0.4
@@ -36,17 +38,13 @@ MIDDLE_RATIO = 0.75
 FOLLOW_EXAGERATION = 3.0
 Y_LOCK_ENABLED = true
 starting_position = NodePath("../CameraStarting")
-level = NodePath("..")
+level = NodePath("../..")
 
-[node name="CameraMagnet" type="Node3D" parent="." unique_id=958983506]
+[node name="CameraMagnet" type="Node3D" parent="CameraPackage" unique_id=1166017232]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.46767)
 
-[node name="CameraStarting" type="Node3D" parent="." unique_id=203170082]
+[node name="CameraStarting" type="Node3D" parent="CameraPackage" unique_id=565849136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -53.254036)
-
-[node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_2r41h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
-level = NodePath("..")
 
 [node name="Map" type="Node3D" parent="." unique_id=369540063]
 
@@ -256,6 +254,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.24904, 1.0000019, -22.403
 
 [node name="Cow20" parent="Cows" unique_id=188131422 groups=["obstacles"] instance=ExtResource("3_klq6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.250366, 1.0000019, 0.01367569)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=824461060]
+transform = Transform3D(0.743921, -0.37955108, -0.5500206, 0.6403339, 0.64033383, 0.42419934, 0.1911915, -0.6677676, 0.7193971, 0, 6.6657405, 0)
+light_angular_distance = 3.63
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
