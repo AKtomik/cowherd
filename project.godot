@@ -26,8 +26,8 @@ window/stretch/aspect="expand"
 3d_physics/layer_2="enviro"
 3d_physics/layer_3="player"
 3d_physics/layer_4="cow"
-3d_physics/layer_9="panic area"
-3d_physics/layer_10="detection area"
+3d_physics/layer_9="panic provocation"
+3d_physics/layer_10="panic detection"
 
 [physics]
 

@@ -28,3 +28,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 
 [node name="Cow" parent="." unique_id=233384321 instance=ExtResource("2_6gjf6")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 5.3876557, 2.6934862, 2.7976751)
+
+[node name="Cow2" parent="." unique_id=537164334 instance=ExtResource("2_6gjf6")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.30958, 2.6934857, -1.005522)
+
+[node name="Cow3" parent="." unique_id=1966080469 instance=ExtResource("2_6gjf6")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 1.2719183, 2.6934862, 5.135236)
+
+[editable path="Player"]
