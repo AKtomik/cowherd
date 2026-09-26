@@ -11,7 +11,7 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
 
-[node name="Level" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("PEN", "UI", "sun_node")]
+[node name="Level2" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("PEN", "UI", "sun_node")]
 script = ExtResource("1_ppgk2")
 PEN = NodePath("Map/Pen")
 UI = NodePath("CanvasLayer/UI")
@@ -26,8 +26,9 @@ transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70
 script = ExtResource("5_2r41h")
 follow_node = NodePath("../Player")
 magnet_position = NodePath("../CameraMagnet")
-ALIGN_SPEED = 0.005
-FOLLOW_EXAGERATION = 5.0
+ALIGN_SPEED = 0.07
+MIDDLE_RATIO = 0.75
+FOLLOW_EXAGERATION = 3.0
 Y_LOCK_ENABLED = true
 starting_position = NodePath("../CameraStarting")
 level = NodePath("..")
@@ -172,5 +173,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.250366, 1.0000019, 0.0136
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("5_8c41q")]
-
-[editable path="Player"]
