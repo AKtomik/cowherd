@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://jf1c63gatqdj"]
+
+[ext_resource type="Script" uid="uid://c50m2hv8uegw5" path="res://scripts/ui.gd" id="1_nt7q6"]
+
+[node name="UI" type="Control" unique_id=156332835]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nt7q6")
+
+[node name="HerdingScore" type="Label" parent="." unique_id=1385031824]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
