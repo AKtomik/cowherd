@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://75wf2fkcgd2q"]
+
+[ext_resource type="Script" uid="uid://dv1v22ievp2n0" path="res://scenes/camera.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://b7ygxlcy10sun" path="res://scripts/horse.gd" id="2_qhqgy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bfnls"]
+radius = 0.7
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bfnls"]
+
+[node name="Cowherd" type="Node3D" unique_id=303297383]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=71666337 node_paths=PackedStringArray("follow_node")]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 6.396906, 10.632731)
+script = ExtResource("1_g2els")
+follow_node = NodePath("../Horse")
+
+[node name="Horse" type="CharacterBody3D" parent="." unique_id=421952062 node_paths=PackedStringArray("visual_rotated")]
+script = ExtResource("2_qhqgy")
+visual_rotated = NodePath("Rota")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Horse" unique_id=1750590295]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shape = SubResource("SphereShape3D_bfnls")
+
+[node name="Rota" type="Node3D" parent="Horse" unique_id=1786192518]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Horse/Rota" unique_id=530511716]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_bfnls")
