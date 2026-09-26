@@ -9,8 +9,9 @@ class_name Cow
 @export var cow_shape: CollisionShape3D
 
 # General var
-@export var MAX_SPEED: float = 5.0
-@export var MAX_FORCE: float = 10.0 # Max steering force
+@export var MAX_SPEED_IDLE: float = 5.0
+@export var MAX_SPEED_FLEE: float = 10.0 # Used when fleeing
+@export var MAX_FORCE: float = 200.0 # Max steering force
 @export var MASS: float = 1.0
 
 # Wander var
@@ -22,7 +23,7 @@ var wander_angle: float = 0 # Current wander angle
 
 # Flee var
 var panic_by: Array = []
-@export var FLEE_WEIGHT: float = 1.0
+@export var FLEE_WEIGHT: float = 200.0
 
 # Flock var
 @export var SEPARATION_RADIUS: float = 2.0 # Personal space
@@ -42,31 +43,37 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
+	var max_speed = MAX_SPEED_IDLE
+	
 	var wander_force = wander()
 	
 	var flee_force = Vector3.ZERO
 	var count: int = 0
 	for t in panic_by:
 		flee_force += flee(t)
+		count += 1
 	if count > 0:
 		flee_force = flee_force / float(count)
+		max_speed = MAX_SPEED_FLEE
 		
 	var flock_force = flock()
 	
-	var composite_force = wander_force * WANDER_WEIGHT + flee_force * FLEE_WEIGHT + flock_force * FLOCK_WEIGHT
-	apply_steering_force(composite_force, delta)
+	# Priority based truncation
+	var composite_force = flee_force * FLEE_WEIGHT
+	if composite_force.length() < MAX_FORCE:
+		composite_force += flock_force * FLOCK_WEIGHT
+	if composite_force.length() < MAX_FORCE:
+		composite_force += wander_force * WANDER_WEIGHT
+	apply_steering_force(composite_force, max_speed, delta)
 	
 	# Rotate to face the right direction
 	var current_direction = global_position + velocity
-	var facing = current_direction
-	print(facing)
-	look_at(facing)
-	
+	look_at(current_direction)
+		
 	move_and_slide()
 
 
-
-func apply_steering_force(steering_force: Vector3, dt: float) -> void:
+func apply_steering_force(steering_force: Vector3, max_speed: float, dt: float) -> void:
 	
 	# Truncate to max force
 	if steering_force.length() > MAX_FORCE:
@@ -78,8 +85,8 @@ func apply_steering_force(steering_force: Vector3, dt: float) -> void:
 	velocity += acceleration * dt
 	
 	# Clamp to max speed
-	if velocity.length() > MAX_SPEED:
-		velocity = velocity.normalized() * MAX_SPEED
+	if velocity.length() > max_speed:
+		velocity = velocity.normalized() * max_speed
 
 
 func wander() -> Vector3:
@@ -96,7 +103,7 @@ func wander() -> Vector3:
 
 func seek(target: Vector3) -> Vector3:
 	
-	var desired: Vector3 = (target - position).normalized() * MAX_SPEED
+	var desired: Vector3 = (target - position).normalized() * MAX_SPEED_IDLE
 	var force = desired - velocity
 	
 	return force
@@ -104,7 +111,7 @@ func seek(target: Vector3) -> Vector3:
 
 func flee(threat: Area3D) -> Vector3:
 	
-	var desired: Vector3 = (position - threat.position).normalized() * MAX_SPEED
+	var desired: Vector3 = (global_position - threat.global_position).normalized() * MAX_SPEED_FLEE
 	var force = desired - velocity
 	
 	return force
@@ -167,9 +174,9 @@ func flock_cohesion() -> Vector3:
 
 
 func _on_panic_area_entered(area: Area3D) -> void:
-	print("enter:", self, area)
+	
 	panic_by.append(area)
 #
 func _on_panic_area_exited(area: Area3D) -> void:
-	print("exit:", self, area)
+
 	panic_by.erase(area)

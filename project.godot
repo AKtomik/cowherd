@@ -22,7 +22,6 @@ window/stretch/aspect="expand"
 
 [global_group]
 
-cow_area=""
 cows=""
 
 [layer_names]

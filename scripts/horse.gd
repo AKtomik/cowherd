@@ -1,8 +1,7 @@
 extends CharacterBody3D
 
-
-@export var SPEED_MAX = 10.0
-@export var SPEED_ACCELERATION = .7
+@export var SPEED_MAX = 12.0
+@export var SPEED_ACCELERATION = 1
 @export var SPEED_DECELERATION = .05
 
 @export var visual_rotated: Node3D
