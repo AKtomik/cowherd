@@ -22,8 +22,8 @@ window/stretch/aspect="expand"
 
 [global_group]
 
-cows=""
 cow_area=""
+cows=""
 obstacles=""
 
 [layer_names]
@@ -34,6 +34,7 @@ obstacles=""
 3d_physics/layer_4="cow"
 3d_physics/layer_9="panic provocation"
 3d_physics/layer_10="panic detection"
+3d_physics/layer_11="pen area"
 
 [physics]
 
