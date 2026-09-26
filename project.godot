@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Coward"
-run/main_scene="uid://dpro8hklwkc22"
+run/main_scene="uid://c4qt43tbd3w5x"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -52,8 +52,8 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [global_group]
 
-cow_area=""
 cows=""
+cow_area=""
 obstacles=""
 
 [input]
