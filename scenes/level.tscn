@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dpro8hklwkc22"]
+
+[ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/level.gd" id="1_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/player.tscn" id="2_2r41h"]
+[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/cow.tscn" id="3_klq6b"]
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/pen.tscn" id="4_b121j"]
+[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui.tscn" id="5_8c41q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
+
+[node name="Level" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("PEN", "UI", "sun_node")]
+script = ExtResource("1_ppgk2")
+PEN = NodePath("Map/Pen")
+UI = NodePath("CanvasLayer/UI")
+sun_node = NodePath("DirectionalLight3D")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=824461060]
+transform = Transform3D(1, 0, 0, 0, 0.9055688, 0.4241994, 0, -0.4241994, 0.9055688, 0, 6.6657405, 0)
+light_angular_distance = 3.63
+
+[node name="Player" parent="." unique_id=303297383 instance=ExtResource("2_2r41h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+
+[node name="CameraPlayer" parent="Player" index="0" unique_id=71666337]
+visible = true
+
+[node name="Map" type="Node3D" parent="." unique_id=369540063]
+
+[node name="Pen" parent="Map" unique_id=1444030719 instance=ExtResource("4_b121j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.810415, -4.7683716e-07, -18.392918)
+
+[node name="Ground" type="StaticBody3D" parent="Map" unique_id=659294413]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Ground" unique_id=897421936]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Ground" unique_id=1219543948]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
+
+[node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("5_8c41q")]
+
+[node name="Cows" type="Node3D" parent="." unique_id=750490606]
+
+[node name="Cow" parent="Cows" unique_id=233384321 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.649092, 1, -1.7552805)
+
+[node name="Cow2" parent="Cows" unique_id=1920320106 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.003189, 1, 13.24519)
+
+[node name="Cow3" parent="Cows" unique_id=1095926027 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.940536, 1, -2.1029997)
+
+[node name="Cow4" parent="Cows" unique_id=1047863658 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.272404, 1, -14.869044)
+
+[node name="Cow5" parent="Cows" unique_id=366816852 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.861467, 1, 8.243958)
+
+[node name="Cow6" parent="Cows" unique_id=495916648 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.654844, 1, 12.547262)
+
+[node name="Cow7" parent="Cows" unique_id=32860563 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.323208, 0.99999815, -2.6911592)
+
+[node name="Cow8" parent="Cows" unique_id=1473179791 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.821857, 1, 10.49454)
+
+[node name="Cow9" parent="Cows" unique_id=629701607 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.992559, 1, -31.650501)
+
+[node name="Cow10" parent="Cows" unique_id=83496599 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.96875, 1, -14.820006)
+
+[editable path="Player"]
