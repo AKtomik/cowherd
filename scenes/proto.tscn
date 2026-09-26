@@ -10,6 +10,10 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_0dxmq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0dxmq"]
+
 [node name="Level" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("PEN", "UI")]
 script = ExtResource("1_ambff")
 PEN = NodePath("Pen")
@@ -71,5 +75,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.810413, -4.7683716e-07, -
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("5_jiowo")]
+
+[node name="ObstacleTest" type="Area3D" parent="." unique_id=837882875 groups=["obstacles"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.421541, 0, -11.614694)
+collision_mask = 8
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ObstacleTest" unique_id=1650985326]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_0dxmq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleTest" unique_id=1625864484]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_0dxmq")
 
 [editable path="Player"]
