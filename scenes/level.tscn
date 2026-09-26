@@ -41,6 +41,56 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Ground" unique_id=1219543948]
 mesh = SubResource("BoxMesh_u60bi")
 
+[node name="Wall1" type="StaticBody3D" parent="Map" unique_id=1349482913]
+transform = Transform3D(3.9505768, 0, -0.9992195, 0, 5, 0, 99.92194, 0, 0.039505765, -44.406273, 0, -7.234818)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall1" unique_id=901247071]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall1" unique_id=511969998]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall2" type="StaticBody3D" parent="Map" unique_id=161824770]
+transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 20.732449)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall2" unique_id=1680730822]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall2" unique_id=1519158370]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall3" type="StaticBody3D" parent="Map" unique_id=1242347814]
+transform = Transform3D(3.9505773, 0, -0.99921954, 0, 5, 0, 99.921936, 0, 0.039505765, 45.870087, -3.8146973e-06, -0.09259796)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall3" unique_id=1768130953]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall3" unique_id=1496998397]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall4" type="StaticBody3D" parent="Map" unique_id=1531075389]
+transform = Transform3D(51.616596, 0, 0, 0, 5, 0, 0, 0, 1, -35.043312, 0, -38.50861)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall4" unique_id=1372664398]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall4" unique_id=867161663]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Wall5" type="StaticBody3D" parent="Map" unique_id=1818945136]
+transform = Transform3D(51.616596, 0, 0, 0, 4.9999995, 0, 0, 0, 1, 38.96683, 0, -38.056667)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall5" unique_id=659824954]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall5" unique_id=369489505]
+mesh = SubResource("BoxMesh_u60bi")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
 [node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("5_8c41q")]
@@ -76,5 +126,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.992559, 1, -31.650501)
 
 [node name="Cow10" parent="Cows" unique_id=83496599 instance=ExtResource("3_klq6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.96875, 1, -14.820006)
+
+[node name="Cow11" parent="Cows" unique_id=720488893 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.149593, 1.0000019, -25.10505)
+
+[node name="Cow12" parent="Cows" unique_id=1768826826 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.33736, 0.9999981, -29.944569)
+
+[node name="Cow13" parent="Cows" unique_id=2038344594 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.375397, 0.9999981, 7.9442177)
+
+[node name="Cow14" parent="Cows" unique_id=1738425765 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1346703, 1, 15.3454075)
+
+[node name="Cow15" parent="Cows" unique_id=43677096 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.102566, 1.0000019, 1.6184845)
+
+[node name="Cow16" parent="Cows" unique_id=1152555414 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.814583, 1.0000019, -15.759878)
+
+[node name="Cow17" parent="Cows" unique_id=994209798 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.565363, 1.0000019, -27.624376)
+
+[node name="Cow18" parent="Cows" unique_id=2033428829 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.110498, 1.0000019, -28.603342)
+
+[node name="Cow19" parent="Cows" unique_id=1853336108 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.24904, 1.0000019, -22.40312)
+
+[node name="Cow20" parent="Cows" unique_id=188131422 instance=ExtResource("3_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.250366, 1.0000019, 0.01367569)
 
 [editable path="Player"]
