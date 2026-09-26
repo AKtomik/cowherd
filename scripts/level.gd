@@ -8,7 +8,7 @@ var score = 0
 @export var sun_node: DirectionalLight3D
 @export var level_duration_seconds: float = 60
 @export var level_progress_seconds: float = 0
-
+@export var level_goal: int = 2
 
 # state
 var cinematic = true
@@ -26,7 +26,11 @@ func start():
 func level_end():
 	print("level end!")
 	ended = true
-	get_tree().change_scene_to_file("res://scenes/level.tscn")
+	if score >= level_goal:
+		get_tree().change_scene_to_file("res://scenes/narrative_scene.tscn")
+		Dialogic.start("interlude1")
+	else:
+		get_tree().change_scene_to_file("res://scenes/level.tscn")
 
 # score
 func add_score():
