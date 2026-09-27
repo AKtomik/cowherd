@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bntbb8jrqwcl4"]
 
-[ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/cow.gd" id="1_fgglk"]
+[ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/entities/cow.gd" id="1_fgglk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fgglk"]
 radius = 0.7

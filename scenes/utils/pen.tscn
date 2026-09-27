@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://diunkg44s7ous"]
 
-[ext_resource type="Script" uid="uid://bsnbsckeq66wq" path="res://scripts/pen.gd" id="1_ngeja"]
+[ext_resource type="Script" uid="uid://bsnbsckeq66wq" path="res://scripts/utils/pen.gd" id="1_0kahl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0dxmq"]
 size = Vector3(50, 5, 10)
@@ -12,7 +12,7 @@ size = Vector3(50, 5, 10)
 size = Vector3(50, 5, 2)
 
 [node name="Pen" type="Node3D" unique_id=1444030719 node_paths=PackedStringArray("COLLISION")]
-script = ExtResource("1_ngeja")
+script = ExtResource("1_0kahl")
 COLLISION = NodePath("EnterArea/CollisionShape3D")
 
 [node name="EnterArea" type="Area3D" parent="." unique_id=1202511450]

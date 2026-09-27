@@ -1,9 +1,9 @@
 extends Node
 
-@onready var menu_scene = preload("res://scenes/menu.tscn")
-@onready var narrative_scene = preload("res://scenes/narrative_scene.tscn")
+@onready var menu_scene = preload("res://scenes/ui/menu.tscn")
+@onready var narrative_scene = preload("res://scenes/narrative/narrative_scene.tscn")
 @onready var level_scene = preload("res://scenes/levels/level0.tscn")
-@onready var game_over_scene = preload("res://scenes/game_over.tscn")
+@onready var game_over_scene = preload("res://scenes/narrative/game_over.tscn")
 
 var game_over_text = ""
 

@@ -2,8 +2,8 @@ extends Node2D
 
 @export var credits_layer: CanvasLayer
 
-@onready var menu_scene = preload("res://scenes/menu.tscn")
-@onready var narrative_scene = preload("res://scenes/narrative_scene.tscn")
+@onready var menu_scene = preload("res://scenes/ui/menu.tscn")
+@onready var narrative_scene = preload("res://scenes/narrative/narrative_scene.tscn")
 
 
 # Called when the node enters the scene tree for the first time.

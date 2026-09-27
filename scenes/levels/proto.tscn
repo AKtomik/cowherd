@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c1m34p06gpycu"]
 
-[ext_resource type="Script" uid="uid://04w1j70kwehx" path="res://scripts/proto.gd" id="1_ambff"]
-[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/player.tscn" id="1_q4ytd"]
-[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/cow.tscn" id="2_6gjf6"]
-[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/pen.tscn" id="3_bfnls"]
-[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui.tscn" id="5_jiowo"]
+[ext_resource type="Script" uid="uid://04w1j70kwehx" path="res://scripts/levels/proto.gd" id="1_ambff"]
+[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="1_q4ytd"]
+[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="2_6gjf6"]
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/utils/pen.tscn" id="3_bfnls"]
+[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="5_jiowo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
 
@@ -89,3 +89,4 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_0dxmq")
 
 [editable path="Player"]
+[editable path="Player/VisalRotated/Cheval"]

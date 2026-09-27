@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jf1c63gatqdj"]
 
-[ext_resource type="Script" uid="uid://c50m2hv8uegw5" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://c50m2hv8uegw5" path="res://scripts/ui/game_ui.gd" id="1_gwk6t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2r41h"]
 font_size = 60
@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nt7q6")
+script = ExtResource("1_gwk6t")
 
 [node name="HerdingScore" type="Label" parent="." unique_id=1385031824]
 layout_mode = 0

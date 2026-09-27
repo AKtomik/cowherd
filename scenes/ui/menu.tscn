@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4qt43tbd3w5x"]
 
-[ext_resource type="Script" uid="uid://dyhaqrjdo8rwi" path="res://scripts/menu.gd" id="1_yqeox"]
-[ext_resource type="PackedScene" uid="uid://cmwtmuek5isnr" path="res://scenes/credits.tscn" id="2_vjb58"]
+[ext_resource type="Script" uid="uid://dyhaqrjdo8rwi" path="res://scripts/ui/menu.gd" id="1_yqeox"]
+[ext_resource type="PackedScene" uid="uid://cmwtmuek5isnr" path="res://scenes/ui/credits.tscn" id="2_vjb58"]
 
 [node name="Menu" type="Node2D" unique_id=1061989209 node_paths=PackedStringArray("credits_layer")]
 script = ExtResource("1_yqeox")
