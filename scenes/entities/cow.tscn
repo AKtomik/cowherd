@@ -1,11 +1,21 @@
 [gd_scene format=3 uid="uid://bntbb8jrqwcl4"]
 
 [ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/entities/cow.gd" id="1_fgglk"]
+[ext_resource type="PackedScene" uid="uid://ceekdq1opge0w" path="res://models/vache/vache.fbx" id="2_q53vi"]
+[ext_resource type="Texture2D" uid="uid://f33php24jfji" path="res://models/vache/M_Vache_BaseColor.png" id="3_wm41f"]
+[ext_resource type="Texture2D" uid="uid://cwakpl0tugt7c" path="res://models/vache/M_Vache_Normal.png" id="4_vg2fe"]
+[ext_resource type="Texture2D" uid="uid://b7gqm1jkgqyd3" path="res://models/vache/M_Vache_OcclusionRoughnessMetallic.png" id="5_iqv4j"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fgglk"]
-radius = 0.7
+radius = 2.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nd8rp"]
+albedo_texture = ExtResource("3_wm41f")
+roughness_texture = ExtResource("5_iqv4j")
+normal_enabled = true
+normal_texture = ExtResource("4_vg2fe")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
 radius = 3.0
@@ -42,7 +52,14 @@ shape = SubResource("SphereShape3D_fgglk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=709582235]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_u60bi")
+
+[node name="vache" parent="." unique_id=1303397550 instance=ExtResource("2_q53vi")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="vache_low" parent="vache" index="0" unique_id=301760064]
+material_override = SubResource("StandardMaterial3D_nd8rp")
 
 [node name="PanicDetection" type="Area3D" parent="." unique_id=1198390454 groups=["cow_area"]]
 collision_layer = 8
@@ -78,3 +95,5 @@ debug_color = Color(0, 0.6039216, 0, 0.21568628)
 [connection signal="body_exited" from="ObstacleDetection" to="." method="_on_obstacle_detection_body_exited"]
 [connection signal="body_entered" from="NeighbourDetection" to="." method="_on_neighbours_detection_body_entered"]
 [connection signal="body_exited" from="NeighbourDetection" to="." method="_on_neighbours_detection_body_exited"]
+
+[editable path="vache"]
