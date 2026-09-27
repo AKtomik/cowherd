@@ -1,2 +1,2 @@
 c'est la fin bien joué
-do GameOverlord
+do GameOverlord.end_game()
