@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://b2p1sgcu5we4x"]
+
+[ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_8a7m2"]
+[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_plydf"]
+[ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_5ntmo"]
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_nkeig"]
+[ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
+[ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
+[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
+[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
+
+[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("pen_node", "ui_node", "sun_node")]
+script = ExtResource("1_8a7m2")
+pen_node = NodePath("Map/Pen")
+ui_node = NodePath("CanvasLayer/UI")
+sun_node = NodePath("Sun")
+
+[node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_plydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
+level = NodePath("..")
+
+[node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_5ntmo")]
+
+[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
+level = NodePath("../..")
+follow_node = NodePath("../../Player")
+
+[node name="CameraStarting" parent="CameraThings" index="2" unique_id=826343550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 58.950493)
+
+[node name="Map" type="Node3D" parent="." unique_id=369540063]
+
+[node name="Pen" parent="Map" unique_id=1444030719 instance=ExtResource("4_nkeig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1680999, 1.4305115e-06, -97.11867)
+
+[node name="Ground" type="StaticBody3D" parent="Map" unique_id=659294413]
+transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 0, 0)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Ground" unique_id=897421936]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Ground" unique_id=1219543948]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallLeft" type="StaticBody3D" parent="Map" unique_id=1349482913 groups=["obstacles"]]
+transform = Transform3D(6.3524175, 0, -1.0232378, 0, 5, 0, 160.6717, 0, 0.04045537, -49.045193, 0, -71.933655)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallLeft" unique_id=901247071]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallLeft" unique_id=511969998]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallRight" type="StaticBody3D" parent="Map" unique_id=1242347814 groups=["obstacles"]]
+transform = Transform3D(6.352418, 0, -1.023238, 0, 5, 0, 160.67168, 0, 0.04045537, 49.667873, -3.8146973e-06, -60.00815)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallRight" unique_id=1768130953]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallRight" unique_id=1496998397]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 4.7683716e-07, 0, 0.9999999, 0, 0, 0)
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallDown2" type="StaticBody3D" parent="Map" unique_id=127492038 groups=["obstacles"]]
+transform = Transform3D(23.542858, 0, -1.1046455, 0, 4.9999995, 0, 21.752048, 0, 1.1955891, -35.06701, 0, -1.5687962)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallDown2" unique_id=1422554007]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown2" unique_id=567965005]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallDown3" type="StaticBody3D" parent="Map" unique_id=912444931 groups=["obstacles"]]
+transform = Transform3D(19.63582, 0, 1.2865901, 0, 4.9999995, 0, -25.334799, 0, 0.99717593, 44.524796, 0, -1.6142931)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallDown3" unique_id=137251623]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown3" unique_id=1775571571]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallDown" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
+transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 5.941078)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallDown" unique_id=1680730822]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown" unique_id=1519158370]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopFence1" type="StaticBody3D" parent="Map" unique_id=1531075389 groups=["obstacles"]]
+transform = Transform3D(51.616596, 0, 0, 0, 5, 0, 0, 0, 1, -35.043312, 0, -91.734924)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopFence1" unique_id=1372664398]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopFence1" unique_id=867161663]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopFence2" type="StaticBody3D" parent="Map" unique_id=1818945136 groups=["obstacles"]]
+transform = Transform3D(51.616596, 0, 0, 0, 4.9999995, 0, 0, 0, 1, 38.96683, 0, -91.282974)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopFence2" unique_id=659824954]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopFence2" unique_id=369489505]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.02257657, 0, -0.41457367)
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopLeft1" type="StaticBody3D" parent="Map" unique_id=947119385 groups=["obstacles"]]
+transform = Transform3D(23.940762, 0, 1.0823654, 0, 5, 0, -21.313322, 0, 1.2157959, -32.22363, 0, -81.81917)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopLeft1" unique_id=294752705]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopLeft1" unique_id=1882625375]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopLeft2" type="StaticBody3D" parent="Map" unique_id=185853593 groups=["obstacles"]]
+transform = Transform3D(7.19088, 0, 1.5862911, 0, 5, 0, -31.236341, 0, 0.365178, -45.17497, 0, -59.244247)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopLeft2" unique_id=970608971]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopLeft2" unique_id=820563889]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopRight1" type="StaticBody3D" parent="Map" unique_id=741828972 groups=["obstacles"]]
+transform = Transform3D(9.448801, 0, -1.5554497, 0, 5, 0, 30.629032, 0, 0.4798432, 21.466091, 0, -81.45439)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopRight1" unique_id=682378963]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopRight1" unique_id=575341668]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="WallTopRight2" type="StaticBody3D" parent="Map" unique_id=2137681924 groups=["obstacles"]]
+transform = Transform3D(27.800774, 0, -0.81020665, 0, 4.9999995, 0, 15.954125, 0, 1.4118209, 39.32284, 0, -58.953484)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopRight2" unique_id=1193786442]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopRight2" unique_id=1839554464]
+mesh = SubResource("BoxMesh_u60bi")
+
+[node name="Cactus" parent="Map" unique_id=454719588 instance=ExtResource("5_nfihu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
+
+[node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_lgguw")]
+transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, 17.328205, 1.9073486e-06, -31.472126)
+
+[node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_lgguw")]
+transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -17.5752, 5.722046e-06, -62.772892)
+
+[node name="Cows" type="Node3D" parent="." unique_id=750490606]
+
+[node name="Cow" parent="Cows" unique_id=233384321 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.72507, 1, -18.74133)
+
+[node name="Cow2" parent="Cows" unique_id=869209800 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.68214, 1, -34.972256)
+
+[node name="Cow3" parent="Cows" unique_id=235132480 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.289894, 1, -37.45742)
+
+[node name="Cow4" parent="Cows" unique_id=540668986 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.879284, 1, -19.884392)
+
+[node name="Cow5" parent="Cows" unique_id=909147723 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.078569, 0.9999962, -27.692345)
+
+[node name="Cow6" parent="Cows" unique_id=426187431 instance=ExtResource("7_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4472628, 0.9999962, -59.092308)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=824461060]
+transform = Transform3D(0.743921, -0.37955108, -0.5500206, 0.6403339, 0.64033383, 0.42419934, 0.1911915, -0.6677676, 0.7193971, 0, 6.6657405, 0)
+light_angular_distance = 3.63
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
+
+[node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("8_ps2vj")]
+
+[editable path="CameraThings"]
+[editable path="Map/Pen"]
