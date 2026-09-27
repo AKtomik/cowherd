@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://cec72ktdq4lo8"]
 
+[ext_resource type="Texture2D" uid="uid://dg4jownqbj1ua" path="res://assets/UI/background.png" id="1_h7bwh"]
+
 [node name="NarrativeScene" type="Node2D" unique_id=428836874]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1416930939]
 offset_right = 1213.0
 offset_bottom = 729.0
-color = Color(0.68768233, 0.9699637, 0.9308961, 1)
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1677276563]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_h7bwh")

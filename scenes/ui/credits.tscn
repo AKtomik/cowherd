@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cmwtmuek5isnr"]
 
+[ext_resource type="Texture2D" uid="uid://dg4jownqbj1ua" path="res://assets/UI/background.png" id="1_oap8i"]
+
 [node name="Credits" type="Control" unique_id=1366788260]
 layout_mode = 3
 anchors_preset = 15
@@ -8,10 +10,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=751334975]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1504666275]
 layout_mode = 0
-offset_right = 1204.0
-offset_bottom = 685.0
+offset_right = 1754.0
+offset_bottom = 883.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2035672622]
+layout_mode = 0
+offset_right = 1768.0
+offset_bottom = 993.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_oap8i")
 
 [node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=1566900674]
 layout_mode = 1
