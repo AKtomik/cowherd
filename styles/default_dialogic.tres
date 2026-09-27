@@ -29,7 +29,9 @@ scene = ExtResource("5_vr060")
 overrides = {
 "box_modulate_global_color": "false",
 "box_panel": "\"res://resources/text_box_dialogic.tres\"",
-"box_size": "Vector2(1000, 160)",
+"box_size": "Vector2(1000, 320)",
+"name_label_custom_size": "20.0",
+"name_label_use_global_size": "false",
 "portrait_bg_modulate": "Color(0, 0, 0, 0)"
 }
 
@@ -68,4 +70,4 @@ layer_info = {
 "15": SubResource("Resource_dxoom"),
 "16": SubResource("Resource_82nkh")
 }
-metadata/_latest_layer = "14"
+metadata/_latest_layer = "12"
