@@ -1,47 +1,43 @@
-[gd_scene format=3 uid="uid://b2p1sgcu5we4x"]
+[gd_scene format=3 uid="uid://cercslfd82e7h"]
 
-[ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_8a7m2"]
-[ext_resource type="PackedScene" uid="uid://cec72ktdq4lo8" path="res://scenes/narrative/narrative_scene.tscn" id="2_5ntmo"]
-[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_plydf"]
-[ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_5ntmo"]
-[ext_resource type="Resource" uid="uid://bhwd45fbbf4n6" path="res://assets/Narrative/interlude1.dtl" id="3_nkeig"]
-[ext_resource type="Resource" uid="uid://du3awvkimlfxh" path="res://assets/Narrative/retry1.dtl" id="4_nfihu"]
-[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_nkeig"]
-[ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
-[ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
-[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
-[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
+[ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_b0vvs"]
+[ext_resource type="PackedScene" uid="uid://cec72ktdq4lo8" path="res://scenes/narrative/narrative_scene.tscn" id="2_gycjm"]
+[ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_oyk6k"]
+[ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_gycjm"]
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_8i1lk"]
+[ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_hgky1"]
+[ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_b4tpv"]
+[ext_resource type="PackedScene" uid="uid://bxh2jk4h4w186" path="res://scenes/level_enviro/maguey.tscn" id="7_hkuam"]
+[ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="8_f3b2k"]
+[ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="9_sqrei"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
 
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
-script = ExtResource("1_8a7m2")
-score_goal = 4
+script = ExtResource("1_b0vvs")
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
-scene_success = ExtResource("2_5ntmo")
-dialog_success = ExtResource("3_nkeig")
-dialog_failure = ExtResource("4_nfihu")
+scene_success = ExtResource("2_gycjm")
 
-[node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_plydf")]
+[node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_oyk6k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 level = NodePath("..")
 
-[node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_5ntmo")]
+[node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_gycjm")]
 
 [node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
 follow_node = NodePath("../../Player")
 
 [node name="CameraStarting" parent="CameraThings" index="2" unique_id=826343550]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -73.43982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -135.07617)
 
 [node name="Map" type="Node3D" parent="." unique_id=369540063]
 
-[node name="Pen" parent="Map" unique_id=1444030719 instance=ExtResource("4_nkeig")]
+[node name="Pen" parent="Map" unique_id=1444030719 instance=ExtResource("4_8i1lk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1680999, 1.4305115e-06, -97.11867)
 
 [node name="Ground" type="StaticBody3D" parent="Map" unique_id=659294413]
@@ -177,39 +173,51 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopRight2" unique_id=1839554464]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Cactus" parent="Map" unique_id=454719588 instance=ExtResource("5_nfihu")]
+[node name="Cactus" parent="Map" unique_id=454719588 instance=ExtResource("5_hgky1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
 
-[node name="Cactus2" parent="Map" unique_id=864635818 instance=ExtResource("5_nfihu")]
+[node name="Cactus2" parent="Map" unique_id=864635818 instance=ExtResource("5_hgky1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.616098, 0, -2.5368962)
 
-[node name="Cactus3" parent="Map" unique_id=1383927900 instance=ExtResource("5_nfihu")]
+[node name="Cactus3" parent="Map" unique_id=1383927900 instance=ExtResource("5_hgky1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.605263, -1.9073486e-06, -15.628393)
 
-[node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_lgguw")]
+[node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_b4tpv")]
 transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, 17.328205, 1.9073486e-06, -31.472126)
 
-[node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_lgguw")]
+[node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_b4tpv")]
 transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -9.607142, 3.8146973e-06, -64.781006)
+
+[node name="Maguey" parent="Map" unique_id=1538181613 instance=ExtResource("7_hkuam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.527628, -1.9073486e-06, -21.206638)
+
+[node name="Maguey2" parent="Map" unique_id=1930859589 instance=ExtResource("7_hkuam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.641022, -1.9073486e-06, -3.2621775)
+
+[node name="Maguey5" parent="Map" unique_id=612398101 instance=ExtResource("7_hkuam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.641022, -1.9073486e-06, -3.2621775)
+
+[node name="Maguey4" parent="Map" unique_id=1268145745 instance=ExtResource("7_hkuam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.271515, -1.9073486e-06, -69.296326)
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
-[node name="Cow" parent="Cows" unique_id=233384321 instance=ExtResource("7_jprdt")]
+[node name="Cow" parent="Cows" unique_id=233384321 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.72507, 1, -18.74133)
 
-[node name="Cow2" parent="Cows" unique_id=869209800 instance=ExtResource("7_jprdt")]
+[node name="Cow2" parent="Cows" unique_id=869209800 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.68214, 1, -34.972256)
 
-[node name="Cow3" parent="Cows" unique_id=235132480 instance=ExtResource("7_jprdt")]
+[node name="Cow3" parent="Cows" unique_id=235132480 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.289894, 1, -37.45742)
 
-[node name="Cow4" parent="Cows" unique_id=540668986 instance=ExtResource("7_jprdt")]
+[node name="Cow4" parent="Cows" unique_id=540668986 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.879284, 1, -19.884392)
 
-[node name="Cow5" parent="Cows" unique_id=909147723 instance=ExtResource("7_jprdt")]
+[node name="Cow5" parent="Cows" unique_id=909147723 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.078569, 0.9999962, -27.692345)
 
-[node name="Cow6" parent="Cows" unique_id=426187431 instance=ExtResource("7_jprdt")]
+[node name="Cow6" parent="Cows" unique_id=426187431 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4472628, 0.9999962, -59.092308)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=824461060]
@@ -218,7 +226,7 @@ light_angular_distance = 3.63
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=225907020]
 
-[node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("8_ps2vj")]
+[node name="UI" parent="CanvasLayer" unique_id=156332835 instance=ExtResource("9_sqrei")]
 
 [editable path="CameraThings"]
 [editable path="Map/Pen"]

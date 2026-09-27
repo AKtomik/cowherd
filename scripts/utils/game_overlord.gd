@@ -2,7 +2,8 @@ extends Node
 
 @onready var menu_scene = preload("res://scenes/ui/menu.tscn")
 @onready var narrative_scene = preload("res://scenes/narrative/narrative_scene.tscn")
-@onready var level_scene = preload("res://scenes/levels/level0.tscn")
+@onready var level_scene_1 = preload("res://scenes/levels/level1.tscn")
+@onready var level_scene_2 = preload("res://scenes/levels/level2.tscn")
 @onready var game_over_scene = preload("res://scenes/narrative/game_over.tscn")
 
 var game_over_text = ""
@@ -23,12 +24,11 @@ func start_game() -> void:
 
 
 func switch_to_level(id: int):
-	print(id)
-	if id == 1:
-		get_tree().change_scene_to_packed(level_scene)
-		
-	else:
-		printerr("Unknown level id")
+	print("switch to level ", id)
+	match id:
+		1: get_tree().change_scene_to_packed(level_scene_1)
+		2: get_tree().change_scene_to_packed(level_scene_2)
+		_: printerr("Unknown level id")
 
 
 func game_over(id: int) -> void:

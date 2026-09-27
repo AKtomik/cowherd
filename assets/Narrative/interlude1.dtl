@@ -1,1 +1,2 @@
 Vous avez survécu au premier niveau, bravo !
+do GameOverlord.switch_to_level(2)

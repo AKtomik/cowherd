@@ -1,14 +1,22 @@
 class_name Level
 extends Node3D
 
+@export_group("propeties")
+@export var duration_seconds: float = 60
+@export var progress_seconds: float = 0
+@export var score_goal: int = 2
+var score_current = 0
+
+@export_group("links")
+@export var sun_node: DirectionalLight3D
 @export var pen_node: Pen
 @export var ui_node: PlayUI
-var score = 0
 
-@export var sun_node: DirectionalLight3D
-@export var level_duration_seconds: float = 60
-@export var level_progress_seconds: float = 0
-@export var level_goal: int = 2
+@export_group("next")
+@export var scene_success: PackedScene
+@export var dialog_success: DialogicTimeline
+@export var scene_failure: PackedScene
+@export var dialog_failure: DialogicTimeline
 
 # state
 var cinematic = true
@@ -17,6 +25,7 @@ var ended = false
 
 func setup():
 	ui_node.visible = false
+	ui_node.update_herding_score(score_current, score_goal)
 
 func start():
 	cinematic = false
@@ -25,24 +34,25 @@ func start():
 	print("level started!")
 
 func level_end():
-	print("level end! ", score, "/", level_goal)
+	print("level end! ", score_current, "/", score_goal)
 	ended = true
-	if score >= level_goal:
-		get_tree().change_scene_to_file("res://scenes/narrative/narrative_scene.tscn")
-		Dialogic.start("interlude1")
+	if score_current >= score_goal:
+		if (scene_success): get_tree().change_scene_to_packed(scene_success)
+		if (dialog_success): Dialogic.start(dialog_success)
 	else:
-		get_tree().reload_current_scene()
+		if (scene_failure): get_tree().change_scene_to_packed(scene_failure)
+		if (dialog_failure): Dialogic.start(dialog_failure)
 
-# score
+# score_current
 func add_score():
 	if (ended): return
-	score += 1
-	ui_node.update_herding_score(score, level_goal)
+	score_current += 1
+	ui_node.update_herding_score(score_current, score_goal)
 
 func remove_score():
 	if (ended): return
-	score -= 1
-	ui_node.update_herding_score(score, level_goal)
+	score_current -= 1
+	ui_node.update_herding_score(score_current, score_goal)
 
 # loop
 func _ready() -> void:
@@ -52,12 +62,12 @@ func _ready() -> void:
 	print("level ready!")
 
 func _process(delta: float) -> void:
-	if (started): level_progress_seconds += delta
+	if (started && !ended): progress_seconds += delta
 	
-	ui_node.update_timer(level_progress_seconds, level_duration_seconds)
+	ui_node.update_timer(progress_seconds, duration_seconds)
 	
-	var progress = level_progress_seconds / level_duration_seconds
+	var progress = progress_seconds / duration_seconds
 	sun_node.rotation.x = - progress * PI
-	if (progress >= 1): level_end()
+	if (progress >= 1 && !ended): level_end()
 
 	
