@@ -43,7 +43,8 @@ directories/dtl_directory={
 "intro": "res://assets/Narrative/intro.dtl",
 "retry1": "res://assets/Narrative/retry1.dtl",
 "retry2": "res://assets/Narrative/retry2.dtl",
-"retry3": "res://assets/Narrative/retry3.dtl"
+"retry3": "res://assets/Narrative/retry3.dtl",
+"retry4": "res://assets/Narrative/retry4.dtl"
 }
 layout/style_directory={
 "": "res://styles/default_dialogic.tres",
