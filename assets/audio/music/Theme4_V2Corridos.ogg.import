@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Theme4_V2Corridos.ogg-7818eda9e8da7b035cdb334
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
