@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cs8is4thtdvny"]
+
+[ext_resource type="PackedScene" uid="uid://dcmxru3tlafkm" path="res://scenes/level_enviro/fence_simple.tscn" id="1_wwvn7"]
+
+[node name="FenceDouble" type="Node3D" unique_id=1726671758]
+
+[node name="FenceSimple" parent="." unique_id=1022040062 instance=ExtResource("1_wwvn7")]
+
+[node name="FenceSimple2" parent="." unique_id=1104271867 instance=ExtResource("1_wwvn7")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.170331, 0, 0)
+
+[node name="Barriere" parent="FenceSimple2/Barriere" parent_id_path=PackedInt32Array(1104271867, 2031057112) index="2" unique_id=936281466]
+visible = false
+
+[editable path="FenceSimple2"]
+[editable path="FenceSimple2/Barriere"]

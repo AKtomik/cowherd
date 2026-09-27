@@ -241,3 +241,4 @@ light_angular_distance = 3.63
 [editable path="CameraThings"]
 [editable path="Map/Pen"]
 [editable path="Map/KayouTall"]
+[editable path="Map/KayouTall/Caillou"]
