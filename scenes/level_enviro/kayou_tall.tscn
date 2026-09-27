@@ -21,12 +21,12 @@ collision_layer = 2
 collision_mask = 12
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1303470173]
-transform = Transform3D(4.7958326, 0, 0, 0, 4.7958326, 0, 0, 0, 4.7958326, 0, 0.47897246, -0.10190678)
+transform = Transform3D(1.3193244, 0, 0, 0, 1.3193244, 0, 0, 0, 1.3193244, 0, 0.47897246, -0.10190678)
 shape = SubResource("BoxShape3D_uvho0")
 
 [node name="Caillou" parent="." unique_id=1528039201 instance=ExtResource("1_gmwg5")]
 
-[node name="Caillou_low" parent="Caillou" index="0" unique_id=1909722298]
+[node name="Caillou_low" parent="Caillou" index="0" unique_id=202369612]
 material_override = SubResource("StandardMaterial3D_srbr6")
 
 [editable path="Caillou"]

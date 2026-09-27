@@ -168,7 +168,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.616098, 0, -2.5368962)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.605263, -1.9073486e-06, -15.628393)
 
 [node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_lgguw")]
-transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, 17.328205, 1.9073486e-06, -31.472126)
+transform = Transform3D(1.1756312, 0, 0, 0, 1.1756312, 0, 0, 0, 1.1756312, 17.328205, 1.9073486e-06, -31.472126)
+
+[node name="Caillou_low" parent="Map/KayouTall/Caillou" parent_id_path=PackedInt32Array(562230623, 1528039201) index="0" unique_id=202369612]
+transform = Transform3D(75.599785, 65.457436, 7.803134e-06, 0, -1.1920931e-05, 100.00001, 65.457436, -75.59978, -9.012197e-06, 0, 0, 0)
 
 [node name="FenceSimple" parent="Map" unique_id=1022040062 instance=ExtResource("11_lgguw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.040297, 4.053116e-06, -91.376785)
@@ -186,7 +189,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.215218, 4.529953e-06, -91
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.481461, 4.529953e-06, -91.5225)
 
 [node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_lgguw")]
-transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -9.607142, 3.8146973e-06, -64.781006)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.607142, 3.8146973e-06, -64.781006)
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
