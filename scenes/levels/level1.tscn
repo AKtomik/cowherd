@@ -18,6 +18,9 @@ script = ExtResource("1_8a7m2")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
 sun_node = NodePath("Sun")
+level_duration_seconds = null
+level_progress_seconds = null
+level_goal = null
 
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_plydf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)

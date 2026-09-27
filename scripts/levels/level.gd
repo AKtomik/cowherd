@@ -22,12 +22,13 @@ func start():
 	cinematic = false
 	started = true
 	ui_node.visible = true
+	print("level started!")
 
 func level_end():
-	print("level end!")
+	print("level end! ", score, "/", level_goal)
 	ended = true
 	if score >= level_goal:
-		get_tree().change_scene_to_file("res://scenes/narrative_scene.tscn")
+		get_tree().change_scene_to_file("res://scenes/narrative/narrative_scene.tscn")
 		Dialogic.start("interlude1")
 	else:
 		get_tree().reload_current_scene()
@@ -36,12 +37,12 @@ func level_end():
 func add_score():
 	if (ended): return
 	score += 1
-	ui_node.update_herding_score(score)
+	ui_node.update_herding_score(score, level_goal)
 
 func remove_score():
 	if (ended): return
 	score -= 1
-	ui_node.update_herding_score(score)
+	ui_node.update_herding_score(score, level_goal)
 
 # loop
 func _ready() -> void:
