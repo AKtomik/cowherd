@@ -11,11 +11,11 @@ juanico: Je crois chacune de tes paroles, mais comme ton histoire change à chaq
 	do GameOverlord.game_over(1)
 	return
 - Je vais vous confier un secret…
-	melchor_mid: Je ne livre ce secret qu’aux hommes qui risquent contre les cornes des taureaux et les flèches des Chichimèques et vous devez jurer d’en faire autant. (Ils jurent). Comme je vous l’ai déjà raconté, j’accompagnais un marchand entre Zacatecas et San Martín quand nous avons été attaqués par une vingtaine de Huachichiles.
+	melchor_mid: Je ne livre ce secret qu’aux hommes qui risquent leur vie contre les cornes des taureaux et les flèches des Chichimèques et vous devez jurer d’en faire autant. (Ils jurent). Comme je vous l’ai déjà raconté, j’accompagnais un marchand entre Zacatecas et San Martín quand nous avons été attaqués par une vingtaine de Huachichiles.
 	melchor_mid: J’ai fui, mais perdu dans le désert, mon cheval est mort de soif. Je me croyais condamné lorsque je me suis réveillé devant un lac magnifique, où des Indiens m’ont offert eau, figues et poisson.
 	melchor_mid: Ils m’ont fait manger un petit cactus qui m’a plongé dans une vision. Le lendemain, épuisé, je me suis réfugié dans une grotte où j’ai rencontré un Mulâtre qui m’a proposé son secours. J’ai signé un contrat avec mon sang et il m’a gravé sur le bras un signe protecteur.
 	Tu montres ton tatouage.
-	melchor_mid: Si je suis en vie, c’est grâce à Mantelillos.
+	melchor_mid: Si je suis en vie, c’est grâce à Mantelillos qui m’accompagne, gravé sur ma peau.
 - Tiens ta langue. Ton sort dépend de ce que je dirai à l’éleveur à notre retour.
 	La partie de cartes s’interrompt. La tension est palpable. Tu ne dors que d’un œil et Juanico en fait probablement autant.
 	do GameOverlord.add_loyauty(1)

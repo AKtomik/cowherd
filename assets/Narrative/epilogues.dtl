@@ -5,7 +5,7 @@ if {loyalty} >= 3.0:
 	Ce souvenir ravive un goût amer que tu ne ressentais pas depuis des années. Tu as besoin de te reposer. Ton fils t’aide à t’asseoir à l’ombre d’un mezquite pour faire la sieste. Tu ne te réveilleras pas.
 elif {loyalty} >= 1.0:
 	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et de s’engager dans une vie de vacher. Tu lui confies certains secrets que tu n’as partagé avec personne. Tu lui montres la figure déteinte de Mantelillos sur ce bras que tu as toujours un peu caché, de peur d’être dénoncé à l’Inquisition...
-	melchor_old: Les Espagnols sont superstitieux et pensent que les vachers nous vendons nos âmes au diable.
+	melchor_old: Les Espagnols sont superstitieux et pensent que les vachers nous vendons notre âme au diable.
 	Cela fait à peine un quart d’heure que vous marchez, mais tu sens que tu as besoin de te reposer. Ton fils t’aide à t’asseoir à l’ombre d’un mezquite pour faire la sieste. Tu ne te réveilleras pas.
 else:
 	San Luis Potosí, 1600. Tu as 65 ans. Tu marches avec un de tes fils, qui a décidé de suivre tes pas et de s’engager dans une vie de vacher. Tu l’emmènes à l’ombre d’un mezquite, à l’abri des regards. Tu attends que ton fils allume un feu de camp pour lui parler.
