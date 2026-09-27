@@ -33,9 +33,13 @@ directories/dch_directory={
 "pere": "res://assets/Narrative/pere.dch"
 }
 directories/dtl_directory={
+"end": "res://assets/Narrative/end.dtl",
 "interlude1": "res://assets/Narrative/interlude1.dtl",
+"interlude2": "res://assets/Narrative/interlude2.dtl",
 "intro": "res://assets/Narrative/intro.dtl",
-"retry1": "res://assets/Narrative/retry1.dtl"
+"retry1": "res://assets/Narrative/retry1.dtl",
+"retry2": "res://assets/Narrative/retry2.dtl",
+"retry3": "res://assets/Narrative/retry3.dtl"
 }
 layout/style_directory={
 "": "res://styles/default_dialogic.tres",
