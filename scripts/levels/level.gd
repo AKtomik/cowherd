@@ -50,11 +50,13 @@ func setup():
 	sfx_feedback_randomizer.add_stream(-1, sfx_feedback_enter_pen)
 	sfx_feedback_randomizer.random_pitch = 2.0
 	sfx_player.stream = sfx_feedback_randomizer
+	sfx_player.volume_db = 2.0
 	
 	ambient_player = AudioStreamPlayer.new()
 	ambient_player.bus = "SFX"
 	add_child(ambient_player)
 	ambient_player.stream = ambient
+	ambient_player.volume_db = -6.0
 	ambient_player.play()
 	
 	end_delay_timer = Timer.new()
@@ -73,6 +75,7 @@ func level_end():
 	GameOverlord.set_last_score(score_current)
 	ended = true
 	if score_current >= score_goal:
+		MusicPlayer.volume_db = - 6.0
 		sfx_player.stream = sfx_victory
 		sfx_player.play()
 		end_delay_timer.start()
@@ -113,6 +116,7 @@ func _process(delta: float) -> void:
 
 func _on_end_delay_timeout():
 
+	MusicPlayer.volume_db = 0.0
 	if (scene_success): get_tree().change_scene_to_packed(scene_success)
 	if (dialog_success): Dialogic.start(dialog_success)
 	
