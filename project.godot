@@ -33,10 +33,13 @@ directories/dch_directory={
 "juanico": "res://assets/Narrative/juanico.dch",
 "leonor": "res://assets/Narrative/leonor.dch",
 "melchor": "res://assets/Narrative/melchor.dch",
+"melchor_mid": "res://assets/Narrative/melchor_mid.dch",
+"melchor_old": "res://assets/Narrative/melchor_old.dch",
 "pere": "res://assets/Narrative/pere.dch"
 }
 directories/dtl_directory={
 "end": "res://assets/Narrative/end.dtl",
+"epilogues": "res://assets/Narrative/epilogues.dtl",
 "interlude1": "res://assets/Narrative/interlude1.dtl",
 "interlude2": "res://assets/Narrative/interlude2.dtl",
 "interlude3": "res://assets/Narrative/interlude3.dtl",
@@ -52,6 +55,9 @@ layout/style_directory={
 }
 layout/style_list=["res://styles/default_dialogic.tres"]
 layout/default_style="res://styles/default_dialogic.tres"
+variables={
+"loyalty": 0
+}
 
 [display]
 

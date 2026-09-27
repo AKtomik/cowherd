@@ -4,7 +4,7 @@ extends AudioStreamPlayer
 @onready var sfx_ambient_desert_storm_and_rain = preload("res://assets/audio/sfx/Ambient_DesertStormandRain.ogg")
 @onready var sfx_ambient_desert_sunny = preload("res://assets/audio/sfx/Ambient_DesertSunny.ogg")
 @onready var sfx_ambient_desert_wind = preload("res://assets/audio/sfx/Ambient_DesertWind.ogg")
-@onready var sfx_UI_click_button = [preload("res://assets/audio/sfx/UI_ClicButton1.ogg"), preload("res://assets/audio/sfx/UI_ClicButton2.ogg"), preload("res://assets/audio/sfx/UI_ClicButton3.ogg"), preload("res://assets/audio/sfx/UI_ClicButton4.ogg")]
+@onready var sfx_UI_click_button = preload("res://assets/audio/sfx/UI_ClicButton_Snap.mp3")
 
 
 
@@ -20,5 +20,5 @@ func _process(delta: float) -> void:
 	
 func play_button_click() -> void:
 	
-	stream = sfx_UI_click_button.pick_random()
+	stream = sfx_UI_click_button
 	play()
