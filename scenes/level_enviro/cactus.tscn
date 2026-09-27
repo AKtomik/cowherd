@@ -5,7 +5,7 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_u60bi"]
 radius = 2.5
 
-[node name="Cactus" type="StaticBody3D" unique_id=454719588]
+[node name="Cactus" type="StaticBody3D" unique_id=454719588 groups=["obstacles"]]
 collision_layer = 2
 collision_mask = 12
 
