@@ -7,15 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_gycjm"]
 [ext_resource type="Resource" uid="uid://cwdkvsxk6upty" path="res://assets/Narrative/interlude2.dtl" id="3_hkuam"]
 [ext_resource type="Resource" uid="uid://cnnm2mclhmu5m" path="res://assets/Narrative/retry2.dtl" id="4_f3b2k"]
-[ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_hgky1"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="8_f3b2k"]
 [ext_resource type="PackedScene" uid="uid://ftcd0lbngyqw" path="res://scenes/level_elements/ground.tscn" id="8_sqrei"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="9_sqrei"]
 [ext_resource type="PackedScene" uid="uid://but86y72jpil3" path="res://scenes/level_enviro/rok.tscn" id="9_yhrca"]
 [ext_resource type="PackedScene" uid="uid://qgxv70ydux4v" path="res://scenes/level_enviro/rock_triple.tscn" id="10_4eecq"]
-[ext_resource type="PackedScene" uid="uid://cs8is4thtdvny" path="res://scenes/level_enviro/fence_double.tscn" id="11_b4tpv"]
 [ext_resource type="PackedScene" uid="uid://mp8qbo46v7fm" path="res://scenes/level_elements/pen_fences.tscn" id="11_hgky1"]
-[ext_resource type="PackedScene" uid="uid://dcmxru3tlafkm" path="res://scenes/level_enviro/fence.tscn" id="12_b3p8y"]
 [ext_resource type="PackedScene" uid="uid://cyj2673dwv4l" path="res://scenes/level_enviro/rock_flat.tscn" id="14_bxuut"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
@@ -71,71 +68,38 @@ transform = Transform3D(1.8136176, 0, -0.6992718, 0, 0.8385616, 0, 0.92777973, 0
 [node name="RokSimpleDown4" parent="Map/Walls" unique_id=479462910 instance=ExtResource("9_yhrca")]
 transform = Transform3D(-2.1731172, 0, -0.100513816, 0, 0.63458365, 0, 0.18271643, 0, -1.195448, -38.20263, 6.2630575e-06, 27.781473)
 
-[node name="RockTriple" parent="Map/Walls" unique_id=1417218628 instance=ExtResource("10_4eecq")]
+[node name="RockFlatDown" parent="Map/Walls" unique_id=268298662 instance=ExtResource("14_bxuut")]
+transform = Transform3D(0.9312948, 0, -0.36426634, 0, 1, 0, 0.36426634, 0, 0.9312948, -17.076975, 0, 31.320246)
+
+[node name="RockTripleLeft" parent="Map/Walls" unique_id=1719889247 instance=ExtResource("10_4eecq")]
+transform = Transform3D(1.5049556, 0, 0, 0, 0.4636759, 0, 0, 0, 1.5049556, -118.28429, 2.0895181e-06, -49.32737)
+
+[node name="RockTripleLeft2" parent="Map/Walls" unique_id=763171943 instance=ExtResource("10_4eecq")]
+transform = Transform3D(1.0640893, 0, 1.0642393, 0, 1.5049555, 0, -1.0642393, 0, 1.0640893, -115.50246, 0, -92.00542)
+
+[node name="RockTripleLeft3" parent="Map/Walls" unique_id=54008947 instance=ExtResource("10_4eecq")]
+transform = Transform3D(-0.21792296, 0, 2.01933, 0, 2.031055, 0, -2.01933, 0, -0.21792296, -119.73357, 0, -74.777054)
+
+[node name="RockTripleLeft4" parent="Map/Walls" unique_id=1918151570 instance=ExtResource("10_4eecq")]
+transform = Transform3D(0.03400136, 2.006181, -0.31506535, 0.21525408, -0.31689474, -1.9945996, -2.01933, 0, -0.21792296, -117.517395, 0, -123.40236)
+
+[node name="RockTripleTop" parent="Map/Walls" unique_id=354590149 instance=ExtResource("10_4eecq")]
+transform = Transform3D(1.3740455, 0, -3.0217915, 0, 2.2827194, 0, 1.8228568, 0, 2.277787, -78.4217, 2.2888184e-05, -154.81293)
+
+[node name="RockTripleRight" parent="Map/Walls" unique_id=1417218628 instance=ExtResource("10_4eecq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.807583, 0, -12.845705)
 
-[node name="RockTriple7" parent="Map/Walls" unique_id=53440539 instance=ExtResource("10_4eecq")]
+[node name="RockTripleRight2" parent="Map/Walls" unique_id=53440539 instance=ExtResource("10_4eecq")]
 transform = Transform3D(2.2827194, 0, 0, 0, 2.2827194, 0, 0, 0, 3.7841163, 57.847393, 0, -60.540928)
 
-[node name="RockTriple8" parent="Map/Walls" unique_id=108943201 instance=ExtResource("10_4eecq")]
+[node name="RockTripleRight3" parent="Map/Walls" unique_id=108943201 instance=ExtResource("10_4eecq")]
 transform = Transform3D(1.2483088, 0, -3.168174, 0, 2.2827194, 0, 1.9111601, 0, 2.0693502, 77.103424, 0, -108.55997)
 
-[node name="RockTriple9" parent="Map/Walls" unique_id=1936938953 instance=ExtResource("10_4eecq")]
-transform = Transform3D(0.8873824, 0, 3.4864879, 0, 2.2827194, 0, -2.1031785, 0, 1.471034, -64.86838, 7.6293945e-06, -104.847885)
+[node name="RockTripleRight4" parent="Map/Walls" unique_id=1936938953 instance=ExtResource("10_4eecq")]
+transform = Transform3D(0.8873824, 0, 3.4864879, 0, 2.2827194, 0, -2.1031785, 0, 1.471034, 126.79791, 7.6293945e-06, -107.179886)
 
-[node name="RockTriple10" parent="Map/Walls" unique_id=354590149 instance=ExtResource("10_4eecq")]
-transform = Transform3D(2.0693235, 0, 1.5975397, 0, 2.2827194, 0, -0.963695, 0, 3.430365, -71.208466, 2.2888184e-05, -75.93944)
-
-[node name="RockTriple2" parent="Map/Walls" unique_id=1719889247 instance=ExtResource("10_4eecq")]
-transform = Transform3D(1.5049556, 0, 0, 0, 0.4636759, 0, 0, 0, 1.5049556, -53.619175, 2.0895181e-06, -14.889866)
-
-[node name="RockTriple5" parent="Map/Walls" unique_id=763171943 instance=ExtResource("10_4eecq")]
-transform = Transform3D(1.0640893, 0, 1.0642393, 0, 1.5049555, 0, -1.0642393, 0, 1.0640893, -50.837353, 0, -57.567913)
-
-[node name="RockTriple3" parent="Map/Walls" unique_id=54008947 instance=ExtResource("10_4eecq")]
-transform = Transform3D(-0.21792296, 0, 2.01933, 0, 2.031055, 0, -2.01933, 0, -0.21792296, -55.068455, 0, -40.339554)
-
-[node name="RockTriple4" parent="Map/Walls" unique_id=1918151570 instance=ExtResource("10_4eecq")]
-transform = Transform3D(0.03400136, 2.006181, -0.31506535, 0.21525408, -0.31689474, -1.9945996, -2.01933, 0, -0.21792296, -52.85229, 0, -88.96485)
-
-[node name="RockTriple6" parent="Map/Walls" unique_id=444736147 instance=ExtResource("10_4eecq")]
+[node name="RockTripleRight5" parent="Map/Walls" unique_id=444736147 instance=ExtResource("10_4eecq")]
 transform = Transform3D(-0.20029885, -1.999357, 0.2960346, 0.21525407, -0.3168947, -1.9945995, 2.009659, -0.16532953, 0.24314624, 71.98965, -3.8146973e-06, -39.290123)
-
-[node name="RokSimple" parent="Map/Walls" unique_id=88244254 instance=ExtResource("9_yhrca")]
-transform = Transform3D(0.9061219, 0, 0.4230167, 0, 1, 0, -0.4230167, 0, 0.9061219, -40.17726, 0, -12.090282)
-
-[node name="RokSimple2" parent="Map/Walls" unique_id=411864968 instance=ExtResource("9_yhrca")]
-transform = Transform3D(0.14840329, 0, 0.98892695, 0, 1, 0, -0.98892695, 0, 0.14840329, -41.670788, 0, -66.53561)
-
-[node name="RokSimple3" parent="Map/Walls" unique_id=1255849799 instance=ExtResource("9_yhrca")]
-transform = Transform3D(0.59060645, 0, 0.80695975, 0, 1, 0, -0.80695975, 0, 0.59060645, -36.672676, 0, -77.72899)
-
-[node name="RokSimple4" parent="Map/Walls" unique_id=176612493 instance=ExtResource("9_yhrca")]
-transform = Transform3D(-0.41640854, 0.24519575, 0.8754902, 0.105316535, 0.9694736, -0.2214258, -0.9030573, 0, -0.42952025, -41.77623, -1.0618324, -53.84623)
-
-[node name="Cactus" parent="Map/Walls" unique_id=454719588 instance=ExtResource("5_hgky1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
-
-[node name="FenceSimple" parent="Map/Walls" unique_id=1022040062 instance=ExtResource("12_b3p8y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.129906, 4.053116e-06, -91.13956)
-
-[node name="FenceSimple2" parent="Map/Walls" unique_id=120130189 instance=ExtResource("12_b3p8y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.124649, 4.053116e-06, -91.376785)
-
-[node name="FenceSimple4" parent="Map/Walls" unique_id=196375604 instance=ExtResource("12_b3p8y")]
-transform = Transform3D(-0.99354196, 0, 0.11346521, 0, 1, 0, -0.11346521, 0, -0.99354196, 11.702444, 4.053116e-06, -91.376785)
-
-[node name="FenceSimple3" parent="Map/Walls" unique_id=1346585979 instance=ExtResource("12_b3p8y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.585373, 4.053116e-06, -91.376785)
-
-[node name="FenceDouble" parent="Map/Walls" unique_id=1726671758 instance=ExtResource("11_b4tpv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.304825, 4.529953e-06, -91.28527)
-
-[node name="FenceDouble2" parent="Map/Walls" unique_id=114876298 instance=ExtResource("11_b4tpv")]
-transform = Transform3D(0.99872285, 0, 0.05052441, 0, 1, 0, -0.05052441, 0, 0.99872285, -15.4904995, 4.529953e-06, -91.41736)
-
-[node name="RockFlat" parent="Map/Walls" unique_id=268298662 instance=ExtResource("14_bxuut")]
-transform = Transform3D(0.7597027, 0, -0.6502706, 0, 1, 0, 0.6502706, 0, 0.7597027, 4.099707, 0, 25.055897)
 
 [node name="OldWalls" type="Node3D" parent="Map" unique_id=875819842]
 
