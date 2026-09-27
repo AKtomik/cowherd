@@ -229,7 +229,7 @@ func _on_obstacle_detection_area_exited(area: Area3D) -> void:
 func _on_obstacle_detection_body_entered(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body not in obstacles:
 		obstacles.append(body)
-		print("_on_obstacle_detection_body_entered", obstacles)
+		#print("_on_obstacle_detection_body_entered", obstacles)
 
 func _on_obstacle_detection_body_exited(body: Node3D) -> void:
 	if body.is_in_group("obstacles") and body in obstacles:
