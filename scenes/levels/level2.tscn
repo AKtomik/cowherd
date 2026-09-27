@@ -262,7 +262,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.879284, 1, -19.884392)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.078569, 0.9999962, -27.692345)
 
 [node name="Cow6" parent="Cows" unique_id=426187431 instance=ExtResource("8_f3b2k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.022164, 0.9999962, -115.92587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.665695, 0.9999962, -99.63843)
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=824461060]
 transform = Transform3D(0.743921, -0.37955108, -0.5500206, 0.6403339, 0.64033383, 0.42419934, 0.1911915, -0.6677676, 0.7193971, 0, 6.6657405, 0)
