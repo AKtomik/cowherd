@@ -6,7 +6,7 @@ extends Node
 @onready var level_scene_1 = preload("res://scenes/levels/level1.tscn")
 @onready var level_scene_2 = preload("res://scenes/levels/level2.tscn")
 @onready var level_scene_3 = preload("res://scenes/levels/level3.tscn")
-#@onready var level_scene_4 = preload("res://scenes/levels/level4.tscn")
+@onready var level_scene_4 = preload("res://scenes/levels/level4.tscn")
 @onready var game_over_scene = preload("res://scenes/narrative/game_over.tscn")
 
 var game_over_text = ""
@@ -38,7 +38,7 @@ func switch_to_level(id: int):
 		1: get_tree().change_scene_to_packed(level_scene_1)
 		2: get_tree().change_scene_to_packed(level_scene_2)
 		3: get_tree().change_scene_to_packed(level_scene_3)
-		#4: get_tree().change_scene_to_packed(level_scene_4)
+		4: get_tree().change_scene_to_packed(level_scene_4)
 		_: printerr("Unknown level id")
 
 

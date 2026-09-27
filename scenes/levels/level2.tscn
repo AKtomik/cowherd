@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_oyk6k"]
 [ext_resource type="AudioStream" uid="uid://4cmqsfhnrl74" path="res://assets/audio/sfx/Ambient_DesertWind.ogg" id="3_8i1lk"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_gycjm"]
+[ext_resource type="Resource" uid="uid://cwdkvsxk6upty" path="res://assets/Narrative/interlude2.dtl" id="3_hkuam"]
 [ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_8i1lk"]
+[ext_resource type="Resource" uid="uid://cnnm2mclhmu5m" path="res://assets/Narrative/retry2.dtl" id="4_f3b2k"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_hgky1"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_b4tpv"]
 [ext_resource type="PackedScene" uid="uid://c67ce8o61kfsx" path="res://scenes/level_enviro/barn.tscn" id="6_hgky1"]
@@ -26,6 +28,8 @@ sun_node = NodePath("Sun")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
 scene_success = ExtResource("2_gycjm")
+dialog_success = ExtResource("3_hkuam")
+dialog_failure = ExtResource("4_f3b2k")
 ambient = ExtResource("3_8i1lk")
 
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_oyk6k")]
