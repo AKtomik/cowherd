@@ -11,5 +11,5 @@ pere: Melchor, tu as 16 ans, tu es un homme fait. Il est temps de partir d’ici
 - Oui, mon seigneur. Si l’on me demande qui sont mes parents, que dois-je dire ?
 	pere: N’utilise jamais le nom de ma famille. Tu n’es pas né à Castille et tu ne tromperas jamais personne. Ta mère était de Guinée, mais n’utilise pas les mots que tu lui entendais prononcer de temps à autre, ils n’ont aucune utilité ici. Ne cache pas qu’elle était une esclave, ta peau te trahira toujours. Mais tu peux dire qu’elle avait une foi sincère et qu’elle t’a toujours inculqué le respect des Espagnols, les nouveaux seigneurs des Indes.
 Trois jours plus tard, tu arrives à San Juan del Río. Tous les Indiens parlent en otomi et en nahuatl, mais le cacique Juan Mexici parle espagnol. Il a ordonné à l’un de ses hommes de t’escorter jusqu’au domaine de Bocanegra. Le conquistador a lu la lettre de ton père et il a accepté de te nourrir sous son toit. Auprès de ses esclaves, tu as appris les rudiments du métier de vaches en quelques semaines. L’heure de la vérité est arrivée, cependant. Un troupeau de cinq cents vaches vient d’arriver dans la vallée de San Juan. Tu as été engagé pour les conduire à l’intérieur du pays des Chichimèques.
-do GameOverlord.switch_to_level(1)
+do GameOverlord.switch_to_level(0)
 return
