@@ -20,7 +20,8 @@
 
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_xx6b8")
-score_goal = 25
+duration_seconds = 120.0
+score_goal = 30
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/FencesCircle/Pen")
 ui_node = NodePath("CanvasLayer/UI")
@@ -301,6 +302,36 @@ transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61
 
 [node name="Cow22" parent="Cows" unique_id=1022117300 instance=ExtResource("11_atlnk")]
 transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 51.244858, 1, -51.421486)
+
+[node name="Cow31" parent="Cows" unique_id=1696367990 instance=ExtResource("11_atlnk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.319027, 1.0000076, -90.55515)
+
+[node name="Cow32" parent="Cows" unique_id=264918232 instance=ExtResource("11_atlnk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.27609, 1.0000076, -106.78609)
+
+[node name="Cow33" parent="Cows" unique_id=971718681 instance=ExtResource("11_atlnk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.88385, 1.0000076, -109.27124)
+
+[node name="Cow34" parent="Cows" unique_id=1863641010 instance=ExtResource("11_atlnk")]
+transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 57.988747, 1.0000076, -97.15053)
+
+[node name="Cow35" parent="Cows" unique_id=2064493594 instance=ExtResource("11_atlnk")]
+transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 80.83881, 1.0000076, -123.235306)
+
+[node name="Cow36" parent="Cows" unique_id=1224723856 instance=ExtResource("11_atlnk")]
+transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, -16.02502, 1.0000076, -160.487)
+
+[node name="Cow37" parent="Cows" unique_id=614262658 instance=ExtResource("11_atlnk")]
+transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, 0.38019335, 1.0000076, -152.89574)
+
+[node name="Cow38" parent="Cows" unique_id=1678932659 instance=ExtResource("11_atlnk")]
+transform = Transform3D(0.022413956, 0, -0.99974877, 0, 1, 0, 0.99974877, 0, 0.022413956, 2.7214315, 1.0000076, -159.34207)
+
+[node name="Cow39" parent="Cows" unique_id=1352863834 instance=ExtResource("11_atlnk")]
+transform = Transform3D(0.7717151, 0, 0.6359684, 0, 1, 0, -0.6359684, 0, 0.7717151, -9.483525, 1.0000076, -162.96452)
+
+[node name="Cow40" parent="Cows" unique_id=1049405350 instance=ExtResource("11_atlnk")]
+transform = Transform3D(0.7717151, 0, 0.6359684, 0, 1, 0, -0.6359684, 0, 0.7717151, 17.10686, 1.0000076, -140.70486)
 
 [node name="Cow23" parent="Cows" unique_id=902234074 instance=ExtResource("11_atlnk")]
 transform = Transform3D(-0.61851144, 0, 0.7857758, 0, 1, 0, -0.7857758, 0, -0.61851144, 40.903236, 0.9999962, -51.936016)
