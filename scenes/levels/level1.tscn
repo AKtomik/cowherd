@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
+[ext_resource type="PackedScene" uid="uid://dcmxru3tlafkm" path="res://scenes/level_enviro/fence_simple.tscn" id="11_lgguw"]
+[ext_resource type="PackedScene" uid="uid://cs8is4thtdvny" path="res://scenes/level_enviro/fence_double.tscn" id="12_jprdt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
 
@@ -112,29 +114,6 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown3" unique_id=1775571571]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="WallTopFence1" type="StaticBody3D" parent="Map" unique_id=1531075389 groups=["obstacles"]]
-transform = Transform3D(51.616596, 0, 0, 0, 5, 0, 0, 0, 1, -35.043312, 0, -91.734924)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopFence1" unique_id=1372664398]
-shape = SubResource("BoxShape3D_u60bi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopFence1" unique_id=867161663]
-mesh = SubResource("BoxMesh_u60bi")
-
-[node name="WallTopFence2" type="StaticBody3D" parent="Map" unique_id=1818945136 groups=["obstacles"]]
-transform = Transform3D(51.616596, 0, 0, 0, 4.9999995, 0, 0, 0, 1, 38.96683, 0, -91.282974)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallTopFence2" unique_id=659824954]
-shape = SubResource("BoxShape3D_u60bi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallTopFence2" unique_id=369489505]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1, -0.02257657, 0, -0.41457367)
-mesh = SubResource("BoxMesh_u60bi")
-
 [node name="WallTopLeft1" type="StaticBody3D" parent="Map" unique_id=947119385 groups=["obstacles"]]
 transform = Transform3D(23.940762, 0, 1.0823654, 0, 5, 0, -21.313322, 0, 1.2157959, -32.22363, 0, -81.81917)
 collision_layer = 2
@@ -191,6 +170,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.605263, -1.9073486e-06, -1
 [node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_lgguw")]
 transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, 17.328205, 1.9073486e-06, -31.472126)
 
+[node name="FenceSimple" parent="Map" unique_id=1022040062 instance=ExtResource("11_lgguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.040297, 4.053116e-06, -91.376785)
+
+[node name="FenceSimple2" parent="Map" unique_id=1170861826 instance=ExtResource("11_lgguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.124649, 4.053116e-06, -91.376785)
+
+[node name="FenceSimple3" parent="Map" unique_id=1391837582 instance=ExtResource("11_lgguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.585373, 4.053116e-06, -91.376785)
+
+[node name="FenceDouble" parent="Map" unique_id=1726671758 instance=ExtResource("12_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.215218, 4.529953e-06, -91.5225)
+
+[node name="FenceDouble2" parent="Map" unique_id=669356807 instance=ExtResource("12_jprdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.481461, 4.529953e-06, -91.5225)
+
 [node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_lgguw")]
 transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -9.607142, 3.8146973e-06, -64.781006)
 
@@ -231,3 +225,4 @@ light_angular_distance = 3.63
 [editable path="CameraThings"]
 [editable path="Map/Pen"]
 [editable path="Map/KayouTall"]
+[editable path="Map/KayouTall/Caillou"]
