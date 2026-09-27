@@ -40,4 +40,6 @@ text = "This is how you died. Too bad..."
 layout_mode = 2
 text = "Retour au menu principal"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=314585105]
+
 [connection signal="pressed" from="VSplitContainer/Menu" to="." method="_on_menu_pressed"]

@@ -1,2 +1,3 @@
+do MusicPlayer.play_music_narration("interlude1")
 Vous avez survécu au premier niveau, bravo !
-do GameOverlord.switch_to_level(2)
+do GameOverlord.switch_to_level(1)

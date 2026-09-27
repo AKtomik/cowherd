@@ -18,14 +18,49 @@ var score_current = 0
 @export var scene_failure: PackedScene
 @export var dialog_failure: DialogicTimeline
 
+# Audio
+@export_group("audio")
+@export var ambient: AudioStream
+@onready var music_arcade = preload("res://assets/audio/music/corridos.ogg")
+@onready var sfx_game_over = preload("res://assets/audio/sfx/GIMMICK_Defeat.ogg")
+@onready var sfx_victory = preload("res://assets/audio/sfx/GIMMICK_Victory.ogg")
+@onready var sfx_feedback_enter_pen = preload("res://assets/audio/sfx/Feedback_EntreeEnclos.ogg")
+var sfx_player: AudioStreamPlayer
+var ambient_player: AudioStreamPlayer
+
 # state
 var cinematic = true
 var started = false
 var ended = false
 
+# Timer to add a delay at the end of the level
+var end_delay_timer: Timer
+
 func setup():
 	ui_node.visible = false
 	ui_node.update_herding_score(score_current, score_goal)
+	
+	MusicPlayer.stream = music_arcade
+	MusicPlayer.play()
+	
+	sfx_player = AudioStreamPlayer.new()
+	sfx_player.bus = "SFX"
+	add_child(sfx_player)
+	var sfx_feedback_randomizer = AudioStreamRandomizer.new()
+	sfx_feedback_randomizer.add_stream(-1, sfx_feedback_enter_pen)
+	sfx_feedback_randomizer.random_pitch = 2.0
+	sfx_player.stream = sfx_feedback_randomizer
+	
+	ambient_player = AudioStreamPlayer.new()
+	ambient_player.bus = "SFX"
+	add_child(ambient_player)
+	ambient_player.stream = ambient
+	ambient_player.play()
+	
+	end_delay_timer = Timer.new()
+	end_delay_timer.wait_time = 3
+	add_child(end_delay_timer)
+	end_delay_timer.timeout.connect(_on_end_delay_timeout)
 
 func start():
 	cinematic = false
@@ -38,9 +73,12 @@ func level_end():
 	GameOverlord.set_last_score(score_current)
 	ended = true
 	if score_current >= score_goal:
-		if (scene_success): get_tree().change_scene_to_packed(scene_success)
-		if (dialog_success): Dialogic.start(dialog_success)
+		sfx_player.stream = sfx_victory
+		sfx_player.play()
+		end_delay_timer.start()
 	else:
+		sfx_player.stream = sfx_game_over
+		sfx_player.play()
 		if (scene_failure): get_tree().change_scene_to_packed(scene_failure)
 		if (dialog_failure): Dialogic.start(dialog_failure)
 
@@ -49,6 +87,7 @@ func add_score():
 	if (ended): return
 	score_current += 1
 	ui_node.update_herding_score(score_current, score_goal)
+	sfx_player.play()
 
 func remove_score():
 	if (ended): return
@@ -71,4 +110,9 @@ func _process(delta: float) -> void:
 	sun_node.rotation.x = - progress * PI
 	if (progress >= 1 && !ended): level_end()
 
+
+func _on_end_delay_timeout():
+
+	if (scene_success): get_tree().change_scene_to_packed(scene_success)
+	if (dialog_success): Dialogic.start(dialog_success)
 	

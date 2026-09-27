@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dlpccq840mlho"]
+
+[ext_resource type="Script" uid="uid://dho16aawh104n" path="res://scripts/utils/sfx_player.gd" id="1_ttgug"]
+
+[node name="SFXPlayer" type="AudioStreamPlayer" unique_id=73858726]
+autoplay = true
+bus = &"SFX"
+script = ExtResource("1_ttgug")

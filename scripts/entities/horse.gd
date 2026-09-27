@@ -7,7 +7,20 @@ extends CharacterBody3D
 @export var visual_rotated: Node3D
 @export var level: Level
 
+# Audio
+@onready var sfx_galop = preload("res://assets/audio/sfx/Loop_Galop.ogg")
+@onready var sfx_horse_neigh = [preload("res://assets/audio/sfx/OS_Cheval_Henissement1.ogg"), preload("res://assets/audio/sfx/OS_Cheval_Henissement2.ogg")]
+@onready var sfx_horse_sniff = [preload("res://assets/audio/sfx/OS_Cheval_Renifle1.ogg"), preload("res://assets/audio/sfx/OS_Cheval_Renifle2.ogg"), preload("res://assets/audio/sfx/OS_Cheval_Renifle3.ogg"), preload("res://assets/audio/sfx/OS_Cheval_Renifle4.ogg")]
+@onready var galop_player: AudioStreamPlayer3D = $GalopPlayer
+@onready var horse_player: AudioStreamPlayer3D = $HorsePlayer
+@onready var neigh_timer: Timer = $NeighTimer
+
 var last_facing: Vector2
+
+func _ready() -> void:
+	
+	galop_player.stream = sfx_galop
+
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta
@@ -23,13 +36,34 @@ func _physics_process(delta: float) -> void:
 			velocity.z = move_toward(velocity.z, 0, SPEED_DECELERATION)
 		
 		var facing = last_facing
+		
 		if velocity:
 			facing = Vector2(velocity.x, velocity.z).normalized()
 			last_facing = facing
+			
+			if not galop_player.playing:
+				galop_player.play()
+			
 		else:
 			facing = last_facing
+			
+			if galop_player.playing:
+				galop_player.stop()
+				horse_player.stream = sfx_horse_sniff.pick_random()
+				horse_player.play()
 	
 		#print("facing:", facing, facing.angle(), visual_rotated.rotation)
 		visual_rotated.rotation.y = -facing.angle() + PI / 2
 
 	move_and_slide()
+
+
+func _on_neigh_timer_timeout() -> void:
+	
+	if not horse_player.playing:
+		
+		horse_player.stream = sfx_horse_neigh.pick_random()
+		horse_player.play()
+		
+	neigh_timer.wait_time = randf_range(3, 12)
+	neigh_timer.start()

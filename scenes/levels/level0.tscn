@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="3_klq6b"]
 [ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_b121j"]
 [ext_resource type="Resource" uid="uid://du3awvkimlfxh" path="res://assets/Narrative/retry1.dtl" id="4_d3ub6"]
+[ext_resource type="AudioStream" uid="uid://dddbwsp2emr2" path="res://assets/audio/sfx/Ambient_DesertSunny.ogg" id="5_7s2gi"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="5_8c41q"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_vals0"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_vals0"]
@@ -25,6 +26,7 @@ ui_node = NodePath("CanvasLayer/UI")
 scene_success = ExtResource("2_a76di")
 dialog_success = ExtResource("3_d3ub6")
 dialog_failure = ExtResource("4_d3ub6")
+ambient = ExtResource("5_7s2gi")
 
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_2r41h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)

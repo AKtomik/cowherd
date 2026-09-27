@@ -3,8 +3,6 @@ class_name Cow
 
 # Algo source: https://kindatechnical.com/game-development/steering-behaviors-seek-flee-arrive-and-flocking.html
 
-# TODO Add weights to forces
-
 @export var cow_mesh: MeshInstance3D
 @export var cow_shape: CollisionShape3D
 @export var cow_obstacle_detection_shape: CollisionShape3D
@@ -43,10 +41,14 @@ var obstacles: Array[Node3D] = []
 @export var OBSTACLE_LOOK_AHEAD: float = 5.0
 @export var OBSTACLE_MAX_DIST: float = 100.0
 
+# Audio
+@onready var mow_timer: Timer = $AudioStreamPlayer3D/MowTimer
+@onready var mow_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
+
 func _ready() -> void:
 	
 	wander_angle = randf_range(0, 2 * PI)
-
+	
 
 func _physics_process(delta: float) -> void:
 	
@@ -245,3 +247,11 @@ func _on_neighbours_detection_body_exited(body: Node3D) -> void:
 	if body in neighbours:
 		neighbours.erase(body)
 		#print("_on_neighbours_detection_body_exited", neighbours, since)
+
+
+func _on_mow_timer_timeout() -> void:
+	
+	mow_player.play()
+	
+	mow_timer.wait_time = randf_range(5, 20)
+	mow_timer.start()

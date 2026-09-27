@@ -24,6 +24,7 @@ buses/default_bus_layout="uid://d3funrcbjf7km"
 Dialogic="*uid://ds2q0uclmolvu"
 GameOverlord="*uid://bnpde7ou8khbf"
 MusicPlayer="*uid://de8n30d43mque"
+SfxPlayer="*uid://dlpccq840mlho"
 
 [dialogic]
 

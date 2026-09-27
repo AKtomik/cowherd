@@ -1,6 +1,6 @@
 extends Control
 
-@export var flavour_text: Label 
+@export var flavour_text: Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,4 +21,5 @@ func set_text(text: String = "") -> void:
 
 func _on_menu_pressed() -> void:
 	
+	SfxPlayer.play_button_click()
 	get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")

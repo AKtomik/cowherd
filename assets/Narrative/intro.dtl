@@ -1,3 +1,4 @@
+do MusicPlayer.play_music_narration("intro")
 Actopan, 1551. Tu écoutes la messe avec un pincement au coeur. Tu y as été baptisé quand ce n’était qu’une hutte en paille avec une croix en boix et tu as grandi en même temps que ce monastère. Mais ton père, un Espagnol arrivé en Nouvelle-Espagne quelques années après la conquête de Mexico, t’a fait comprendre que tu ne pourrais pas vivre sous son toit toute la vie
 join pere center
 join melchor center

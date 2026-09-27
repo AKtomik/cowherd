@@ -45,6 +45,9 @@ visible = false
 
 [node name="Credits" parent="CanvasLayer2" unique_id=1366788260 instance=ExtResource("2_vjb58")]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=569059219]
+bus = &"SFX"
+
 [connection signal="pressed" from="CanvasLayer/VSplitContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/VSplitContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/VSplitContainer/Quit" to="." method="_on_quit_pressed"]

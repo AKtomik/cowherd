@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_b0vvs"]
 [ext_resource type="PackedScene" uid="uid://cec72ktdq4lo8" path="res://scenes/narrative/narrative_scene.tscn" id="2_gycjm"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_oyk6k"]
+[ext_resource type="AudioStream" uid="uid://4cmqsfhnrl74" path="res://assets/audio/sfx/Ambient_DesertWind.ogg" id="3_8i1lk"]
 [ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_gycjm"]
 [ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_8i1lk"]
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_hgky1"]
@@ -23,6 +24,7 @@ sun_node = NodePath("Sun")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
 scene_success = ExtResource("2_gycjm")
+ambient = ExtResource("3_8i1lk")
 
 [node name="Player" parent="." unique_id=303297383 node_paths=PackedStringArray("level") instance=ExtResource("2_oyk6k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
