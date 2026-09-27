@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-@onready var music_start = preload("res://assets/audio/music/Theme4.ogg")
+@onready var music_start_interlude3 = preload("res://assets/audio/music/Theme4.ogg")
 @onready var music_narration_intro_epilogues = preload("res://assets/audio/music/Church.ogg")
 @onready var music_narration_interludes = preload("res://assets/audio/music/Start.ogg")
 
@@ -27,7 +27,7 @@ func _play_music(music: AudioStream, volume: float = 0.0) -> void:
 
 func play_music_start() -> void:
 	
-	_play_music(music_start)
+	_play_music(music_start_interlude3)
 
 func play_music_narration(id: String) -> void:
 	
@@ -35,7 +35,7 @@ func play_music_narration(id: String) -> void:
 			"intro": _play_music(music_narration_intro_epilogues)
 			"interlude1": _play_music(music_narration_interludes)
 			"interlude2": _play_music(music_narration_interludes)
-			"interlude3": _play_music(music_narration_interludes)
+			"interlude3": _play_music(music_start_interlude3)
 			"epilogues": _play_music(music_narration_intro_epilogues)
 			
 			_: printerr("Unknown narration id for MusicPlayer")

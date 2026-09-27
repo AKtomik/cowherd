@@ -33,6 +33,8 @@ directories/dch_directory={
 "juanico": "res://assets/Narrative/juanico.dch",
 "leonor": "res://assets/Narrative/leonor.dch",
 "melchor": "res://assets/Narrative/melchor.dch",
+"melchor_mid": "res://assets/Narrative/melchor_mid.dch",
+"melchor_old": "res://assets/Narrative/melchor_old.dch",
 "pere": "res://assets/Narrative/pere.dch"
 }
 directories/dtl_directory={

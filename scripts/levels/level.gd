@@ -24,7 +24,7 @@ var score_current = 0
 @onready var music_arcade = preload("res://assets/audio/music/corridos.ogg")
 @onready var sfx_game_over = preload("res://assets/audio/sfx/GIMMICK_Defeat.ogg")
 @onready var sfx_victory = preload("res://assets/audio/sfx/GIMMICK_Victory.ogg")
-@onready var sfx_feedback_enter_pen = preload("res://assets/audio/sfx/Feedback_EntreeEnclos.ogg")
+@onready var sfx_feedback_enter_pen = [preload("res://assets/audio/sfx/FB_Enclos1.ogg"), preload("res://assets/audio/sfx/FB_Enclos2.ogg"), preload("res://assets/audio/sfx/FB_Enclos3.ogg"), preload("res://assets/audio/sfx/FB_Enclos4.ogg"), preload("res://assets/audio/sfx/FB_Enclos5.ogg")]
 var sfx_player: AudioStreamPlayer
 var ambient_player: AudioStreamPlayer
 
@@ -47,7 +47,8 @@ func setup():
 	sfx_player.bus = "SFX"
 	add_child(sfx_player)
 	var sfx_feedback_randomizer = AudioStreamRandomizer.new()
-	sfx_feedback_randomizer.add_stream(-1, sfx_feedback_enter_pen)
+	for s in sfx_feedback_enter_pen:
+		sfx_feedback_randomizer.add_stream(-1, s)
 	sfx_feedback_randomizer.random_pitch = 2.0
 	sfx_player.stream = sfx_feedback_randomizer
 	
