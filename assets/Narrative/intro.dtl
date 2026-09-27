@@ -1,4 +1,5 @@
 do MusicPlayer.play_music_narration("intro")
+set {loyalty} = 0
 Ixmiquilpan, 1551. Tu écoutes les chants en latin à l’intérieur d’un monastère construit sur l’église où tu as été baptisé seize ans auparavant. Il n’y avait alors en ces lieux qu’une modeste hutte en paille avec une croix en bois. A la sortie de la messe, ton père, un Espagnol arrivé en Nouvelle-Espagne quelques années après la conquête de Mexico, te fait comprendre qu’il est temps pour toi de partir.
 join pere center
 join melchor center

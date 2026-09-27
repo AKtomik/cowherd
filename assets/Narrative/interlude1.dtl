@@ -3,7 +3,6 @@ Querétaro, 1567. Tu as 32 ans. Tu as passé la moitié de ta vie dans les domai
 join melchor center
 Pour la première fois, un éleveur t’a désigné comme caporal d’une équipe de vachers. Autour d’un feu de camp, tu joues aux cartes avec les trois hommes à ta charge. Soudain, l’un d’eux interrompt l’une de tes histoires...
 join juanico center
-do GameOverlord.switch_to_level(1)
 juanico: Sa Majesté Melchor de los Reyes, cette histoire de comment tu as survécu seul deux mois dans le désert, je l’ai entendue tellement de fois depuis que je te connais que je commence presque à y croire.
 melchor: Tu mets en doute ma parole d’homme ?
 juanico: Je crois chacune de tes paroles, mais comme ton histoire change à chaque fois de manière différente, je commence à croire que tu parles seulement pour nous brouiller l’esprit et gagner aux cartes…
@@ -20,6 +19,7 @@ juanico: Je crois chacune de tes paroles, mais comme ton histoire change à chaq
 - Tiens ta langue. Ton sort dépend de ce que je dirai à l’éleveur à notre retour.
 	La partie de cartes s’interrompt. La tension est palpable. Tu ne dors que d’un œil et Juanico en fait probablement autant.
 	do GameOverlord.add_loyauty(1)
+	set {loyalty} += 1.0
 Au petit matin, le ciel est parsemé de nuages. Tu sais qu’il va pleuvoir dans l’après-midi pendant plusieurs heures comme les jours précédents. Cette année, les vaches seront grasses et les veaux nombreux, mais il est important de presser le pas pour ne pas partager les bestiaux avec les équipes de vachers des autres éleveurs.
 do GameOverlord.switch_to_level(2)
 return

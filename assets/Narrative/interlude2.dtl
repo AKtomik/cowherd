@@ -10,6 +10,7 @@ diego: J’entends de plus en plus d’Espagnols se plaindre des esclaves qui s�
 - Il existe des bandits qui préfèrent la liberté sur cette terre plutôt que le salut de leur âme.
 	Diego crache par terre et s’en va.
 	do GameOverlord.add_loyauty(1)
+	set {loyalty} += 1.0
 - Aide-moi à me lever et passe-moi ma lance, on va faire la peau à un Espagnol comme on abat un mauvais taureau.
 	Vous arrivez tant bien que mal à frapper aux portes de l’hôtel de ville, mais les Espagnols vous ont repéré. Un coup de feu part de quelques mètres derrière toi.
 	do GameOverlord.game_over(2)
