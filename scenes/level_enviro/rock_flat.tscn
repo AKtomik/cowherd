@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cyj2673dwv4l"]
+
+[ext_resource type="PackedScene" uid="uid://but86y72jpil3" path="res://scenes/level_enviro/rok.tscn" id="1_vchvw"]
+
+[node name="RockFlat" type="Node3D" unique_id=268298662]
+
+[node name="RokSimple" parent="." unique_id=1297683498 instance=ExtResource("1_vchvw")]
+transform = Transform3D(1.9595582, 0, 0, 0, 0.7439888, 0, 0, 0, 1.582027, 0, 0, 0)

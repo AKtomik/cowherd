@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://qgxv70ydux4v"]
+
+[ext_resource type="PackedScene" uid="uid://but86y72jpil3" path="res://scenes/level_enviro/rok.tscn" id="1_371je"]
+
+[node name="RockTriple" type="Node3D" unique_id=1417218628]
+
+[node name="RokSimple" parent="." unique_id=1297683498 instance=ExtResource("1_371je")]
+
+[node name="RokSimple2" parent="." unique_id=384974010 instance=ExtResource("1_371je")]
+transform = Transform3D(-0.91881025, 0, 0.39469963, 0, 1, 0, -0.39469963, 0, -0.91881025, -0.04714966, -1.7486982, -7.6172867)
+
+[node name="RokSimple3" parent="." unique_id=475633679 instance=ExtResource("1_371je")]
+transform = Transform3D(-0.61816174, 0, -0.78605086, 0, 1, 0, 0.78605086, 0, -0.61816174, 2.976715, 3.4490051, -2.14779)

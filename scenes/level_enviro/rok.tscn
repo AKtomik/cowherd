@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://but86y72jpil3"]
+
+[ext_resource type="PackedScene" uid="uid://cyxrybsg0mgqs" path="res://assets/models/rok/Roche.fbx" id="1_0y8uc"]
+[ext_resource type="Texture2D" uid="uid://bh6mssw85ga53" path="res://assets/models/rok/M_Roche_BaseColor.png" id="2_6goq3"]
+[ext_resource type="Texture2D" uid="uid://cvriv8bdun62" path="res://assets/models/rok/M_Roche_OcclusionRoughnessMetallic.png" id="3_rfmio"]
+[ext_resource type="Texture2D" uid="uid://fwu2ib2k14ln" path="res://assets/models/rok/M_Roche_Normal.png" id="4_iud67"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wse01"]
+albedo_texture = ExtResource("2_6goq3")
+metallic = 1.0
+metallic_texture = ExtResource("3_rfmio")
+normal_enabled = true
+normal_texture = ExtResource("4_iud67")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5v42s"]
+size = Vector3(13, 8.6, 12)
+
+[node name="RokSimple" type="StaticBody3D" unique_id=1297683498 groups=["obstacles"]]
+collision_layer = 2
+collision_mask = 12
+
+[node name="Roche" parent="." unique_id=1362480041 instance=ExtResource("1_0y8uc")]
+
+[node name="Rocher" parent="Roche" index="0" unique_id=263090120]
+material_override = SubResource("StandardMaterial3D_wse01")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1238452841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 4, 0)
+shape = SubResource("BoxShape3D_5v42s")
+
+[editable path="Roche"]
