@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bntbb8jrqwcl4"]
 
 [ext_resource type="Script" uid="uid://cceapts7dyrd" path="res://scripts/entities/cow.gd" id="1_fgglk"]
-[ext_resource type="PackedScene" uid="uid://ceekdq1opge0w" path="res://models/vache/vache.fbx" id="2_q53vi"]
-[ext_resource type="Texture2D" uid="uid://f33php24jfji" path="res://models/vache/M_Vache_BaseColor.png" id="3_wm41f"]
-[ext_resource type="Texture2D" uid="uid://cwakpl0tugt7c" path="res://models/vache/M_Vache_Normal.png" id="4_vg2fe"]
-[ext_resource type="Texture2D" uid="uid://b7gqm1jkgqyd3" path="res://models/vache/M_Vache_OcclusionRoughnessMetallic.png" id="5_iqv4j"]
+[ext_resource type="PackedScene" uid="uid://ceekdq1opge0w" path="res://assets/models/vache/vache.fbx" id="2_q53vi"]
+[ext_resource type="Texture2D" uid="uid://f33php24jfji" path="res://assets/models/vache/M_Vache_BaseColor.png" id="3_wm41f"]
+[ext_resource type="Texture2D" uid="uid://cwakpl0tugt7c" path="res://assets/models/vache/M_Vache_Normal.png" id="4_vg2fe"]
+[ext_resource type="Texture2D" uid="uid://b7gqm1jkgqyd3" path="res://assets/models/vache/M_Vache_OcclusionRoughnessMetallic.png" id="5_iqv4j"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_fgglk"]
 radius = 2.0

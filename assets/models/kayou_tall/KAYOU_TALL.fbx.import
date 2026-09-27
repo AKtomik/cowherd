@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cv1sqas3psesp"
-path="res://.godot/imported/Cheval.fbx-4ff0c8f578730dc50e2eec10eabd0420.scn"
+uid="uid://bo5jlivnn7arf"
+path="res://.godot/imported/KAYOU_TALL.fbx-9a4da684697f65f2a32ef70ec0900692.scn"
 
 [deps]
 
-source_file="res://models/horse/Cheval.fbx"
-dest_files=["res://.godot/imported/Cheval.fbx-4ff0c8f578730dc50e2eec10eabd0420.scn"]
+source_file="res://assets/models/kayou_tall/KAYOU_TALL.fbx"
+dest_files=["res://.godot/imported/KAYOU_TALL.fbx-9a4da684697f65f2a32ef70ec0900692.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bo5jlivnn7arf"
-path="res://.godot/imported/KAYOU_TALL.fbx-8f03077b775558e93febe4af24f98011.scn"
+uid="uid://bnfl4wknr787s"
+path="res://.godot/imported/Maguey.fbx-de6e5024afd68aebe5a33a4cf9992a5a.scn"
 
 [deps]
 
-source_file="res://models/kayou_tall/KAYOU_TALL.fbx"
-dest_files=["res://.godot/imported/KAYOU_TALL.fbx-8f03077b775558e93febe4af24f98011.scn"]
+source_file="res://assets/models/maguey/Maguey.fbx"
+dest_files=["res://.godot/imported/Maguey.fbx-de6e5024afd68aebe5a33a4cf9992a5a.scn"]
 
 [params]
 

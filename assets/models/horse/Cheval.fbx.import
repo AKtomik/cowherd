@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dxr0d0ilk3n8c"
-path="res://.godot/imported/Cactus.fbx-dd29373ff3197d2a0bcb4bbdd3cadbe5.scn"
+uid="uid://cv1sqas3psesp"
+path="res://.godot/imported/Cheval.fbx-0472aace98f21d3ab1ce1eed086fb8af.scn"
 
 [deps]
 
-source_file="res://models/cactus/Cactus.fbx"
-dest_files=["res://.godot/imported/Cactus.fbx-dd29373ff3197d2a0bcb4bbdd3cadbe5.scn"]
+source_file="res://assets/models/horse/Cheval.fbx"
+dest_files=["res://.godot/imported/Cheval.fbx-0472aace98f21d3ab1ce1eed086fb8af.scn"]
 
 [params]
 

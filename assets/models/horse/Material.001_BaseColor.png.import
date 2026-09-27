@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7gqm1jkgqyd3"
-path.s3tc="res://.godot/imported/M_Vache_OcclusionRoughnessMetallic.png-bd0054a01b9b0f844f50830a99bd61b6.s3tc.ctex"
+uid="uid://cbf4c3gb0vn15"
+path.s3tc="res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://models/vache/M_Vache_OcclusionRoughnessMetallic.png"
-dest_files=["res://.godot/imported/M_Vache_OcclusionRoughnessMetallic.png-bd0054a01b9b0f844f50830a99bd61b6.s3tc.ctex"]
+source_file="res://assets/models/horse/Material.001_BaseColor.png"
+dest_files=["res://.godot/imported/Material.001_BaseColor.png-174ca99be390386e114cbf508165b9ab.s3tc.ctex"]
 
 [params]
 

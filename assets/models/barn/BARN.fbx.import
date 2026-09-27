@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dwfg7y1x4f818"
-path="res://.godot/imported/BARN.fbx-c0c519bb0072d53ff5506a53814ed6a7.scn"
+path="res://.godot/imported/BARN.fbx-5921e85c765e5408d33b3c771b17cd3b.scn"
 
 [deps]
 
-source_file="res://models/barn/BARN.fbx"
-dest_files=["res://.godot/imported/BARN.fbx-c0c519bb0072d53ff5506a53814ed6a7.scn"]
+source_file="res://assets/models/barn/BARN.fbx"
+dest_files=["res://.godot/imported/BARN.fbx-5921e85c765e5408d33b3c771b17cd3b.scn"]
 
 [params]
 

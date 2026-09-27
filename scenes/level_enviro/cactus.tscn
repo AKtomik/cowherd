@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baubasbmvb4eu"]
 
-[ext_resource type="PackedScene" uid="uid://dxr0d0ilk3n8c" path="res://models/cactus/Cactus.fbx" id="1_uvho0"]
+[ext_resource type="PackedScene" uid="uid://dxr0d0ilk3n8c" path="res://assets/models/cactus/Cactus.fbx" id="1_uvho0"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_u60bi"]
 radius = 2.5

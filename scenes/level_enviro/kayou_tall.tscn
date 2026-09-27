@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fwbtpt0ervu"]
 
-[ext_resource type="PackedScene" uid="uid://bo5jlivnn7arf" path="res://models/kayou_tall/KAYOU_TALL.fbx" id="1_vh1py"]
+[ext_resource type="PackedScene" uid="uid://bo5jlivnn7arf" path="res://assets/models/kayou_tall/KAYOU_TALL.fbx" id="1_vh1py"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uvho0"]
 size = Vector3(3.2, 2, 2.6)

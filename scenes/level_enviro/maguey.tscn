@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxh2jk4h4w186"]
 
-[ext_resource type="PackedScene" uid="uid://bnfl4wknr787s" path="res://models/maguey/Maguey.fbx" id="1_ji30f"]
+[ext_resource type="PackedScene" uid="uid://bnfl4wknr787s" path="res://assets/models/maguey/Maguey.fbx" id="1_ji30f"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
 radius = 1.0

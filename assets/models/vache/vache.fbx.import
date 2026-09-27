@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bnfl4wknr787s"
-path="res://.godot/imported/Maguey.fbx-052e8ac74a0291d921965d14a3e796d0.scn"
+uid="uid://ceekdq1opge0w"
+path="res://.godot/imported/vache.fbx-d1a7ba946bf9f7c287de7bc51d04e0f2.scn"
 
 [deps]
 
-source_file="res://models/maguey/Maguey.fbx"
-dest_files=["res://.godot/imported/Maguey.fbx-052e8ac74a0291d921965d14a3e796d0.scn"]
+source_file="res://assets/models/vache/vache.fbx"
+dest_files=["res://.godot/imported/vache.fbx-d1a7ba946bf9f7c287de7bc51d04e0f2.scn"]
 
 [params]
 
