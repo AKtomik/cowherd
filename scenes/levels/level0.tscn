@@ -13,10 +13,6 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_u60bi"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xkjw5"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_u60bi"]
-
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("pen_node", "ui_node", "sun_node")]
 script = ExtResource("1_ppgk2")
 pen_node = NodePath("Map/Pen")
@@ -29,9 +25,9 @@ level = NodePath("..")
 
 [node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_d0grl")]
 
-[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("follow_node", "level")]
-follow_node = NodePath("../../Player")
+[node name="FollowCamera" parent="CameraThings" index="0" unique_id=2081140864 node_paths=PackedStringArray("level", "follow_node")]
 level = NodePath("../..")
+follow_node = NodePath("../../Player")
 
 [node name="Map" type="Node3D" parent="." unique_id=369540063]
 
@@ -147,44 +143,14 @@ shape = SubResource("BoxShape3D_u60bi")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Wall5" unique_id=369489505]
 mesh = SubResource("BoxMesh_u60bi")
 
-[node name="Rock" type="StaticBody3D" parent="Map" unique_id=248168530 groups=["obstacles"]]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 11.9451885, 0, 2.5797458)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock" unique_id=864046858]
-shape = SubResource("CapsuleShape3D_xkjw5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock" unique_id=174710927]
-mesh = SubResource("CapsuleMesh_u60bi")
-
 [node name="Cactus" parent="Map" unique_id=454719588 instance=ExtResource("5_vals0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.178183, 0, -17.906897)
 
 [node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_vals0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.233575, 0, 7.812566)
+transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, -10.578698, 1.9073486e-06, -16.742294)
 
-[node name="Rock2" type="StaticBody3D" parent="Map" unique_id=377545063 groups=["obstacles"]]
-transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 5, 17.417616, 0, -20.803288)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock2" unique_id=1689776685]
-shape = SubResource("CapsuleShape3D_xkjw5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock2" unique_id=816270485]
-mesh = SubResource("CapsuleMesh_u60bi")
-
-[node name="Rock3" type="StaticBody3D" parent="Map" unique_id=1155477620 groups=["obstacles"]]
-transform = Transform3D(8, 0, 0, 0, 3, 0, 0, 0, 8, -3.8749752, -1.9073486e-06, -17.867514)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Rock3" unique_id=1084716146]
-shape = SubResource("CapsuleShape3D_xkjw5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/Rock3" unique_id=167043607]
-mesh = SubResource("CapsuleMesh_u60bi")
+[node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_vals0")]
+transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, 11.942065, 1.9073486e-06, 4.712434)
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
