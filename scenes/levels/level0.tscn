@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://75wf2fkcgd2q" path="res://scenes/entities/player.tscn" id="2_2r41h"]
+[ext_resource type="PackedScene" uid="uid://dbynw7w7qasvq" path="res://scenes/level_elements/camera_things.tscn" id="3_d0grl"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="3_klq6b"]
-[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/utils/pen.tscn" id="4_b121j"]
-[ext_resource type="Script" uid="uid://dv1v22ievp2n0" path="res://scripts/utils/follow_camera.gd" id="5_2r41h"]
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="4_b121j"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="5_8c41q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
@@ -25,26 +25,7 @@ sun_node = NodePath("Sun")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7994308, 0)
 level = NodePath("..")
 
-[node name="CameraPackage" type="Node3D" parent="." unique_id=1496614505]
-
-[node name="FollowCamera" type="Camera3D" parent="CameraPackage" unique_id=59954025 node_paths=PackedStringArray("follow_node", "magnet_position", "starting_position", "level")]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 20, 20)
-script = ExtResource("5_2r41h")
-follow_node = NodePath("../../Player")
-magnet_position = NodePath("../CameraMagnet")
-ALIGN_SPEED = 0.07
-CINEMATIC_SPEED = 0.4
-MIDDLE_RATIO = 0.75
-FOLLOW_EXAGERATION = 3.0
-Y_LOCK_ENABLED = true
-starting_position = NodePath("../CameraStarting")
-level = NodePath("../..")
-
-[node name="CameraMagnet" type="Node3D" parent="CameraPackage" unique_id=1166017232]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.46767)
-
-[node name="CameraStarting" type="Node3D" parent="CameraPackage" unique_id=565849136]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -53.254036)
+[node name="CameraThings" parent="." unique_id=774152112 instance=ExtResource("3_d0grl")]
 
 [node name="Map" type="Node3D" parent="." unique_id=369540063]
 
