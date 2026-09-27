@@ -18,9 +18,12 @@
 [ext_resource type="PackedScene" uid="uid://qgxv70ydux4v" path="res://scenes/level_enviro/rock_triple.tscn" id="12_ev8xs"]
 [ext_resource type="PackedScene" uid="uid://mp8qbo46v7fm" path="res://scenes/level_elements/pen_fences.tscn" id="13_q6dln"]
 
-[node name="LevelRoot" type="Node3D" unique_id=1058585129]
+[node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_xx6b8")
 score_goal = 25
+sun_node = NodePath("Sun")
+pen_node = NodePath("Map/FencesCircle/Pen")
+ui_node = NodePath("CanvasLayer/UI")
 scene_success = ExtResource("2_f62st")
 dialog_success = ExtResource("3_y3vdi")
 dialog_failure = ExtResource("4_xx6b8")

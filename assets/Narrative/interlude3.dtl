@@ -15,4 +15,4 @@ leonor: Ça va faire dix ans que nous sommes mariés. Tu m’avais promis qu’o
 	do GameOverlord.add_loyauty(1)
 	set {loyalty} += 1.0
 Quelques mois plus tard, tu es à une journée de parvenir à la vallée de San Francisco. La nuit est tombée, mais tu n’as plus à craindre les Chichimèques aux visages peints aux arcs bandés. Cependant, un faux mouvement pourrait disperser les troupeaux, au risque de défaire tous les efforts fournis au cours du périple.
-jump epilogues/
+do GameOverlord.switch_to_level(4)
