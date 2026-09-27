@@ -37,9 +37,12 @@ directories/dtl_directory={
 "intro": "res://assets/Narrative/intro.dtl",
 "retry1": "res://assets/Narrative/retry1.dtl"
 }
-layout/style_directory={}
-layout/style_list=["res://Resources/default_narrative_style.tres"]
-layout/default_style="res://Resources/default_narrative_style.tres"
+layout/style_directory={
+"": "res://styles/default_dialogic.tres",
+"default_dialogic": "res://styles/default_dialogic.tres"
+}
+layout/style_list=["res://styles/default_dialogic.tres"]
+layout/default_style="res://styles/default_dialogic.tres"
 
 [display]
 
