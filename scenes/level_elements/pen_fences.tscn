@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://mp8qbo46v7fm"]
+
+[ext_resource type="PackedScene" uid="uid://diunkg44s7ous" path="res://scenes/level_elements/pen.tscn" id="1_rkoe5"]
+[ext_resource type="PackedScene" uid="uid://cs8is4thtdvny" path="res://scenes/level_enviro/fence_double.tscn" id="2_oevmc"]
+
+[node name="FencesCircle" type="Node3D" unique_id=773438538]
+
+[node name="Pen" parent="." unique_id=1444030719 instance=ExtResource("1_rkoe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6995902, 1.4305115e-06, -125.768005)
+
+[node name="FencesLeft" type="Node3D" parent="." unique_id=706144417]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.229, 0, -280.871)
+
+[node name="FenceDouble" parent="FencesLeft" unique_id=1726671758 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.518016, 0, -120.36195)
+
+[node name="FenceDouble11" parent="FencesLeft" unique_id=14885702 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5915806, 0, -120.36195)
+
+[node name="FenceDouble12" parent="FencesLeft" unique_id=733221274 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1771464, 0, -120.36195)
+
+[node name="FenceDouble2" parent="FencesLeft" unique_id=1991420241 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.347412, 0, -120.36195)
+
+[node name="FenceDouble9" parent="FencesLeft" unique_id=1496748264 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.69332, 0, -160.45679)
+
+[node name="FenceDouble10" parent="FencesLeft" unique_id=2121861365 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.522717, 0, -160.45679)
+
+[node name="FenceDouble3" parent="FencesLeft" unique_id=919624994 instance=ExtResource("2_oevmc")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 29.585247, 3.8146973e-06, -122.62403)
+
+[node name="FenceDouble4" parent="FencesLeft" unique_id=1537569947 instance=ExtResource("2_oevmc")]
+transform = Transform3D(0.5585623, 0, 0.8294626, 0, 1, 0, -0.8294626, 0, 0.5585623, 35.887383, 3.8146973e-06, -128.59406)
+
+[node name="FenceDouble7" parent="FencesLeft" unique_id=1827861609 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-0.62261844, 0, 0.7825256, 0, 1, 0, -0.7825256, 0, -0.62261844, 35.278904, 0.20609093, -153.2857)
+
+[node name="FenceDouble8" parent="FencesLeft" unique_id=614871975 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-0.9029694, 0, 0.42970487, 0, 1, 0, -0.42970487, 0, -0.9029694, 28.803888, 0.20609093, -158.5726)
+
+[node name="FenceDouble5" parent="FencesLeft" unique_id=1828220594 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.26129, 3.8146973e-06, -136.72144)
+
+[node name="FenceDouble6" parent="FencesLeft" unique_id=1852933503 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.269997, 5.722046e-06, -145.42816)
+
+[node name="FencesRight" type="Node3D" parent="." unique_id=1632512607]
+
+[node name="FenceDouble" parent="FencesRight" unique_id=1966826542 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.518016, 0, -120.36195)
+
+[node name="FenceDouble2" parent="FencesRight" unique_id=1320345592 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.347412, 0, -120.36195)
+
+[node name="FenceDouble9" parent="FencesRight" unique_id=721089027 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.69332, 0, -160.45679)
+
+[node name="FenceDouble10" parent="FencesRight" unique_id=1499359572 instance=ExtResource("2_oevmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.522717, 0, -160.45679)
+
+[node name="FenceDouble3" parent="FencesRight" unique_id=955890868 instance=ExtResource("2_oevmc")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 29.585247, 3.8146973e-06, -122.62403)
+
+[node name="FenceDouble4" parent="FencesRight" unique_id=474904029 instance=ExtResource("2_oevmc")]
+transform = Transform3D(0.5585623, 0, 0.8294626, 0, 1, 0, -0.8294626, 0, 0.5585623, 35.887383, 3.8146973e-06, -128.59406)
+
+[node name="FenceDouble7" parent="FencesRight" unique_id=1423692020 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-0.62261844, 0, 0.7825256, 0, 1, 0, -0.7825256, 0, -0.62261844, 35.278904, 0.20609093, -153.2857)
+
+[node name="FenceDouble8" parent="FencesRight" unique_id=1902516829 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-0.9029694, 0, 0.42970487, 0, 1, 0, -0.42970487, 0, -0.9029694, 28.803888, 0.20609093, -158.5726)
+
+[node name="FenceDouble5" parent="FencesRight" unique_id=1095487819 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.26129, 3.8146973e-06, -136.72144)
+
+[node name="FenceDouble6" parent="FencesRight" unique_id=1217992820 instance=ExtResource("2_oevmc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 38.269997, 5.722046e-06, -145.42816)
+
+[editable path="Pen"]
