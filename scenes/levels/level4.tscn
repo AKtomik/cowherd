@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsy2oiyt8le24" path="res://scripts/levels/level.gd" id="1_xx6b8"]
 [ext_resource type="PackedScene" uid="uid://cec72ktdq4lo8" path="res://scenes/narrative/narrative_scene.tscn" id="2_f62st"]
-[ext_resource type="Resource" uid="uid://bblkresjmmx8l" path="res://assets/Narrative/end.dtl" id="3_w24lh"]
+[ext_resource type="Resource" uid="uid://2gaamm10v81k" path="res://assets/Narrative/epilogues.dtl" id="3_y3vdi"]
 [ext_resource type="Resource" uid="uid://imstm6868rlb" path="res://assets/Narrative/retry4.dtl" id="4_xx6b8"]
 [ext_resource type="AudioStream" uid="uid://dddbwsp2emr2" path="res://assets/audio/sfx/Ambient_DesertSunny.ogg" id="5_tsmbm"]
 [ext_resource type="PackedScene" uid="uid://dsaf48h56ubr" path="res://scenes/level_elements/common_level.tscn" id="6_5sfmg"]
@@ -22,7 +22,7 @@
 script = ExtResource("1_xx6b8")
 score_goal = 25
 scene_success = ExtResource("2_f62st")
-dialog_success = ExtResource("3_w24lh")
+dialog_success = ExtResource("3_y3vdi")
 dialog_failure = ExtResource("4_xx6b8")
 ambient = ExtResource("5_tsmbm")
 
