@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmjpt6yfmhwj4"
-path="res://.godot/imported/leonor.png-8ac1928490b92a8691bedf0930c4071f.ctex"
+uid="uid://g300687hsa0v"
+path="res://.godot/imported/diego.png-cb6ef53ce7d868c5fadb0104d730b84a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/portraits/leonor.png"
-dest_files=["res://.godot/imported/leonor.png-8ac1928490b92a8691bedf0930c4071f.ctex"]
+source_file="res://assets/portraits/diego.png"
+dest_files=["res://.godot/imported/diego.png-cb6ef53ce7d868c5fadb0104d730b84a.ctex"]
 
 [params]
 
