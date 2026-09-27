@@ -1,17 +1,32 @@
 [gd_scene format=3 uid="uid://fwbtpt0ervu"]
 
-[ext_resource type="PackedScene" uid="uid://bo5jlivnn7arf" path="res://assets/models/kayou_tall/KAYOU_TALL.fbx" id="1_vh1py"]
+[ext_resource type="PackedScene" uid="uid://cpefqrl7qyn5f" path="res://assets/models/kayou_tall/Caillou.fbx" id="1_gmwg5"]
+[ext_resource type="Texture2D" uid="uid://x8x8wcdogn2k" path="res://assets/models/kayou_tall/M_Caillou_BaseColor.png" id="2_chjxj"]
+[ext_resource type="Texture2D" uid="uid://b84tp51tvtoq1" path="res://assets/models/kayou_tall/M_Caillou_OcclusionRoughnessMetallic.png" id="3_51t54"]
+[ext_resource type="Texture2D" uid="uid://bn4cqshecmihn" path="res://assets/models/kayou_tall/M_Caillou_Normal.png" id="4_32k6f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uvho0"]
 size = Vector3(3.2, 2, 2.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srbr6"]
+albedo_texture = ExtResource("2_chjxj")
+metallic = 1.0
+metallic_texture = ExtResource("3_51t54")
+roughness_texture = ExtResource("3_51t54")
+normal_enabled = true
+normal_texture = ExtResource("4_32k6f")
 
 [node name="KayouTall" type="StaticBody3D" unique_id=562230623 groups=["obstacles"]]
 collision_layer = 2
 collision_mask = 12
 
-[node name="KAYOU" parent="." unique_id=1765563851 instance=ExtResource("1_vh1py")]
-transform = Transform3D(0.9231241, 0, 0, 0, 0.9231241, 0, 0, 0, 0.9231241, 0, 0.25035378, 31.611801)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1303470173]
 transform = Transform3D(4.7958326, 0, 0, 0, 4.7958326, 0, 0, 0, 4.7958326, 0, 0.47897246, -0.10190678)
 shape = SubResource("BoxShape3D_uvho0")
+
+[node name="Caillou" parent="." unique_id=1528039201 instance=ExtResource("1_gmwg5")]
+
+[node name="Caillou_low" parent="Caillou" index="0" unique_id=1909722298]
+material_override = SubResource("StandardMaterial3D_srbr6")
+
+[editable path="Caillou"]
