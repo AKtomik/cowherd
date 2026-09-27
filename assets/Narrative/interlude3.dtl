@@ -10,7 +10,7 @@ leonor: Ça va faire dix ans que nous sommes mariés. Tu m’avais promis qu’o
 	Ta femme a gardé le silence et elle est partie dans la cuisine. Tu l’entends réchauffer une soupe et quelques tortillas. Mais tu ne l’entends pas empoisonner ton dernier repas.
 	do GameOverlord.game_over(3)
 	return
-- Nous allons nous établir à San Luis Potosí : les Espagnols ont choisi ce nom car la colline qui surplombe la ville renferme plus d’argent que toutes les mines du Pérou réunies.
+- Tout changera à San Luis Potosí : la colline qui surplombe cette ville renferme plus d’argent que toutes les mines du Pérou réunies.
 	leonor: Quand je t’ai rencontré, tu te moquais de ton père qui croyait qu’il allait devenir le plus riche des hommes à Ixmiquilpan.
 	do GameOverlord.add_loyauty(1)
 	set {loyalty} += 1.0

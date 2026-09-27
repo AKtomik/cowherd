@@ -1,13 +1,13 @@
 do MusicPlayer.play_music_narration("intro")
 set {loyalty} = 0
-Ixmiquilpan, 1551. Tu écoutes les chants en latin à l’intérieur d’un monastère construit sur l’église où tu as été baptisé seize ans auparavant. Il n’y avait alors en ces lieux qu’une modeste hutte en paille avec une croix en bois. A la sortie de la messe, ton père, un Espagnol arrivé en Nouvelle-Espagne quelques années après la conquête de Mexico, te fait comprendre qu’il est temps pour toi de partir.
+Ixmiquilpan, 1551. Tu attends ton père à l’ombre de l’immense monastère érigé à la place de l’église en bois et en paille où tu as été baptisé seize ans auparavant. A la sortie de la messe, tu aperçois ton père qui te fait signe d’approcher.
 join pere center
 join melchor center
 pere: Melchor, tu es un homme fait. Je t’ai appris à monter à cheval et à signer avec une plume. Tu n’as pas besoin de plus pour gagner ta vie dans ce pays. Prends la route pour San Juan del Río, tu remettras cette lettre au conquistador Bocanegra. J’ai fait sa connaissance dans le vaisseau qui nous a emmenés d’Espagne jusqu’ici. Il a prouvé sa valeur en faisant la guerre dans le pays des Chichimèques, les plus barbares des Indiens.
-- Jamais : là-bas, les Indiens sont capables de traverser le crâne d’un cheval et le corps de son cavalier d’une seule flèche.
-	pere: C’est vrai, mais cela va bientôt changer. Les Otomis ont accepté de nous aider à soumettre les Chichimèques et le vice-roi y distribue d’immenses terres à tous les Espagnols qui veulent élever des vaches et des chevaux.
-- J’espère ne plus jamais revoir ton visage, perro, puto, mazate.
-	"Mulâtre ingrat, tu ne vaux pas mieux que les Indiens qui prient à la Vierge le jour et font des sacrifices à Quetzalcoatl la nuit, menteur, serviteur de Satan : je vais t’envoyer aux mines de Ixmiquilpan.": <Empty Text Event>
+- Jamais ! Un Chichimèque peut tuer d’une seule flèche un cheval et son cavalier.
+	pere: C’est vrai, mais ces infidèles n’en ont plus pour longtemps. Les Otomis vont nous aider à les soumettre. Et le vice-roi distribue d’immenses terres à tous les Espagnols qui veulent élever des vaches et des chevaux. Travaille pour l’un d’entre eux et tu jouiras de sa protection et de sa richesse.
+- Très bien. J’espère ne plus jamais revoir ton visage, perro, puto, bellaco.
+	pere: Mulâtre ingrat, tu ne vaux pas mieux que les Indiens qui prient à la Vierge le jour et font des sacrifices à Quetzalcoatl la nuit, serviteur de Satan \: je vais t’envoyer aux mines de Ixmiquilpan expurger tes pêchés à la sueur de ton front.
 	do GameOverlord.game_over(0)
 	return
 - Oui, mon seigneur. Si l’on me demande qui sont mes parents, que dois-je dire ?
