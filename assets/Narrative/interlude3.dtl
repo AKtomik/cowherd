@@ -1,6 +1,6 @@
 do MusicPlayer.play_music_narration("interlude3")
 Aguascalientes, 1593. Tu as 58 ans. Une armistice a été conclue il y a trois ans avec les Chichimèques \: les nomades ont accepté de ne plus attaquer les colons à condition que ces derniers leur fournissent régulièrement du maïs, des habits et du bétail. Cela a permis aux Espagnols de s’installer dans des vallées où même toi tu n’osais pas pénétrer quelques années plus tôt...
-join melchor center
+join melchor_mid center
 On t’a proposé d’amener des vaches de Guadiana jusqu’à la vallée de San Francisco. Ce voyage est long et périlleux, surtout à ton âge, mais si tu le réalises avec succès, tu as la promesse du capitaine Miguel Caldera que tu obtiendras des terres fertiles où tu pourras bâtir une maison pour y vivre avec ta famille. Tu parles de cette opportunité avec ta femme.
 join leonor center
 leonor: Ça va faire dix ans que nous sommes mariés. Tu m’avais promis qu’on vivrait loin de la guerre. J’ai soigné tes blessures et j’ai élevé nos enfants seule pendant que tu chevauchais à travers le désert, sans savoir si tu reviendrais. Si tu n’arrêtes pas maintenant, tu laisseras une veuve et deux orphelins sans le sou.

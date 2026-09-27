@@ -1,21 +1,21 @@
 do MusicPlayer.play_music_narration("interlude1")
 Querétaro, 1567. Tu as 32 ans. Tu as passé la moitié de ta vie dans les domaines d’élevage des Espagnols, tu connais tous les ombrages et les lacs où les troupeaux trouvent refuge. A présent, les vaches et les chevaux abondent dans le pays des Chichimèques \: certains éleveurs, marquent jusqu’à 13 000 veaux au fer rouge avec leurs initiales…
-join melchor center
+join melchor_mid center
 Pour la première fois, un éleveur t’a désigné comme caporal d’une équipe de vachers. Autour d’un feu de camp, tu joues aux cartes avec les trois hommes à ta charge. L’un d’eux, certainement agacé d’avoir perdu la moitié de son salaire en une partie, interrompt l’une de tes histoires...
 join juanico center
 juanico: Sa Majesté Melchor de los Reyes, cette histoire de comment tu as survécu seul deux mois dans le désert, je l’ai entendue tellement de fois depuis que je te connais que je commence presque à y croire.
-melchor: Tu mets en doute ma parole d’homme ?
+melchor_mid: Tu mets en doute ma parole d’homme ?
 juanico: Je crois chacune de tes paroles, mais comme ton histoire change à chaque fois de manière différente, je commence à croire que tu parles seulement pour nous brouiller l’esprit et gagner aux cartes…
 - Salaud, tu vas payer cette partie de cartes avec tes tripes !
 	Tu as sous-estimé Juanico \: le temps que tu finisses ta phrase, il avait dégainé un couteau boucher avec lequel il te fend le crâne, reprend les piastres que tu lui avais gagné et prend la fuite sur ton cheval.
 	do GameOverlord.game_over(1)
 	return
 - Je vais vous confier un secret…
-	melchor: Je ne livre ce secret qu’aux hommes qui risquent contre les cornes des taureaux et les flèches des Chichimèques et vous devez jurer d’en faire autant. (Ils jurent). Comme je vous l’ai déjà raconté, j’accompagnais un marchand entre Zacatecas et San Martín quand nous avons été attaqués par une vingtaine de Huachichiles.
-	melchor: J’ai fui, mais perdu dans le désert, mon cheval est mort de soif. Je me croyais condamné lorsque je me suis réveillé devant un lac magnifique, où des Indiens m’ont offert eau, figues et poisson.
-	melchor: Ils m’ont fait manger un petit cactus qui m’a plongé dans une vision. Le lendemain, épuisé, je me suis réfugié dans une grotte où j’ai rencontré un Mulâtre qui m’a proposé son secours. J’ai signé un contrat avec mon sang et il m’a gravé sur le bras un signe protecteur.
-	Il montre son tatouage.
-	melchor: Si je suis en vie, c’est grâce à Mantelillos.
+	melchor_mid: Je ne livre ce secret qu’aux hommes qui risquent contre les cornes des taureaux et les flèches des Chichimèques et vous devez jurer d’en faire autant. (Ils jurent). Comme je vous l’ai déjà raconté, j’accompagnais un marchand entre Zacatecas et San Martín quand nous avons été attaqués par une vingtaine de Huachichiles.
+	melchor_mid: J’ai fui, mais perdu dans le désert, mon cheval est mort de soif. Je me croyais condamné lorsque je me suis réveillé devant un lac magnifique, où des Indiens m’ont offert eau, figues et poisson.
+	melchor_mid: Ils m’ont fait manger un petit cactus qui m’a plongé dans une vision. Le lendemain, épuisé, je me suis réfugié dans une grotte où j’ai rencontré un Mulâtre qui m’a proposé son secours. J’ai signé un contrat avec mon sang et il m’a gravé sur le bras un signe protecteur.
+	Tu montres ton tatouage.
+	melchor_mid: Si je suis en vie, c’est grâce à Mantelillos.
 - Tiens ta langue. Ton sort dépend de ce que je dirai à l’éleveur à notre retour.
 	La partie de cartes s’interrompt. La tension est palpable. Tu ne dors que d’un œil et Juanico en fait probablement autant.
 	do GameOverlord.add_loyauty(1)
