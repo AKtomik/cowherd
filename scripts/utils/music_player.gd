@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-@onready var music_start = preload("res://assets/audio/music/Start.ogg")
+@onready var music_start = preload("res://assets/audio/music/Theme4.ogg")
 @onready var music_narration_intro_epilogues = preload("res://assets/audio/music/Church.ogg")
 @onready var music_narration_interludes = preload("res://assets/audio/music/Start.ogg")
 
