@@ -5,6 +5,7 @@ extends Node3D
 @export var duration_seconds: float = 60
 @export var progress_seconds: float = 0
 @export var score_goal: int = 2
+@export var do_good_score_end: bool = true
 var score_current = 0
 
 @export_group("links")
@@ -89,6 +90,7 @@ func add_score():
 	score_current += 1
 	ui_node.update_herding_score(score_current, score_goal)
 	sfx_player.play()
+	if (do_good_score_end && score_current >= score_goal): level_end()
 
 func remove_score():
 	if (ended): return
