@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cmwtmuek5isnr"]
 
 [ext_resource type="Texture2D" uid="uid://dg4jownqbj1ua" path="res://assets/UI/background.png" id="1_oap8i"]
+[ext_resource type="Texture2D" uid="uid://ctrgrexyit0ny" path="res://assets/UI/quit_idle.png" id="2_pqmjv"]
+[ext_resource type="Texture2D" uid="uid://d0mcj7p5xsvt8" path="res://assets/UI/quit_hover.png" id="3_e5ls7"]
 
 [node name="Credits" type="Control" unique_id=1366788260]
 layout_mode = 3
@@ -25,21 +27,25 @@ texture = ExtResource("1_oap8i")
 
 [node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=1566900674]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+anchor_bottom = 0.5
+offset_left = -545.5
+offset_top = -289.5
+offset_right = 545.5
+offset_bottom = 289.5
 grow_horizontal = 2
-split_offsets = PackedInt32Array(103, 143, 183, 223, 263, 303, 343, 385, 425)
+grow_vertical = 2
+split_offsets = PackedInt32Array(103, 143, 183, 223, 263, 303, 343, 383)
 split_offset = 103
 
 [node name="Title" type="Label" parent="VSplitContainer" unique_id=1342655445]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
-text = "
+text = ".
 Crédits"
 horizontal_alignment = 1
 
@@ -82,12 +88,9 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Théo Gottis - Artiste 3D"
+text = "Théo Gottis - Artiste 3D
+."
 horizontal_alignment = 1
-
-[node name="HSeparator3" type="HSeparator" parent="VSplitContainer" unique_id=750812727]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
 
 [node name="RDVH2026" type="Label" parent="VSplitContainer" unique_id=480675788]
 layout_mode = 2
@@ -108,8 +111,12 @@ Dénonciation de deux vachers ayant pactisé avec le diable - Archivo General de
 Procès contre Juan de Cordoba (1596). Archivo Municipal de San Luis Potosí (San Luis Potosí), caja 79, exp. 6."
 horizontal_alignment = 1
 
-[node name="Return" type="Button" parent="." unique_id=1692593524]
+[node name="Return" type="TextureButton" parent="." unique_id=617255588]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "x"
+offset_left = 1051.0
+offset_top = 22.0
+offset_right = 1246.0
+offset_bottom = 217.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_pqmjv")
+texture_hover = ExtResource("3_e5ls7")

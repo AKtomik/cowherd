@@ -3,10 +3,20 @@
 [ext_resource type="Script" uid="uid://dyhaqrjdo8rwi" path="res://scripts/ui/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://dg4jownqbj1ua" path="res://assets/UI/background.png" id="2_c2n5p"]
 [ext_resource type="PackedScene" uid="uid://cmwtmuek5isnr" path="res://scenes/ui/credits.tscn" id="2_vjb58"]
+[ext_resource type="Texture2D" uid="uid://5ue7knfnmwk4" path="res://assets/UI/play buton_idle.png" id="3_e11en"]
+[ext_resource type="Texture2D" uid="uid://cclwt8oxr1epw" path="res://assets/UI/play buton_hover.png" id="4_288ov"]
+[ext_resource type="Texture2D" uid="uid://cx23bn6eiukqs" path="res://assets/UI/CREDITS_idle.png" id="5_tub5d"]
+[ext_resource type="Texture2D" uid="uid://sl1wdl324h2k" path="res://assets/UI/CREDITS_hover.png" id="6_dnmb1"]
+[ext_resource type="Texture2D" uid="uid://d4nrfm8rwrgco" path="res://assets/UI/sound on_idle.png" id="7_5j7hh"]
+[ext_resource type="Texture2D" uid="uid://gmgj85anha52" path="res://assets/UI/sound on_hover.png" id="8_y7dvm"]
+[ext_resource type="Texture2D" uid="uid://ctrgrexyit0ny" path="res://assets/UI/quit_idle.png" id="9_tub5d"]
+[ext_resource type="Texture2D" uid="uid://d0mcj7p5xsvt8" path="res://assets/UI/quit_hover.png" id="10_dnmb1"]
+[ext_resource type="Texture2D" uid="uid://cmq3bjysrh0fw" path="res://assets/UI/logo.png" id="12_dnmb1"]
 
-[node name="Menu" type="Node2D" unique_id=1061989209 node_paths=PackedStringArray("credits_layer")]
+[node name="Menu" type="Node2D" unique_id=1061989209 node_paths=PackedStringArray("credits_layer", "mute_button")]
 script = ExtResource("1_yqeox")
 credits_layer = NodePath("CanvasLayer2")
+mute_button = NodePath("CanvasLayer/Mute")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1325743933]
 offset_right = 1410.0
@@ -21,44 +31,100 @@ texture = ExtResource("2_c2n5p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2031083009]
 
-[node name="VSplitContainer" type="VSplitContainer" parent="CanvasLayer" unique_id=1038022658]
+[node name="Start" type="TextureButton" parent="CanvasLayer" unique_id=2056337860]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -174.0
+offset_top = -107.0
+offset_right = 387.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offsets = PackedInt32Array(31, 74)
-split_offset = 31
+scale = Vector2(0.6, 0.6)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_e11en")
+texture_hover = ExtResource("4_288ov")
 
-[node name="Start" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=1734234549]
-layout_mode = 2
-text = "Jouer"
+[node name="Credits" type="TextureButton" parent="CanvasLayer" unique_id=474847998]
+offset_left = 912.00006
+offset_top = 536.0
+offset_right = 1245.0
+offset_bottom = 693.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("5_tub5d")
+texture_hover = ExtResource("6_dnmb1")
 
-[node name="Credits" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=612226832]
-layout_mode = 2
-text = "Crédits"
+[node name="Mute" type="TextureButton" parent="CanvasLayer" unique_id=1151876728]
+offset_left = 24.0
+offset_top = 537.99994
+offset_right = 219.0
+offset_bottom = 732.99994
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_5j7hh")
+texture_hover = ExtResource("8_y7dvm")
 
-[node name="Quit" type="Button" parent="CanvasLayer/VSplitContainer" unique_id=790519751]
-layout_mode = 2
-text = "Quitter"
+[node name="Quit" type="TextureButton" parent="CanvasLayer" unique_id=1998572281]
+offset_left = 1051.0
+offset_top = 22.0
+offset_right = 1246.0
+offset_bottom = 217.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("9_tub5d")
+texture_hover = ExtResource("10_dnmb1")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1783456785]
 visible = false
 
 [node name="Credits" parent="CanvasLayer2" unique_id=1366788260 instance=ExtResource("2_vjb58")]
 
+[node name="VSplitContainer" parent="CanvasLayer2/Credits" index="2" unique_id=1566900674]
+split_offsets = PackedInt32Array(50, 117, 179, 225, 271, 317, 363, 409, 455, 517)
+split_offset = 50
+
+[node name="Title" parent="CanvasLayer2/Credits/VSplitContainer" index="0" unique_id=1342655445]
+theme_override_font_sizes/font_size = 40
+text = "Crédits"
+
+[node name="Beny" parent="CanvasLayer2/Credits/VSplitContainer" index="1" unique_id=1541676197]
+theme_override_font_sizes/font_size = 24
+
+[node name="Evann" parent="CanvasLayer2/Credits/VSplitContainer" index="2" unique_id=507195012]
+theme_override_font_sizes/font_size = 24
+
+[node name="Jeronimo" parent="CanvasLayer2/Credits/VSplitContainer" index="3" unique_id=1017745198]
+theme_override_font_sizes/font_size = 24
+
+[node name="Emma" parent="CanvasLayer2/Credits/VSplitContainer" index="4" unique_id=1468803718]
+theme_override_font_sizes/font_size = 24
+
+[node name="Léa" parent="CanvasLayer2/Credits/VSplitContainer" index="5" unique_id=256620647]
+theme_override_font_sizes/font_size = 24
+
+[node name="Théo" parent="CanvasLayer2/Credits/VSplitContainer" index="6" unique_id=1207760179]
+theme_override_font_sizes/font_size = 24
+
+[node name="RDVH2026" parent="CanvasLayer2/Credits/VSplitContainer" index="7" unique_id=480675788]
+theme_override_font_sizes/font_size = 24
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=569059219]
 bus = &"SFX"
 
-[connection signal="pressed" from="CanvasLayer/VSplitContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="CanvasLayer/VSplitContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CanvasLayer/VSplitContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="Logo" type="TextureRect" parent="." unique_id=1942013761]
+offset_left = 152.0
+offset_top = 16.0
+offset_right = 1507.0
+offset_bottom = 330.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_dnmb1")
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Mute" to="." method="_on_mute_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Credits/Return" to="." method="_on_return_pressed"]
 
 [editable path="CanvasLayer2/Credits"]
