@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baubasbmvb4eu" path="res://scenes/level_enviro/cactus.tscn" id="5_nfihu"]
 [ext_resource type="PackedScene" uid="uid://fwbtpt0ervu" path="res://scenes/level_enviro/kayou_tall.tscn" id="6_lgguw"]
 [ext_resource type="PackedScene" uid="uid://bntbb8jrqwcl4" path="res://scenes/entities/cow.tscn" id="7_jprdt"]
+[ext_resource type="PackedScene" uid="uid://bxh2jk4h4w186" path="res://scenes/level_enviro/maguey.tscn" id="7_plydf"]
 [ext_resource type="PackedScene" uid="uid://jf1c63gatqdj" path="res://scenes/ui/game_ui.tscn" id="8_ps2vj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u60bi"]
@@ -176,11 +177,29 @@ mesh = SubResource("BoxMesh_u60bi")
 [node name="Cactus" parent="Map" unique_id=454719588 instance=ExtResource("5_nfihu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.636698, 0, -35.326637)
 
+[node name="Cactus2" parent="Map" unique_id=864635818 instance=ExtResource("5_nfihu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.616098, 0, -2.5368962)
+
+[node name="Cactus3" parent="Map" unique_id=1383927900 instance=ExtResource("5_nfihu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.605263, -1.9073486e-06, -15.628393)
+
 [node name="KayouTall" parent="Map" unique_id=562230623 instance=ExtResource("6_lgguw")]
 transform = Transform3D(0.6803808, 0, 0, 0, 0.6803808, 0, 0, 0, 0.6803808, 17.328205, 1.9073486e-06, -31.472126)
 
 [node name="KayouTall2" parent="Map" unique_id=1949165068 instance=ExtResource("6_lgguw")]
-transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -17.5752, 5.722046e-06, -62.772892)
+transform = Transform3D(0.34595132, 0, 0, 0, 0.34595132, 0, 0, 0, 0.34595132, -9.607142, 3.8146973e-06, -64.781006)
+
+[node name="Maguey" parent="Map" unique_id=1538181613 instance=ExtResource("7_plydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.527628, -1.9073486e-06, -21.206638)
+
+[node name="Maguey2" parent="Map" unique_id=1930859589 instance=ExtResource("7_plydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.641022, -1.9073486e-06, -3.2621775)
+
+[node name="Maguey5" parent="Map" unique_id=612398101 instance=ExtResource("7_plydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.641022, -1.9073486e-06, -3.2621775)
+
+[node name="Maguey4" parent="Map" unique_id=1268145745 instance=ExtResource("7_plydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.271515, -1.9073486e-06, -69.296326)
 
 [node name="Cows" type="Node3D" parent="." unique_id=750490606]
 
