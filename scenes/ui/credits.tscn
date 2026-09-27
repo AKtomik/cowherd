@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cmwtmuek5isnr"]
 
+[ext_resource type="Texture2D" uid="uid://dg4jownqbj1ua" path="res://assets/UI/background.png" id="1_oap8i"]
+[ext_resource type="Texture2D" uid="uid://ctrgrexyit0ny" path="res://assets/UI/quit_idle.png" id="2_pqmjv"]
+[ext_resource type="Texture2D" uid="uid://d0mcj7p5xsvt8" path="res://assets/UI/quit_hover.png" id="3_e5ls7"]
+
 [node name="Credits" type="Control" unique_id=1366788260]
 layout_mode = 3
 anchors_preset = 15
@@ -8,93 +12,111 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=751334975]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1504666275]
 layout_mode = 0
-offset_right = 1204.0
-offset_bottom = 685.0
+offset_right = 1754.0
+offset_bottom = 883.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2035672622]
+layout_mode = 0
+offset_right = 1768.0
+offset_bottom = 993.0
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_oap8i")
 
 [node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=1566900674]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 40.0
+anchor_bottom = 0.5
+offset_left = -545.5
+offset_top = -289.5
+offset_right = 545.5
+offset_bottom = 289.5
 grow_horizontal = 2
-split_offsets = PackedInt32Array(50, 117, 179, 225, 271, 317, 363, 409, 455, 517)
-split_offset = 50
-
-[node name="HSeparator" type="HSeparator" parent="VSplitContainer" unique_id=1095865554]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
+grow_vertical = 2
+split_offsets = PackedInt32Array(103, 143, 183, 223, 263, 303, 343, 383)
+split_offset = 103
 
 [node name="Title" type="Label" parent="VSplitContainer" unique_id=1342655445]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Crédits"
+theme_override_font_sizes/font_size = 36
+text = ".
+Crédits"
 horizontal_alignment = 1
-
-[node name="HSeparator2" type="HSeparator" parent="VSplitContainer" unique_id=1745384018]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
 
 [node name="Beny" type="Label" parent="VSplitContainer" unique_id=1541676197]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "BenyDanette - Sound design et composition"
 horizontal_alignment = 1
 
 [node name="Evann" type="Label" parent="VSplitContainer" unique_id=507195012]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "Evann - Programmation et level design"
 horizontal_alignment = 1
 
 [node name="Jeronimo" type="Label" parent="VSplitContainer" unique_id=1017745198]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "Jerónimo Bermúdez - Expertise en histoire et écriture"
 horizontal_alignment = 1
 
 [node name="Emma" type="Label" parent="VSplitContainer" unique_id=1468803718]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "LaChapelière - Programmation"
 horizontal_alignment = 1
 
 [node name="Léa" type="Label" parent="VSplitContainer" unique_id=256620647]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Lea Tassoni - Graphisme"
+theme_override_font_sizes/font_size = 20
+text = "Lea Tassoni - Artiste 3D et UI"
 horizontal_alignment = 1
 
 [node name="Théo" type="Label" parent="VSplitContainer" unique_id=1207760179]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Théo - Graphisme"
+theme_override_font_sizes/font_size = 20
+text = "Théo Gottis - Artiste 3D
+."
 horizontal_alignment = 1
-
-[node name="HSeparator3" type="HSeparator" parent="VSplitContainer" unique_id=750812727]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
 
 [node name="RDVH2026" type="Label" parent="VSplitContainer" unique_id=480675788]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 20
 text = "Un jeu réalisé pour la Game Jam des Rendez-Vous de l'Histoire 2026"
 horizontal_alignment = 1
 
-[node name="Return" type="Button" parent="." unique_id=1692593524]
+[node name="Sources" type="Label" parent="VSplitContainer" unique_id=448598417]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Le monastère augustin de Ixmiquilpan (entre 1530-1560) - Patrimoine conservé par le Instituto Nacional de Antropologia e Historia (Mexique).
+Carte du pays des Chichimèques (autour de 1580) - Biblioteca Nacional de España (Madrid).
+Procès contre Antonio de Espejo, éleveur espagnol, pour l’assassinat de Marcos Ramos, vacher indien (1581) -
+Archivo General de la Nación (Mexico) : Inquisición, volume 90, document 25.
+Dénonciation de deux vachers ayant pactisé avec le diable - Archivo General de la Nación (Mexico) : Inquisición, volume 278, exp. 14.
+Procès contre Juan de Cordoba (1596). Archivo Municipal de San Luis Potosí (San Luis Potosí), caja 79, exp. 6."
+horizontal_alignment = 1
+
+[node name="Return" type="TextureButton" parent="." unique_id=617255588]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-text = "x"
+offset_left = 1051.0
+offset_top = 22.0
+offset_right = 1246.0
+offset_bottom = 217.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("2_pqmjv")
+texture_hover = ExtResource("3_e5ls7")

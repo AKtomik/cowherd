@@ -2,8 +2,13 @@ extends Node2D
 
 @export var credits_layer: CanvasLayer
 
-@onready var menu_scene = preload("res://scenes/ui/menu.tscn")
-@onready var narrative_scene = preload("res://scenes/narrative/narrative_scene.tscn")
+@export var mute_button: TextureButton
+@export var sound_on_idle = preload("res://assets/UI/sound on_idle.png")
+@export var sound_on_hover = preload("res://assets/UI/sound on_hover.png")
+@export var sound_off_idle = preload("res://assets/UI/sound off_idle.png")
+@export var sound_off_hover = preload("res://assets/UI/sound off_hover.png")
+
+var sound_on: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,3 +47,20 @@ func _on_return_pressed() -> void:
 func play_button_sound() -> void:
 	
 	SfxPlayer.play_button_click()
+
+
+func _on_mute_pressed() -> void:
+	
+	var master_bus = AudioServer.get_bus_index("Master")
+	
+	if sound_on:
+		sound_on = false
+		mute_button.texture_normal = sound_off_idle
+		mute_button.texture_hover = sound_off_hover
+		AudioServer.set_bus_volume_db(master_bus, -80)
+		
+	else:
+		sound_on = true
+		mute_button.texture_normal = sound_on_idle
+		mute_button.texture_hover = sound_on_hover
+		AudioServer.set_bus_volume_db(master_bus, 0)
