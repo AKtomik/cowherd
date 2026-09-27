@@ -1,10 +1,12 @@
 extends Camera3D
 
+@export var level: Level
 @export var follow_node: Node3D
 var position_difference: Vector3
 var position_followed: Vector3
 
 @export var magnet_position: Node3D
+@export var starting_position: Node3D
 
 @export var ALIGN_SPEED: float = .09
 @export var CINEMATIC_SPEED: float = .09
@@ -14,8 +16,6 @@ var position_followed: Vector3
 @export var Y_LOCK_ENABLED: bool = false
 var y_lock_value: float
 
-@export var starting_position: Node3D
-@export var level: Level
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

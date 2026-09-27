@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://fwbtpt0ervu"]
+
+[ext_resource type="PackedScene" uid="uid://bo5jlivnn7arf" path="res://models/kayou_tall/KAYOU_TALL.fbx" id="1_vh1py"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvho0"]
+size = Vector3(3, 2, 2.4)
+
+[node name="KayouTall" type="StaticBody3D" unique_id=562230623]
+collision_layer = 2
+collision_mask = 12
+
+[node name="KAYOU" parent="." unique_id=1765563851 instance=ExtResource("1_vh1py")]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0, 0.6257027, 5.687232)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1303470173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("BoxShape3D_uvho0")
