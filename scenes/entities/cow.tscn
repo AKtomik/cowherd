@@ -18,15 +18,15 @@ normal_enabled = true
 normal_texture = ExtResource("4_vg2fe")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u60bi"]
-radius = 3.0
+radius = 5.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0dxmq"]
 radius = 0.9
 height = 4.0
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fgglk"]
-radius = 1.5
-height = 5.0
+radius = 2.0
+height = 7.0
 
 [node name="Cow" type="CharacterBody3D" unique_id=869209800 node_paths=PackedStringArray("cow_mesh", "cow_shape", "cow_obstacle_detection_shape") groups=["cows"]]
 collision_layer = 8
@@ -40,11 +40,13 @@ cow_shape = NodePath("PanicDetection/CollisionShape3D")
 cow_obstacle_detection_shape = NodePath("ObstacleDetection/CollisionShape3D")
 MAX_FORCE = 100.0
 MASS = 2.0
-SEPARATION_RADIUS = 3.0
-ALIGNMENT_RADIUS = 4.5
-COHESION_RADIUS = 5.0
+SEPARATION_RADIUS = 4.0
+ALIGNMENT_RADIUS = 8.0
+COHESION_RADIUS = 10.0
 SEPARATION_WEIGHT = 50.0
 ALIGNMENT_WEIGHT = 3.0
+OBSTACLE_WEIGHT = 120.0
+OBSTACLE_LOOK_AHEAD = 90.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1027818964]
 transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
@@ -74,7 +76,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ObstacleDetection" unique_id=1509246181]
-transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0, 0, -3.9502892)
 shape = SubResource("CapsuleShape3D_0dxmq")
 debug_color = Color(0, 0.60455257, 0.43973753, 0.21568628)
 

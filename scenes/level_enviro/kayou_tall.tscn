@@ -7,7 +7,7 @@ size = Vector3(3.2, 2, 2.6)
 
 [node name="KayouTall" type="StaticBody3D" unique_id=562230623]
 collision_layer = 2
-collision_mask = 12
+collision_mask = 15
 
 [node name="KAYOU" parent="." unique_id=1765563851 instance=ExtResource("1_vh1py")]
 transform = Transform3D(0.9231241, 0, 0, 0, 0.9231241, 0, 0, 0, 0.9231241, 0, 0.25035378, 31.611801)

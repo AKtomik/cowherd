@@ -73,6 +73,17 @@ shape = SubResource("BoxShape3D_u60bi")
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 4.7683716e-07, 0, 0.9999999, 0, 0, 0)
 mesh = SubResource("BoxMesh_u60bi")
 
+[node name="WallDown" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
+transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 5.941078)
+collision_layer = 2
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallDown" unique_id=1680730822]
+shape = SubResource("BoxShape3D_u60bi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown" unique_id=1519158370]
+mesh = SubResource("BoxMesh_u60bi")
+
 [node name="WallDown2" type="StaticBody3D" parent="Map" unique_id=127492038 groups=["obstacles"]]
 transform = Transform3D(23.542858, 0, -1.1046455, 0, 4.9999995, 0, 21.752048, 0, 1.1955891, -35.06701, 0, -1.5687962)
 collision_layer = 2
@@ -93,17 +104,6 @@ collision_mask = 15
 shape = SubResource("BoxShape3D_u60bi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown3" unique_id=1775571571]
-mesh = SubResource("BoxMesh_u60bi")
-
-[node name="WallDown" type="StaticBody3D" parent="Map" unique_id=161824770 groups=["obstacles"]]
-transform = Transform3D(100, 0, 0, 0, 5, 0, 0, 0, 1, -2.254818, -3.8146973e-06, 5.941078)
-collision_layer = 2
-collision_mask = 15
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/WallDown" unique_id=1680730822]
-shape = SubResource("BoxShape3D_u60bi")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Map/WallDown" unique_id=1519158370]
 mesh = SubResource("BoxMesh_u60bi")
 
 [node name="WallTopFence1" type="StaticBody3D" parent="Map" unique_id=1531075389 groups=["obstacles"]]
@@ -212,3 +212,4 @@ light_angular_distance = 3.63
 
 [editable path="CameraThings"]
 [editable path="Map/Pen"]
+[editable path="Map/KayouTall"]
