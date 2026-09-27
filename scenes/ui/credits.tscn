@@ -58,7 +58,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-text = "Jeronimo - Expertise en histoire et écriture"
+text = "Jerónimo Bermúdez - Expertise en histoire et écriture"
 horizontal_alignment = 1
 
 [node name="Emma" type="Label" parent="VSplitContainer" unique_id=1468803718]
