@@ -17,6 +17,8 @@
 
 [node name="LevelRoot" type="Node3D" unique_id=1058585129 node_paths=PackedStringArray("sun_node", "pen_node", "ui_node")]
 script = ExtResource("1_b0vvs")
+duration_seconds = 40.0
+score_goal = 8
 sun_node = NodePath("Sun")
 pen_node = NodePath("Map/Pen")
 ui_node = NodePath("CanvasLayer/UI")
@@ -210,6 +212,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.68214, 1, -34.972256)
 
 [node name="Cow3" parent="Cows" unique_id=235132480 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.289894, 1, -37.45742)
+
+[node name="Cow7" parent="Cows" unique_id=385261631 instance=ExtResource("8_f3b2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.243042, 1, -53.973156)
+
+[node name="Cow8" parent="Cows" unique_id=223689939 instance=ExtResource("8_f3b2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.899956, 1, -3.4078255)
 
 [node name="Cow4" parent="Cows" unique_id=540668986 instance=ExtResource("8_f3b2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.879284, 1, -19.884392)

@@ -35,6 +35,7 @@ func start():
 
 func level_end():
 	print("level end! ", score_current, "/", score_goal)
+	GameOverlord.set_last_score(score_current)
 	ended = true
 	if score_current >= score_goal:
 		if (scene_success): get_tree().change_scene_to_packed(scene_success)
