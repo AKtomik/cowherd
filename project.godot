@@ -29,6 +29,9 @@ SfxPlayer="*uid://dlpccq840mlho"
 [dialogic]
 
 directories/dch_directory={
+"diego": "res://assets/Narrative/diego.dch",
+"juanico": "res://assets/Narrative/juanico.dch",
+"leonor": "res://assets/Narrative/leonor.dch",
 "melchor": "res://assets/Narrative/melchor.dch",
 "pere": "res://assets/Narrative/pere.dch"
 }
@@ -36,6 +39,7 @@ directories/dtl_directory={
 "end": "res://assets/Narrative/end.dtl",
 "interlude1": "res://assets/Narrative/interlude1.dtl",
 "interlude2": "res://assets/Narrative/interlude2.dtl",
+"interlude3": "res://assets/Narrative/interlude3.dtl",
 "intro": "res://assets/Narrative/intro.dtl",
 "retry1": "res://assets/Narrative/retry1.dtl",
 "retry2": "res://assets/Narrative/retry2.dtl",
