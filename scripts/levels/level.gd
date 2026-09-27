@@ -56,7 +56,7 @@ func setup():
 	ambient_player.bus = "SFX"
 	add_child(ambient_player)
 	ambient_player.stream = ambient
-	ambient_player.volume_db = -6.0
+	ambient_player.volume_db = -10.0
 	ambient_player.play()
 	
 	end_delay_timer = Timer.new()
